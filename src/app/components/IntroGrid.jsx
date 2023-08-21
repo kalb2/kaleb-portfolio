@@ -1,11 +1,12 @@
 import React from "react";
+import Image from "next/image";
+import kjlogo from "../assets/KJ-Logo.svg";
+import TitleBar from "./TitleBar";
 
 export default function IntroGrid() {
   return (
     <>
-      <div className="flex w-full border-b p-1">
-        <h1 className="text-6xl uppercase tracking-widest">Welcome</h1>
-      </div>
+    <TitleBar text="Welcome" />
       <div className="grid grid-rows-2 grid-cols-3 h-80">
         <div className="row-span-2 border-r border-b"></div>
         <div className="border-r border-b"></div>
@@ -17,7 +18,9 @@ export default function IntroGrid() {
             trade
           </h2>
         </div>
-        <div className=" border-b"></div>
+        <div className="border-b p-5">
+          <Image src={kjlogo} alt="My Logo" className="w-full"/>
+        </div>
       </div>
     </>
   );

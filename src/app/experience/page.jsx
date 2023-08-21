@@ -4,7 +4,7 @@ import TitleBar from "../components/TitleBar";
 export default function ProjectsPage() {
   return (
     <>
-    <TitleBar text="Projects" />
+    <TitleBar text="Experience" />
     <CardRow />
     </>
   );
