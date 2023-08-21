@@ -1,4 +1,6 @@
+import Image from 'next/image'
 import Link from 'next/link'
+import githublogo from "../assets/github-mark.svg"
 
 export default function NavBar() {
   return (
@@ -6,7 +8,10 @@ export default function NavBar() {
     <div className="border-r border-black px-5 h-full flex items-center">
       <Link href="/">KALEB JENSEN</Link>
     </div>
-    <div className="border-r border-black p-0 h-full flex flex-1 items-center">
+    <div className="border-r border-black p-0 h-full flex flex-1 items-center justify-end" >
+      <a href="https://github.com/kalb2" target="_blank">
+      <Image src={githublogo} width={45} height={"auto"} alt='github logo' className='mr-5'/>
+      </a>
     </div>
     <div className="border-r border-black px-5 h-full flex items-center">
       <Link href="/projects">Projects</Link>
