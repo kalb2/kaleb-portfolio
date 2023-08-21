@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import githublogo from "../assets/github-mark.svg";
 import kjlogo from "../assets/KJ-Logo.svg";
-import linkedinlogo from "../assets/LI-in-Bug.png";
+import linkedinlogo from "../assets/LI-In-Bug.png";
 import { usePathname } from "next/navigation";
 
 export default function NavBar() {
