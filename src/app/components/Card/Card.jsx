@@ -1,19 +1,19 @@
 import Link from "next/link";
 import React from "react";
 import CardHandles from "./CardHandles";
+import CardTopTitle from "./CardTopTitle";
+import CardBottomTitle from "./CardBottomTitle";
 
-export default function Card() {
+export default function Card({text, title}) {
   return (
     <div>
       <Link href={"/"}>
-        <h1 className="pl-2 text-2xl">Header</h1>
+        <CardTopTitle text={text} />
         <div className="flex relative flex-col w-fit">
           <CardHandles />
           <div className="outline">
             <img src="https://avatars.githubusercontent.com/u/132865166?v=4" />
-            <div>
-              <h3 className="uppercase text-4xl pl-2">Title</h3>
-            </div>
+            <CardBottomTitle title={title} />
           </div>
         </div>
       </Link>
