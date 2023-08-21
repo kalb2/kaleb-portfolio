@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+.handles {
+  border: solid;
+  border-width: 1px;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #FFF;
+  transform: translate3d(-50%, -50%, 0);
+  z-index: 10;
+  border-radius: 50%;
+}
+
+/* 
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -24,4 +37,4 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-}
+} */
