@@ -1,15 +1,15 @@
 import Link from "next/link";
 import React from "react";
 
-export default function MenuItem({ text }) {
+export default function MenuItem({ text, href }) {
   return (
-    <li className="border-t h-14 flex justify-between">
-      <Link href="/projects">
-        <div>
+    <Link href={href}>
+      <div className="border-t flex justify-between h-14">
+        <div className="border-r h-full flex flex-col justify-end">
           <h1 className="text-4xl uppercase">{text}</h1>
         </div>
-        <div className="border-l">Image</div>
-      </Link>
-    </li>
+        <div>Image</div>
+      </div>
+    </Link>
   );
 }
