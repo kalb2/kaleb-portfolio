@@ -9,7 +9,7 @@ export default function MenuItem({ text, href, toggleMenu, src }) {
   return (
     <Link href={href}>
       <div className="border-b flex justify-between items-center w-full h-14" onClick={handleClick}>
-        <div className="border-r h-full flex grow flex-col justify-end">
+        <div className="border-r h-full flex grow flex-col justify-end hover:bg-black hover:text-white">
           <h1 className="text-4xl uppercase">{text}</h1>
         </div>
         <div className="w-14 h-14 border-y bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${src})` }}></div>

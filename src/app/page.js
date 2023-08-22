@@ -9,8 +9,11 @@ export default function Home() {
       <IntroGrid />
       <TitleBar text="Recent Projects" />
       <CardRow>
-        <Card text="hello" title="Title" />
+        <Card text="001" title="This Website" />
+        <Card text="002" title="Title" />
+        <Card text="003" title="Title" />
       </CardRow>
+      <TitleBar text="Recent Projects" />
     </>
   );
 }

@@ -51,7 +51,7 @@ export default function NavBar() {
           currentRoute === "/projects" ? "bg-black text-white" : "bg-white"
         }
       >
-        <div className="border-r border-black px-5 h-full hidden md:flex items-center">
+        <div className="border-r border-black px-5 h-full hidden md:flex items-center hover:bg-black hover:text-white">
           Projects
         </div>
       </Link>
@@ -61,11 +61,11 @@ export default function NavBar() {
           currentRoute === "/experience" ? "bg-black text-white" : "bg-white"
         }
       >
-        <div className="border-r border-black px-5 h-full hidden md:flex items-center">
+        <div className="border-r border-black px-5 h-full hidden md:flex items-center hover:bg-black hover:text-white">
           Experience
         </div>
       </Link>
-      <div className="border-black px-5 h-full flex items-center justify-items-end	">
+      <div className="border-black px-5 h-full flex items-center justify-items-end hover:bg-black group">
         <MenuIcon isOpen={isMenuOpen} toggleMenu={toggleMenu} />
         {isMenuOpen && <Menu isOpen={isMenuOpen} toggleMenu={toggleMenu} />}
       </div>

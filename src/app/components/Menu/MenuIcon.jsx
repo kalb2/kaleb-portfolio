@@ -9,9 +9,9 @@ function MenuIcon({ isOpen, toggleMenu }) {
       }`}
       onClick={toggleMenu}
     >
-      <div className="bar bg-black h-1 rounded"></div>
-      <div className="bar bg-black h-1 rounded"></div>
-      <div className="bar bg-black h-1 rounded"></div>
+      <div className="bar bg-black group-hover:bg-white h-1 rounded"></div>
+      <div className="bar bg-black group-hover:bg-white h-1 rounded"></div>
+      <div className="bar bg-black group-hover:bg-white h-1 rounded"></div>
     </div>
   );
 }
