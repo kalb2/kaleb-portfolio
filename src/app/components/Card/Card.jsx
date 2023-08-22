@@ -4,7 +4,7 @@ import CardHandles from "./CardHandles";
 import CardTopTitle from "./CardTopTitle";
 import CardBottomTitle from "./CardBottomTitle";
 
-export default function Card({text, title}) {
+export default function Card({ text, title }) {
   return (
     <div>
       <Link href={"/"}>
