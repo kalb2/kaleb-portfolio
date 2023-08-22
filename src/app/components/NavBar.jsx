@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import githublogo from "../assets/github-mark.svg";
-import kjlogo from "../assets/KJ-Logo.png";
+import kjlogo from "../assets/KJ-Logo.svg";
 import linkedinlogo from "../assets/LI-In-Bug.png";
 import { usePathname } from "next/navigation";
 import MenuIcon from "./Menu/MenuIcon";

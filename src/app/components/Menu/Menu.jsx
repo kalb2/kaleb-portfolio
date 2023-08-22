@@ -34,11 +34,31 @@ function Menu({ isOpen, toggleMenu }) {
       <button className="absolute top-3 right-3" onClick={toggleMenu}>
         Close
       </button>
-      <div className="h-full mt-14">
-        <MenuItem text="Projects" href="/projects" toggleMenu={toggleMenu} />
-        <MenuItem text="Experience" href="/experience" toggleMenu={toggleMenu}/>
-        <MenuItem text="About Me" href="/experience" toggleMenu={toggleMenu} />
-        <MenuItem text="Blog" href="/experience" toggleMenu={toggleMenu} />
+      <div className="h-[calc(100vh-80px)] border-t mt-14">
+        <MenuItem
+          text="Projects"
+          href="/projects"
+          src="/Code.png"
+          toggleMenu={toggleMenu}
+        />
+        <MenuItem
+          text="Experience"
+          href="/experience"
+          src="/Code.png"
+          toggleMenu={toggleMenu}
+        />
+        <MenuItem
+          text="About Me"
+          href="/about"
+          src="/Code.png"
+          toggleMenu={toggleMenu}
+        />
+        <MenuItem
+          text="Blog"
+          href="/blog"
+          src="/Code.png"
+          toggleMenu={toggleMenu}
+        />
       </div>
     </div>
   );

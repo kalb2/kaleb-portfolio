@@ -9,7 +9,7 @@ export default function Card({ text, title }) {
     <div>
       <Link href={"/"}>
         <CardTopTitle text={text} />
-        <div className="flex relative flex-col w-fit">
+        <div className=" relative -z-20 ">
           <CardHandles />
           <div className="outline">
             <img src="https://avatars.githubusercontent.com/u/132865166?v=4" />
