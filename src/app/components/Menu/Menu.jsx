@@ -35,11 +35,10 @@ function Menu({ isOpen, toggleMenu }) {
         Close
       </button>
       <div className="h-full mt-14">
-        <MenuItem text="Projects" href="/projects"/>
-        <MenuItem text="Experience" href="/experience"/>
-        <MenuItem text="About Me" href="/experience"/>
-        <MenuItem text="Blog" href="/experience"/>
-
+        <MenuItem text="Projects" href="/projects" toggleMenu={toggleMenu} />
+        <MenuItem text="Experience" href="/experience" toggleMenu={toggleMenu}/>
+        <MenuItem text="About Me" href="/experience" toggleMenu={toggleMenu} />
+        <MenuItem text="Blog" href="/experience" toggleMenu={toggleMenu} />
       </div>
     </div>
   );
