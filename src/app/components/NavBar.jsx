@@ -2,11 +2,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import githublogo from "../assets/github-mark.svg";
-import kjlogo from "../assets/KJ-Logo.svg";
+import kjlogo from "../assets/KJ-Logo.png";
 import linkedinlogo from "../assets/LI-In-Bug.png";
 import { usePathname } from "next/navigation";
-import MenuIcon from "./MenuIcon";
-import Menu from "./Menu";
+import MenuIcon from "./Menu/MenuIcon";
+import Menu from "./Menu/Menu";
 import { useState } from "react";
 
 export default function NavBar() {
