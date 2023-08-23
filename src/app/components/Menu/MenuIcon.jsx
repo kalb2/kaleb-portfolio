@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 function MenuIcon({ isOpen, toggleMenu }) {
-
   return (
     <div
       className={`menu-icon w-6 h-6 flex flex-col justify-between cursor-pointer ${
-        isOpen ? 'open' : ''
+        isOpen ? "open" : ""
       }`}
       onClick={toggleMenu}
     >
@@ -17,4 +16,3 @@ function MenuIcon({ isOpen, toggleMenu }) {
 }
 
 export default MenuIcon;
-
