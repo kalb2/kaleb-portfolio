@@ -7,8 +7,8 @@ export default function ExperiencePage() {
     <>
       <TitleBar text="Experience" />
       <CardRow>
-        <Card text="hello" title="Title" />
-        <Card text="hello" title="Title" />
+        {/* <Card text="hello" title="Title" />
+        <Card text="hello" title="Title" /> */}
       </CardRow>
     </>
   );

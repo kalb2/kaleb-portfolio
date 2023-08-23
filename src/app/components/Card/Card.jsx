@@ -4,10 +4,10 @@ import CardHandles from "./CardHandles";
 import CardTopTitle from "./CardTopTitle";
 import CardBottomTitle from "./CardBottomTitle";
 
-export default function Card({ text, title }) {
+export default function Card({ text, title, href }) {
   return (
     <div>
-      <Link href={"/"}>
+      <Link href={href}>
         <CardTopTitle text={text} />
         <div className=" relative -z-20 ">
           <CardHandles />

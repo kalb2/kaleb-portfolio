@@ -1,10 +1,17 @@
-import React from 'react'
-import TitleBar from '../components/TitleBar'
+import React from "react";
+import TitleBar from "../components/TitleBar";
+import BlogLayout from "./layout";
+import CardRow from "../components/CardRow";
+import Card from "../components/Card/Card";
 
 export default function BlogPage() {
   return (
-    <div>
-      <TitleBar text="Blog" />
-    </div>
-  )
+    <>
+      <CardRow>
+        <Card text="hello" title="Title" href="/"  />
+        <Card text="hello" title="Title" href="/"  />
+        <Card text="hello" title="Title" href="/"  />
+      </CardRow>
+    </>
+  );
 }
