@@ -31,10 +31,16 @@ function Menu({ isOpen, toggleMenu }) {
         isOpen ? "translate-x-0 border-l-2" : "translate-x-full border-l-0"
       } transition-transform`}
     >
-      <button className="absolute right-3 top-3" onClick={toggleMenu}>
-        Close
-      </button>
-      <div className="mt-14 h-[calc(100vh-80px)] border-t">
+      <div className="flex h-14 justify-end">
+        <div className="border-r"></div>
+        <button
+          onClick={toggleMenu}
+          className="h-14 w-14 hover:bg-black hover:text-white"
+        >
+          <div>Close</div>
+        </button>
+      </div>
+      <div className="h-[calc(100vh-80px)] border-t">
         <MenuItem
           text="Projects"
           href="/projects"
