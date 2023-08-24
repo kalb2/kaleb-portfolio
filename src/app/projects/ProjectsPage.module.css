@@ -1,11 +1,10 @@
 .projectsContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1px; /* For the divide effect */
+    gap: 1px;
     height: 75vh;
   }
   
   .projectColumn {
     width: 100%;
-    background-color: lightgray;
   }

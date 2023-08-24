@@ -9,13 +9,13 @@ function TabNavigation() {
   };
 
   return (
-    <div>
-      <div className="flex border-b">
+    <div className="w-full border-b md:w-1/2 sm:border-0 ">
+      <div className="flex divide-x border-b">
         <div
           className={`flex-1 cursor-pointer px-4 py-2 ${
             activeTab === 0
               ? "bg-black text-white"
-              : "bg-gray-200 text-gray-700"
+              : "bg-white text-black"
           }`}
           onClick={() => handleTabClick(0)}
         >
@@ -25,7 +25,7 @@ function TabNavigation() {
           className={`flex-1 cursor-pointer px-4 py-2 ${
             activeTab === 1
               ? "bg-black text-white"
-              : "bg-gray-200 text-gray-700"
+              : "bg-white text-black"
           }`}
           onClick={() => handleTabClick(1)}
         >
@@ -35,7 +35,7 @@ function TabNavigation() {
           className={`flex-1 cursor-pointer  px-4 py-2 ${
             activeTab === 2
               ? "bg-black text-white"
-              : "bg-gray-200 text-gray-700"
+              : "bg-white text-black"
           }`}
           onClick={() => handleTabClick(2)}
         >
@@ -48,6 +48,7 @@ function TabNavigation() {
         {activeTab === 2 && <div>Content for Tab 3</div>}
       </div>
     </div>
+
   );
 }
 
