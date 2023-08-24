@@ -27,14 +27,14 @@ function Menu({ isOpen, toggleMenu }) {
   return (
     <div
       ref={menuRef}
-      className={`menu-container fixed top-0 bottom-0 right-0 w-full md:w-1/3 bg-white opacity-95 overflow-y-auto transform ${
+      className={`menu-container fixed bottom-0 right-0 top-0 w-full transform overflow-y-auto bg-white opacity-95 md:w-1/3 ${
         isOpen ? "translate-x-0 border-l-2" : "translate-x-full border-l-0"
       } transition-transform`}
     >
-      <button className="absolute top-3 right-3" onClick={toggleMenu}>
+      <button className="absolute right-3 top-3" onClick={toggleMenu}>
         Close
       </button>
-      <div className="h-[calc(100vh-80px)] border-t mt-14">
+      <div className="mt-14 h-[calc(100vh-80px)] border-t">
         <MenuItem
           text="Projects"
           href="/projects"

@@ -19,7 +19,7 @@ export default function NavBar() {
   };
 
   return (
-    <div className="sticky top-0 flex border-b bg-white border-black w-full h-14">
+    <div className="sticky z-20 top-0 flex border-b bg-white border-black w-full h-14">
       <Link href="/">
         <div className="border-r border-black px-5 h-full flex items-center ">
           <Image src={kjlogo} height={50} width={"auto"} alt="My Logo" />
