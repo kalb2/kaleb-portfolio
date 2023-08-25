@@ -1,5 +1,5 @@
 import React from "react";
-import TabNavigation from "./TabNavigation";
+import TabNavigation from "../Tabs/TabNavigation";
 import ProjectRight from "./ProjectRight";
 import WhiteTitleBar from "../TitleBar/WhiteTitleBar";
 
