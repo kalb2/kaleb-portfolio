@@ -2,7 +2,7 @@ import Card from "./components/Card/Card";
 import CardRow from "./components/CardRow";
 import IntroGrid from "./components/IntroGrid";
 import SectionBreak from "./components/SectionBreak";
-import TitleBar from "./components/TitleBar";
+import TitleBar from "./components/TitleBar/TitleBar";
 
 export default function Home() {
   return (

@@ -1,8 +1,10 @@
 import React from "react";
-import TitleBar from "../components/TitleBar";
+import TitleBar from "../components/TitleBar/TitleBar";
 
 export default function AboutPage() {
-  return <div>
+  return (
+    <div>
       <TitleBar text="About Me" />
-  </div>;
+    </div>
+  );
 }

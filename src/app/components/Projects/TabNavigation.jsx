@@ -9,7 +9,7 @@ function TabNavigation() {
   };
 
   return (
-    <div className="w-full border-b md:w-1/2 sm:border-0 ">
+    <div className="border-b sm:border-0 ">
       <div className="flex divide-x border-b">
         <div
           className={`flex-1 cursor-pointer px-4 py-2 ${

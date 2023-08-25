@@ -15,6 +15,12 @@ module.exports = {
       borderColor: {
         DEFAULT: "#000",
       },
+      gridTemplateColumns: {
+        basic: "repeat(auto-fit, minmax(500px, 1fr))",
+      },
+      gridAutoRows: {
+        basic: "500px",
+      },
     },
   },
   plugins: [],

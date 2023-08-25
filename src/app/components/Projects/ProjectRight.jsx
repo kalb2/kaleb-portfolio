@@ -5,12 +5,12 @@ import ProjectDescription from "./ProjectDescription";
 
 export default function ProjectRight() {
   return (
-    <div className="w-full divide-y md:w-1/2 ">
-      <div className="h-3/4">
+    <div className="divide-y">
+      <div className="h-2/3">
         <Carousel />
       </div>
 
-      <div className="flex h-1/4 divide-x">
+      <div className="flex h-1/3 divide-x">
         <ProjectName />
         <ProjectDescription />
       </div>
