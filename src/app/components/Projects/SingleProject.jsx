@@ -1,3 +1,4 @@
+"use client"
 import React, { useEffect } from "react";
 import { useTabContentContext } from "../Tabs/TabContentContext";
 import TabNavigation from "../Tabs/TabNavigation";

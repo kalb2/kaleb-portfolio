@@ -1,4 +1,4 @@
-// "use client";
+"use client";
 import React, { useState } from "react";
 import { useTabContentContext } from "./TabContentContext";
 import TabContent from "./TabContent";
@@ -12,9 +12,9 @@ function TabNavigation() {
 
   const { tabContentData } = useTabContentContext(); // Use the context hook to access the value
 
-  // if (!tabContentData || tabContentData.length === 0) {
-  //   return <div>Loading...</div>; // or another appropriate placeholder
-  // }
+  if (!tabContentData || tabContentData.length === 0) {
+    return <div>Loading...</div>; // or another appropriate placeholder
+  }
 
   return (
     <div className="border-b sm:border-0">
