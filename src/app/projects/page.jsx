@@ -9,16 +9,13 @@ import projectsData from "../projectsData";
 export default function ProjectsPage() {
   return (
     <>
-    {projectsData.map((project) => (
-        <Project key={project.id} project={project} />
+      {projectsData.map((project, index) => (
+        <Project
+          key={project.id}
+          project={project}
+          order={index % 2 === 0 ? 1 : 2}
+        />
       ))}
-      {/* <SingleProject />
-      <SectionBreak />
-      <WhiteTitleBar text="My Portfolio" />
-      <div className="grid-cols-basic auto-rows-basic grid divide-x border-b ">
-        <ProjectRight />
-        <TabNavigation />
-      </div> */}
     </>
   );
 }
