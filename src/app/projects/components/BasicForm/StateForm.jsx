@@ -1,3 +1,4 @@
+"use client"
 import  { useState, useMemo } from "react";
 import "./styles.css";
 import { checkEmail, checkPassword } from "./validators";

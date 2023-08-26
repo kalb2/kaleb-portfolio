@@ -1,7 +1,7 @@
 import React from "react";
 import TabNavigation from "./Tabs/TabNavigationAlternate";
 import ProjectRight from "./Projects/ProjectRightAlternate";
-import SectionBreak from "./SectionBreak";
+import SectionBreak from "./SectionBreak/SectionBreak";
 
 function Project({ project, order }) {
   return (
@@ -11,7 +11,7 @@ function Project({ project, order }) {
       </div> */}
 
       <div className="grid-cols-basic auto-rows-basic grid divide-x border-b">
-      {order === 1 ? (
+        {order === 1 ? (
           <>
             <TabNavigation tabs={project.tabs} project={project} />
             <ProjectRight project={project} />

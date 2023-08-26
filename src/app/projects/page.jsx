@@ -1,6 +1,6 @@
 import ProjectRight from "../components/Projects/ProjectRight";
 import TabNavigation from "../components/Tabs/TabNavigation";
-import SectionBreak from "../components/SectionBreak";
+import SectionBreak from "../components/SectionBreak/SectionBreak";
 import SingleProject from "../components/Projects/SingleProject";
 import WhiteTitleBar from "../components/TitleBar/WhiteTitleBar";
 import Project from "../components/Project";

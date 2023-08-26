@@ -1,14 +1,13 @@
+"use client"
 import { useLocalStorage } from "./useLocalStorage"
 
 function LocalStorage() {
     const [firstName, setFirstName] = useLocalStorage("FIRST_NAME", "")
   
-    // Bonus:
     const [lastName, setLastName] = useLocalStorage("LAST_NAME", () => {
       return "Default"
     })
   
-    // Bonus:
     const [hobbies, setHobbies] = useLocalStorage("HOBBIES", [
       "Programming",
       "Weight Lifting",

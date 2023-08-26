@@ -1,3 +1,4 @@
+"use client"
 import { useArray } from "./useArray"
 
 const INITIAL_ARRAY = [1, 2, 3]

@@ -1,5 +1,5 @@
 import Card from "../components/Card/Card";
-import CardRow from "../components/CardRow";
+import CardRow from "../components/Card/CardRow";
 import Project from "../components/ProjectAlternate";
 import ProjectRight from "../components/Projects/ProjectRight";
 import SingleProject from "../components/Projects/SingleProject";

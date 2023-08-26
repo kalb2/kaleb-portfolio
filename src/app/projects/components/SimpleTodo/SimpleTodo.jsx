@@ -1,3 +1,4 @@
+"use client"
 import { createContext, useEffect, useReducer, useState } from "react";
 import "./styles.css";
 import { NewTodoForm } from "./NewTodoForm";

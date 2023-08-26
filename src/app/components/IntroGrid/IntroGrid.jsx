@@ -1,8 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import kjlogo from "../assets/KJ-Logo.svg";
-import kjlogoonly from "../assets/LOGO ONLY.svg";
-import TitleBar from "./TitleBar/TitleBar";
+import kjlogoonly from "../../assets/LOGO ONLY.svg";
+import TitleBar from "../TitleBar/TitleBar";
 
 export default function IntroGrid() {
   return (

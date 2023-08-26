@@ -1,12 +1,12 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import githublogo from "../assets/github-mark.svg";
-import kjlogo from "../assets/KJ-Logo.svg";
-import linkedinlogo from "../assets/LI-In-Bug.png";
+import githublogo from "../../assets/github-mark.svg";
+import kjlogo from "../../assets/KJ-Logo.svg";
+import linkedinlogo from "../../assets/LI-In-Bug.png";
 import { usePathname } from "next/navigation";
-import MenuIcon from "./Menu/MenuIcon";
-import Menu from "./Menu/Menu";
+import MenuIcon from "../Menu/MenuIcon";
+import Menu from "../Menu/Menu";
 import { useState } from "react";
 
 export default function NavBar() {
@@ -19,20 +19,20 @@ export default function NavBar() {
   };
 
   return (
-    <div className="sticky z-20 top-0 flex border-b bg-white border-black w-full h-14">
+    <div className="sticky top-0 z-20 flex h-14 w-full border-b border-black bg-white">
       <Link href="/">
-        <div className="border-r border-black px-5 h-full flex items-center ">
+        <div className="flex h-full items-center border-r border-black px-5 ">
           <Image src={kjlogo} height={50} width={"auto"} alt="My Logo" />
         </div>
       </Link>
-      <div className="border-r border-black p-0 h-full flex-1 items-center justify-end flex">
+      <div className="flex h-full flex-1 items-center justify-end border-r border-black p-0">
         <a href="https://www.linkedin.com/in/kalebjensen/" target="_blank">
           <Image
             src={linkedinlogo}
             width={45}
             height={"auto"}
             alt="my LinkedIn"
-            className="mr-5 invisible md:visible"
+            className="invisible mr-5 md:visible"
           />
         </a>
         <a href="https://github.com/kalb2" target="_blank">
@@ -41,7 +41,7 @@ export default function NavBar() {
             width={45}
             height={"auto"}
             alt="my Github"
-            className="mr-5 invisible md:visible"
+            className="invisible mr-5 md:visible"
           />
         </a>
       </div>
@@ -51,7 +51,7 @@ export default function NavBar() {
           currentRoute === "/projects" ? "bg-black text-white" : "bg-white"
         }
       >
-        <div className="border-r border-black px-5 h-full hidden md:flex items-center hover:bg-black hover:text-white">
+        <div className="hidden h-full items-center border-r border-black px-5 hover:bg-black hover:text-white md:flex">
           Projects
         </div>
       </Link>
@@ -61,11 +61,11 @@ export default function NavBar() {
           currentRoute === "/experience" ? "bg-black text-white" : "bg-white"
         }
       >
-        <div className="border-r border-black px-5 h-full hidden md:flex items-center hover:bg-black hover:text-white">
+        <div className="hidden h-full items-center border-r border-black px-5 hover:bg-black hover:text-white md:flex">
           Experience
         </div>
       </Link>
-      <div className="border-black px-5 h-full flex items-center justify-items-end hover:bg-black group">
+      <div className="group flex h-full items-center justify-items-end border-black px-5 hover:bg-black">
         <MenuIcon isOpen={isMenuOpen} toggleMenu={toggleMenu} />
         {isMenuOpen && <Menu isOpen={isMenuOpen} toggleMenu={toggleMenu} />}
       </div>
