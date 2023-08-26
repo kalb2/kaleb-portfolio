@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import TabContent from "./TabContent";
 
-function TabNavigation() {
+function TabNavigation({tabs}) {
   const [activeTab, setActiveTab] = useState(0);
 
   const handleTabClick = (tabIndex) => {
@@ -27,7 +27,7 @@ function TabNavigation() {
         ))}
       </div>
       <div className="p-4">
-        <TabContent activeTab={activeTab} />
+        <TabContent activeTab={activeTab} tabs={tabs} />
       </div>
     </div>
   );

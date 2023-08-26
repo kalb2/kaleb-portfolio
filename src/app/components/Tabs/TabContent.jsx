@@ -1,13 +1,7 @@
 import React from "react";
 
-function TabContent({ activeTab }) {
-  const tabContents = [
-    "Content for Tab 1",
-    "Content for Tab 2",
-    "Content for Tab 3",
-  ];
-
-  return <div>{tabContents[activeTab]}</div>;
+function TabContent({ activeTab, tabs }) {
+  return <div>{tabs[`tab${activeTab + 1}`]}</div>;
 }
 
 export default TabContent;
