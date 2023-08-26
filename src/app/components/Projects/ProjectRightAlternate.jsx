@@ -17,7 +17,7 @@ export default function ProjectRight({ project }) {
           ) : (
             Component && 
             <div className="flex flex-col justify-center">
-            <div>Interact with me</div>
+            {/* <div>Interact with me</div> */}
             <Component />
             </div>
           )}
