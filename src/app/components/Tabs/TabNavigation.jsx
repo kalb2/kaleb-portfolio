@@ -1,32 +1,40 @@
 "use client";
 import React, { useState } from "react";
 import TabContent from "./TabContent";
+import ProjectName from "../Projects/ProjectName";
+import ProjectDescription from "../Projects/ProjectDescription";
 
-function TabNavigation({tabs}) {
+function TabNavigation({ tabs, project }) {
   const [activeTab, setActiveTab] = useState(0);
 
   const handleTabClick = (tabIndex) => {
     setActiveTab(tabIndex);
   };
 
+  const tabTitles = ["What I", "Concepts Used", "See the code"];
+
   return (
-    <div className="border-b sm:border-0">
-      <div className="flex divide-x border-b">
-        {[0, 1, 2].map((index) => (
+    <div className="border-b bg-zinc-300 sm:border-0">
+      {/* <div className="flex">
+      <ProjectName title={project.title} />
+      <ProjectDescription description={project.description} />
+      </div> */}
+      <div className="flex items-end divide-x ">
+        {tabTitles.map((title, index) => (
           <div
             key={index}
-            className={`flex-1 cursor-pointer px-4 py-2 ${
+            className={`flex flex-1 cursor-pointer px-4 py-2  ${
               activeTab === index
-                ? "bg-black text-white"
-                : "bg-white text-black"
+                ? "bg-zinc-300 font-bold uppercase text-black"
+                : "bg-black uppercase text-white "
             }`}
             onClick={() => handleTabClick(index)}
           >
-            Tab {index + 1}
+            {title}
           </div>
         ))}
       </div>
-      <div className="p-4">
+      <div className="bg-zinc-300 p-6 ">
         <TabContent activeTab={activeTab} tabs={tabs} />
       </div>
     </div>

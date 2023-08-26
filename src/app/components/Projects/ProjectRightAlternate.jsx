@@ -25,10 +25,9 @@ export default function ProjectRight({ project }) {
         {/* </div> */}
       </div>
 
-      <div className="flex h-1/4 divide-x ">
-      {/* <div className="text-6xl bg-black text-white uppercase border-white">Try me</div> */}
-        <ProjectName title={project.title} />
-        <ProjectDescription description={project.description} />
+      <div className="flex h-1/4 divide-x justify-center bg-black items-center ">
+      <div className="text-6xl  text-white uppercase border-white">Try me</div>
+
       </div>
     </div>
   );
