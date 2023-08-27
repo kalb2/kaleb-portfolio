@@ -21,6 +21,7 @@
     border: 0.05em solid black;
     border-radius: 0.25em;
     padding: 0.25em 0.5em;
+    background-color: #fff;
   }
   
   .form-group.error .input {

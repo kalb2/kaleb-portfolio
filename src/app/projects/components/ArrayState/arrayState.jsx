@@ -1,5 +1,6 @@
 "use client"
 import { useState } from "react"
+import "./styles.css"
 
 const INITIAL_VALUE = ["A", "B", "C"]
 

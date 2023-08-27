@@ -6,9 +6,10 @@ import ProjectDescription from "./ProjectDescription";
 export default function ProjectRight({ project }) {
   const Component = project.component;
 
+  
   return (
     <div className="flex flex-col divide-y">
-      <div className="flex h-3/4 items-start justify-center bg-white pt-5">
+      <div className="flex h-3/4 items-start justify-center bg-neutral-100 pt-5">
         {/* <Carousel /> */}
 
         {project.imageUrl ? (
