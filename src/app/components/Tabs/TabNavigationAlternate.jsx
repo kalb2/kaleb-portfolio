@@ -15,7 +15,7 @@ function TabNavigation({ tabs, project }) {
 
   return (
     <div className="border-b bg-white sm:border-0">
-      <div className="grid h-1/3 grid-cols-3 grid-rows-4">
+      <div className="grid  grid-cols-3 grid-rows-4">
         <div className="flex items-center border-b border-r pl-3 uppercase text-2xl font-light">
           Project
         </div>
