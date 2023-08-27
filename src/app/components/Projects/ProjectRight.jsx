@@ -16,7 +16,7 @@ export default function ProjectRight({ project }) {
              <img src={project.imageUrl} />
           ) : (
             Component && 
-            <div className="flex flex-col justify-center">
+            <div className="flex flex-col justify-center overflow-hidden">
             <Component />
             </div>
           )}
