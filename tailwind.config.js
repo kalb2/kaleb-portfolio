@@ -16,7 +16,7 @@ module.exports = {
         DEFAULT: "#000",
       },
       gridTemplateColumns: {
-        basic: "repeat(auto-fit, minmax(500px, 1fr))",
+        basic: "repeat(auto-fit, minmax(380px, 1fr))",
       },
       gridAutoRows: {
         basic: "500px",

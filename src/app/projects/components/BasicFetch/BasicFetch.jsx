@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState, useEffect } from "react";
 
 export default function BasicFetch() {
@@ -47,7 +47,11 @@ export default function BasicFetch() {
       ) : error ? (
         <p>Error: {error.message}</p>
       ) : (
-        <pre>{JSON.stringify(users, null, 2)}</pre>
+        <div className="max-h-[375px] overflow-scroll">
+          <pre className=" whitespace-pre-wrap">
+            {JSON.stringify(users, null, 2)}
+          </pre>
+        </div>
       )}
     </div>
   );

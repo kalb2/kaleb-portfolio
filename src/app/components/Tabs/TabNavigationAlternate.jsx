@@ -36,14 +36,14 @@ function TabNavigation({ tabs, project }) {
           </p>
         </div>
       </div>
-      <div className="h-2/3 bg-zinc-300">
-        <div className="flex items-end divide-x border-t ">
+      <div className="h-2/3 bg-white ">
+        <div className="flex items-end divide-x border-t">
           {tabTitles.map((title, index) => (
             <div
               key={index}
               className={`flex flex-1 cursor-pointer px-4 py-2  ${
                 activeTab === index
-                  ? "bg-zinc-300 font-bold uppercase text-black"
+                  ? "bg-white font-bold uppercase text-black"
                   : "bg-black uppercase text-white "
               }`}
               onClick={() => handleTabClick(index)}
@@ -52,7 +52,7 @@ function TabNavigation({ tabs, project }) {
             </div>
           ))}
         </div>
-        <div className=" p-6 ">
+        <div className=" p-6">
           <TabContent activeTab={activeTab} tabs={tabs} />
         </div>
       </div>

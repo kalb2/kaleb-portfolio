@@ -7,27 +7,25 @@ export default function ProjectRight({ project }) {
   const Component = project.component;
 
   return (
-    <div className="divide-y">
-      <div className="h-3/4 flex bg-zinc-300 place-content-center">
+    <div className="flex flex-col divide-y">
+      <div className="flex h-3/4 items-start justify-center bg-white pt-5">
         {/* <Carousel /> */}
-        {/* <div className="group relative h-full w-full"> */}
-          {/* <div className="relative h-full overflow-hidden"> */}
-          {project.imageUrl ? (
-             <img src={project.imageUrl} />
-          ) : (
-            Component && 
-            <div className="flex flex-col justify-center overflow-hidden">
-            {/* <div>Interact with me</div> */}
-            <Component />
+
+        {project.imageUrl ? (
+          <img src={project.imageUrl} alt={project.title} />
+        ) : (
+          Component && (
+            <div className="flex flex-col justify-items-center p-5 font-sans">
+              <Component />
             </div>
-          )}
-          {/* </div> */}
-        {/* </div> */}
+          )
+        )}
       </div>
 
-      <div className="flex h-1/4 divide-x justify-center bg-black items-center ">
-      <div className="text-6xl  text-white uppercase border-white">Try me</div>
-
+      <div className="flex h-1/4 items-center justify-center divide-x bg-black ">
+        <div className="border-white  text-6xl uppercase text-white">
+          Try me
+        </div>
       </div>
     </div>
   );

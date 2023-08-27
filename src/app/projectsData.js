@@ -8,8 +8,8 @@ import Array from "./projects/components/UseArray/Array";
 import Fetch from "./projects/components/UseFetch/Fetch";
 import LocalStorage from "./projects/components/UseLocalStorage/LocalStorage";
 import UserList from "./projects/components/User List/UserList";
-import Counter from "./projects/components/counter";
-import UpdateName from "./projects/components/updateName";
+import Counter from "./projects/components/UseState/counter";
+import UpdateName from "./projects/components/UseState/updateName";
 import Effect from "./projects/components/useEffect/Effect";
 
 const projectsData = [

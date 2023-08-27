@@ -1,6 +1,6 @@
-"use client"
-import { useState } from "react"
-import { useFetch } from "./useFetch"
+"use client";
+import { useState } from "react";
+import { useFetch } from "./useFetch";
 
 // If the API does not work use these local URLs
 // const URLS = {
@@ -13,7 +13,7 @@ const URLS = {
   USERS: "https://jsonplaceholder.typicode.com/users",
   POSTS: "https://jsonplaceholder.typicode.com/posts",
   COMMENTS: "https://jsonplaceholder.typicode.com/comments",
-}
+};
 
 // BONUS:
 // const OPTIONS = {
@@ -25,9 +25,9 @@ const URLS = {
 // }
 
 export function Fetch() {
-  const [url, setUrl] = useState(URLS.USERS)
+  const [url, setUrl] = useState(URLS.USERS);
 
-  const { data, isLoading, isError } = useFetch(url)
+  const { data, isLoading, isError } = useFetch(url);
   // BONUS:
   // const { data, isLoading, isError } = useFetch(url, OPTIONS)
 
@@ -64,11 +64,14 @@ export function Fetch() {
       ) : isError ? (
         <h1>Error</h1>
       ) : (
-        <pre>{JSON.stringify(data, null, 2)}</pre>
+        <div className="max-h-[375px] overflow-scroll">
+          <pre className=" whitespace-pre-wrap">
+            {JSON.stringify(data, null, 2)}
+          </pre>
+        </div>
       )}
     </>
-  )
+  );
 }
 
-export default Fetch
-
+export default Fetch;
