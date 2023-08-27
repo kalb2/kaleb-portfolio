@@ -12,7 +12,7 @@ export function useFetch(url, options = {}) {
 
     const controller = new AbortController();
 
-    fetch(url, { signal: controller.signal, ...options })
+    fetch(url, { signal: controller.signal, })
       .then((res) => {
         if (res.status === 200) {
           return res.json();
