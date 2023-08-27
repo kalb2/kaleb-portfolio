@@ -97,18 +97,18 @@ const projectsData = [
       },
       component: BasicFetch,
     },
-    {
-      id: 8,
-      title: "Simple To-Do List",
-      description: "Description of Project 3.",
-      // imageUrl: "/next.svg",
-      tabs: {
-        tab1: "Tab 1 Content for Project 3",
-        tab2: "Tab 2 Content for Project 3",
-        tab3: "Tab 3 Content for Project 3"
-      },
-      component: SimpleTodo,
-    },
+    // {
+    //   id: 8,
+    //   title: "Simple To-Do List",
+    //   description: "Description of Project 3.",
+    //   // imageUrl: "/next.svg",
+    //   tabs: {
+    //     tab1: "Tab 1 Content for Project 3",
+    //     tab2: "Tab 2 Content for Project 3",
+    //     tab3: "Tab 3 Content for Project 3"
+    //   },
+    //   component: SimpleTodo,
+    // },
     {
       id: 9,
       title: "UserList",
