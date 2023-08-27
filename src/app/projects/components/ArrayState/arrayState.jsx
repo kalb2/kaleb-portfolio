@@ -62,7 +62,7 @@ function ArrayState() {
     <div>
       <button onClick={removeFirstElement}>Remove First Element</button>
       <br />
-      <button onClick={() => removeSpecificLetter("B")}>Remove All B's</button>
+      <button onClick={() => removeSpecificLetter("B")}>Remove All B&apos;s</button>
       <br />
       <button onClick={() => addLetterToStart("B")}>Add To Start</button>
       <br />

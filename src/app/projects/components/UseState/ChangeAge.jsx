@@ -23,7 +23,7 @@ useEffect(() => {
         <button onClick={() => setAge(currentCount => currentCount + 1)}>+</button>
     </div>
     <div>
-        <h2>'My name is {name} and I am {age} years old'</h2>
+        <h2>My name is {name} and I am {age} years old</h2>
     </div>
     </div>
   )
