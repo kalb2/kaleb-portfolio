@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 export function useLocalStorage(key, initialValue) {
     const [value, setValue] = useState(() => {
-      const localValue = window.localStorage.getItem(key)
+      const localValue = localStorage.getItem(key)
       if (localValue == null) {
         if (typeof initialValue === "function") {
           return initialValue()
@@ -17,9 +17,9 @@ export function useLocalStorage(key, initialValue) {
   
     useEffect(() => {
       if (value === undefined) {
-        window.localStorage.removeItem(key)
+        localStorage.removeItem(key)
       } else {
-        window.localStorage.setItem(key, JSON.stringify(value))
+        localStorage.setItem(key, JSON.stringify(value))
       }
     }, [value, key])
   

@@ -49,18 +49,18 @@ const projectsData = [
       },
       component: StateForm,
     },
-    {
-      id: 4,
-      title: "Local Storage Custom Hook",
-      description: "Description of Project 3.",
-      // imageUrl: "/next.svg",
-      tabs: {
-        tab1: "Tab 1 Content for Project 3",
-        tab2: "Tab 2 Content for Project 3",
-        tab3: "Tab 3 Content for Project 3"
-      },
-      component: LocalStorage,
-    },
+    // {
+    //   id: 4,
+    //   title: "Local Storage Custom Hook",
+    //   description: "Description of Project 3.",
+    //   // imageUrl: "/next.svg",
+    //   tabs: {
+    //     tab1: "Tab 1 Content for Project 3",
+    //     tab2: "Tab 2 Content for Project 3",
+    //     tab3: "Tab 3 Content for Project 3"
+    //   },
+    //   component: LocalStorage,
+    // },
     {
       id: 5,
       title: "Array",
