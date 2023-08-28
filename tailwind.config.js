@@ -19,7 +19,7 @@ module.exports = {
         basic: "repeat(auto-fit, minmax(380px, 1fr))",
       },
       gridAutoRows: {
-        basic: "500px",
+        basic: "700px",
       },
     },
   },
