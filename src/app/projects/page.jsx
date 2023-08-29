@@ -5,10 +5,13 @@ import SingleProject from "../components/Projects/SingleProject";
 import WhiteTitleBar from "../components/TitleBar/WhiteTitleBar";
 import Project from "../components/Project";
 import projectsData from "../projectsData";
+import TitleBar from "../components/TitleBar/TitleBar";
 
 export default function ProjectsPage() {
   return (
     <>
+      <TitleBar text="Projects" />
+      <SectionBreak />
       {projectsData.map((project, index) => (
         <Project
           key={project.id}
