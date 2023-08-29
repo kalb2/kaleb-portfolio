@@ -1,32 +1,44 @@
-"use client"
-import React from 'react'
-import { useState, useEffect } from 'react'
+"use client";
+import React from "react";
+import { useState, useEffect } from "react";
 
 const ChangeAge = () => {
-    const [name, setName] = useState("")
-    const [age, setAge] = useState(0)
+  const [name, setName] = useState("Kaleb");
+  const [age, setAge] = useState(0);
 
-useEffect(() => {
-    console.log("Age Changed", age)
-}, [age]
-)
+  useEffect(() => {
+    console.log("Age Changed", age);
+  }, [age]);
 
   return (
-    <div>
-    <div>
-        <input type='text' value={name} onChange={e => setName(e.target.value)}></input>
-        <br></br>
-        <br />
-        <button onClick={() => setAge(currentCount => currentCount - 1)} >-</button>
-        
-        {age}
-        <button onClick={() => setAge(currentCount => currentCount + 1)}>+</button>
+    <div className="flex flex-col items-center h-full justify-evenly">
+      <div>
+        <input
+          type="text"
+          placeholder="Type Name Here"
+          value={name}
+          maxLength={15}
+          onChange={(e) => setName(e.target.value)}
+        ></input>
+      </div>
+      <div className="flex w-full justify-evenly">
+        <button onClick={() => setAge((currentCount) => currentCount - 1)}>
+          -
+        </button>
+        <h1>
+          {age}
+          </h1>
+        <button onClick={() => setAge((currentCount) => currentCount + 1)}>
+          +
+        </button>
+      </div>
+      
+        <h1 className="px-1">
+          My name is <span className="underline">{name}</span> and I am {age} years old
+        </h1>
+      
     </div>
-    <div>
-        <h2>My name is {name} and I am {age} years old</h2>
-    </div>
-    </div>
-  )
-}
+  );
+};
 
-export default ChangeAge
+export default ChangeAge;

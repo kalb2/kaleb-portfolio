@@ -65,10 +65,13 @@ export default function NavBar() {
           Experience
         </div>
       </Link>
-      <div className="group flex h-full items-center justify-items-end border-black px-5 hover:bg-black">
-        <MenuIcon isOpen={isMenuOpen} toggleMenu={toggleMenu} />
-        {isMenuOpen && <Menu isOpen={isMenuOpen} toggleMenu={toggleMenu} />}
-      </div>
+      <div
+      className="group flex h-full items-center justify-center border-black w-[64px] hover:bg-black cursor-pointer"
+      onClick={toggleMenu}
+    >
+      <MenuIcon isOpen={isMenuOpen} toggleMenu={toggleMenu} />
+      {isMenuOpen && <Menu isOpen={isMenuOpen} toggleMenu={toggleMenu} />}
+    </div>
     </div>
   );
 }

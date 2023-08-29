@@ -32,10 +32,9 @@ function Menu({ isOpen, toggleMenu }) {
       } transition-transform`}
     >
       <div className="flex h-14 justify-end">
-        <div className="border-r"></div>
         <button
           onClick={toggleMenu}
-          className="h-14 w-14 hover:bg-black hover:text-white"
+          className=" hover:bg-black hover:text-white w-[64px] px-0 rounded-none border-black"
         >
           <div>Close</div>
         </button>

@@ -16,7 +16,6 @@
 button {
   all: unset;
   border: 0.05em solid #888;
-  background-color: #bbb;
   border-radius: 0.25em;
   padding: 0.5em 1em;
   text-align: center;

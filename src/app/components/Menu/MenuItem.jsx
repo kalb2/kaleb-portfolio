@@ -30,7 +30,7 @@ export default function MenuItem({ text, href, toggleMenu, src }) {
               peer-hover:text-white
               "
         >
-          <h1 className="text-4xl uppercase">{text}</h1>
+          <h1 className="text-4xl uppercase text-left">{text}</h1>
         </div>
       </div>
     </Link>

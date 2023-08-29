@@ -61,6 +61,11 @@ function ArrayState() {
 
   return (
     <div>
+      <div className="bg-neutral-200 border p-1 h-10">
+      <h1>
+      {array.join(", ")}
+      </h1>
+      </div>
       <button onClick={removeFirstElement}>Remove First Element</button>
       <br />
       <button onClick={() => removeSpecificLetter("B")}>Remove All B&apos;s</button>
@@ -77,13 +82,12 @@ function ArrayState() {
       <br />
       <button onClick={() => addLetterAtIndex("C", 2)}>Add C At 2</button>
       <br />
-      <input value={value} onChange={e => setValue(e.target.value)} />
+      <input placeholder="Add Value Here" value={value} onChange={e => setValue(e.target.value)} />
       <br />
       <button onClick={() => addLetterToStart(value)}>
         Add Value To Array
       </button>
       <br />
-      {array.join(", ")}
     </div>
   )
 }
