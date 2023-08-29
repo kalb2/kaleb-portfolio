@@ -10,7 +10,7 @@ function Project({ project, order }) {
         <h1 className="text-6xl uppercase tracking-widest">{project.title}</h1>
       </div> */}
 
-      <div className="grid-cols-basic auto-rows-basic grid divide-x border-b">
+      <div className="grid-cols-basic auto-rows-[calc(100vh-3.5rem)] grid divide-x border-b">
         {order === 1 ? (
           <>
             <TabNavigation tabs={project.tabs} project={project} />
@@ -24,7 +24,7 @@ function Project({ project, order }) {
         )}
       </div>
 
-      <SectionBreak />
+      {/* <SectionBreak /> */}
     </>
   );
 }

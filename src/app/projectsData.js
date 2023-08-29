@@ -113,7 +113,7 @@ const projectsData = [
       id: 9,
       title: "UserList",
       description: "Description of Project 2.",
-      imageUrl: "/next.svg",
+      // imageUrl: "/next.svg",
       tabs: {
         tab1: "Tab 1 Content for Project 2",
         tab2: "Tab 2 Content for Project 2",

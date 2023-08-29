@@ -12,7 +12,7 @@ export default function Home() {
       <TitleBar text="Recent Projects" />
       <CardRow>
         <Card text="001" title="Basic useState" href="/projects/BasicUseStateProjects" />
-        <Card text="001" title="This Website" href="/" />
+        <Card text="001" title="Basic Fetch" href="/projects/BasicFetchRequest" />
         <Card text="001" title="This Website" href="/" />
         {/* <Card text="002" title="Baby-Elo" />
         <Card text="003" title="Daily React" /> */}

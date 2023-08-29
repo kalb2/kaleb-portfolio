@@ -5,7 +5,7 @@ import UpdateName from "../components/UseState/updateName";
 import ArrayState from "../components/ArrayState/arrayState";
 import "./styles.css";
 
-export default function BasicUseStateProjects() {
+export default function BasicUseStateProjectsPage() {
   return (
     <>
       <div className="flex text-2xl sm:text-3xl h-14 divide-x uppercase border-b">
@@ -13,10 +13,10 @@ export default function BasicUseStateProjects() {
         <div className="flex items-center px-3">001</div>
       </div>
       <div className="flex flex-col sm:flex-row sm:h-[calc(100vh-7rem)]">
-      <div className="basis-1/3 border-r flex flex-col">
-          <div className="grow border-b border-t sm:border-t-0">
+      <div className="basis-1/3 sm:border-r flex flex-col">
+          <div className="grow border-b ">
             <p
-              className="text-black text-5xl uppercase"
+              className="text-black text-5xl uppercase sm:border-b"
               style={{
                 backgroundImage:
                   "repeating-linear-gradient(180deg, transparent, transparent 47px, #000 47.5px, #000 48.5px)",
@@ -31,13 +31,13 @@ export default function BasicUseStateProjects() {
               my understanding of the useState hook.
             </p>
             <p className="py-1">
-              Whether it was an indivual state or multiple, I've found this to
+              Whether it was an indivual state or multiple, I have found this to
               be invaluable over my career.
             </p>
           </div>
         </div>
         <div className="grid grid-cols-basic basis-2/3">
-          <div className="flex flex-col items-center border-b border-r ">
+          <div className="flex flex-col items-center border-b sm:border-r ">
             <div className="border-b w-full text-center text-2xl h-10 py-1">
               Simple Counter
             </div>
@@ -45,7 +45,7 @@ export default function BasicUseStateProjects() {
               <Counter />
             </div>
           </div>
-          <div className="flex flex-col items-center border-b border-r">
+          <div className="flex flex-col items-center border-b sm:border-r">
             <div className="border-b w-full text-center text-2xl h-10 py-1">
               Change On Input
             </div>
@@ -54,7 +54,7 @@ export default function BasicUseStateProjects() {
             </div>
           </div>
 
-          <div className="flex flex-col items-center border-r border-b">
+          <div className="flex flex-col items-center sm:border-r border-b sm:border-b-0">
             <div className="border-b w-full text-center text-2xl h-10 py-1">
               Single Array State
             </div>
@@ -62,7 +62,7 @@ export default function BasicUseStateProjects() {
               <UpdateName />
             </div>
           </div>
-          <div className="flex flex-col items-center border-r">
+          <div className="flex flex-col items-center sm:border-r">
             <div className="border-b w-full text-center text-2xl h-10 py-1">
               Mult. Array States
             </div>
