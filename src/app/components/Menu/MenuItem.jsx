@@ -13,7 +13,7 @@ export default function MenuItem({ text, href, toggleMenu, src }) {
         onClick={handleClick}
       >
         <div
-          className="peer h-14 w-14 border-y bg-cover bg-center order-last bg-no-repeat"
+          className="peer h-14 w-[64px] border-y bg-cover bg-center order-last bg-no-repeat"
           style={{ backgroundImage: `url(${src})` }}
         ></div>
         <div
