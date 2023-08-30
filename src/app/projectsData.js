@@ -63,7 +63,7 @@ const projectsData = [
     // },
     {
       id: 5,
-      title: "Array",
+      title: "Custom Hook - useArray",
       description: "Description of Project 3.",
       // imageUrl: "/next.svg",
       tabs: {

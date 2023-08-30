@@ -9,9 +9,6 @@ export default function ProjectRight({ project }) {
   return (
     <div className="divide-y">
       <div className="h-3/4 flex bg-zinc-300 place-content-center">
-        {/* <Carousel /> */}
-        {/* <div className="group relative h-full w-full"> */}
-          {/* <div className="relative h-full overflow-hidden"> */}
           {project.imageUrl ? (
              <img src={project.imageUrl} />
           ) : (
@@ -20,12 +17,10 @@ export default function ProjectRight({ project }) {
             <Component />
             </div>
           )}
-          {/* </div> */}
-        {/* </div> */}
+
       </div>
 
       <div className="flex h-1/4 divide-x ">
-      {/* <div className="text-6xl bg-black text-white uppercase border-white">Try me</div> */}
         <ProjectName title={project.title} />
         <ProjectDescription description={project.description} />
       </div>
