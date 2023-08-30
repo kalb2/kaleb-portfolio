@@ -29,7 +29,7 @@ export default function ProjectsPage() {
         <div className="row-span-1 order-6 col-span-2 flex items-center">
           <Link href="/projects/ThisWebsite">
             <p className="text-4xl font-light pl-4 after:content-['_↗'] after:text-6xl ">
-              This Website{" "}
+              This Website
             </p>
           </Link>
         </div>
@@ -38,8 +38,8 @@ export default function ProjectsPage() {
             <div>
               <p>
                 Creating this has been a challenge all along the way, but I
-                wouldn't trade the experience of teaching myself Next.js and
-                React fundamentals.{" "}
+                wouldn&apos;t trade the experience of teaching myself Next.js and
+                React fundamentals.
               </p>
             </div>
             <div className="flex gap-5 flex-wrap">
@@ -87,7 +87,7 @@ export default function ProjectsPage() {
       <div className="grid grid-flow-row divide-x grid-cols-[1fr_2fr_repeat(3,_1fr)] w-screen grid-rows-[6fr_1fr_3fr] h-[calc(100vh-7.5rem)] border-b">
         <div className="order-1 row-span-1 col-span-1 border-b  "></div>
         <div className="row-span-1 order-2 col-span-2 border-b ">
-          Background
+          <RefForm />
         </div>
         <div className="row-span-2 order-3 col-span-1 flex items-end ">
           <Image

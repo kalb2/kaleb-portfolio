@@ -6,11 +6,12 @@
   border: solid;
   border-width: 1px;
   position: absolute;
-  width: 10px;
-  height: 10px;
+  width: 7px;
+  height: 7px;
   background: #FFF;
   transform: translate3d(-50%, -50%, 0);
   border-radius: 50%;
+  z-index: 10;
 }
 
 button {

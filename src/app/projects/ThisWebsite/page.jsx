@@ -28,7 +28,7 @@ export default function ThisWebsitePage() {
             Creating this site has pushed me beyond my limits time and time again.
           </p>
           <p className="py-1">
-            While I know it is far from perfect, I've enjoyed the entire process.
+            While I know it is far from perfect, I have enjoyed the entire process.
           </p>
         </div>
       </div>
