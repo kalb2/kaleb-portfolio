@@ -1,4 +1,6 @@
+import ProjectRight from '@/app/components/Projects/ProjectRight';
 import React from 'react'
+import projectsData from '@/app/projectsData';
 
 
 export default function ThisWebsitePage() {
@@ -23,17 +25,15 @@ export default function ThisWebsitePage() {
         </div>
         <div className="h-1/4 p-5 border-b sm:border-b-0">
           <p className="py-1">
-            When I began learning React, I created these examples to solidify
-            my understanding of the useState hook.
+            Creating this site has pushed me beyond my limits time and time again.
           </p>
           <p className="py-1">
-            Whether it was an indivual state or multiple, I have found this to
-            be invaluable over my career.
+            While I know it is far from perfect, I've enjoyed the entire process.
           </p>
         </div>
       </div>
       <div className="grid grid-cols-basic basis-2/3">
-        
+        <ProjectRight project={projectsData[1]}/>
       </div>
 
     </div>
