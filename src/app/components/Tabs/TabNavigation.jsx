@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import TabContent from "./TabContent";
-import ProjectName from "../Projects/ProjectName";
-import ProjectDescription from "../Projects/ProjectDescription";
+import ProjectName from "../Projects/Original/ProjectName";
+import ProjectDescription from "../Projects/Original/ProjectDescription";
 
 function TabNavigation({ tabs, project }) {
   const [activeTab, setActiveTab] = useState(0);

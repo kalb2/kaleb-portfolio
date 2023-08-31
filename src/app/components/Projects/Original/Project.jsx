@@ -1,7 +1,7 @@
 import React from "react";
-import TabNavigation from "../components/Tabs/TabNavigation";
-import ProjectRight from "./Projects/ProjectRight";
-import SectionBreak from "./SectionBreak/SectionBreak";
+import TabNavigation from "../../Tabs/TabNavigation";
+import ProjectRight from "./ProjectRight";
+import SectionBreak from "../../SectionBreak/SectionBreak";
 
 function Project({ project, order }) {
   return (

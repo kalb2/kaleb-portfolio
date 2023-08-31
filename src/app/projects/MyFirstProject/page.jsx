@@ -1,4 +1,4 @@
-import ProjectRight from "@/app/components/Projects/ProjectRightAlternate";
+import ProjectRight from "@/app/components/Projects/Alternate/ProjectRightAlternate";
 import projectsData from "@/app/projectsData";
 import { H1 } from "@/app/styles/components";
 import React from "react";
@@ -14,11 +14,14 @@ export default function MyFirstProjectPage() {
         <div className="basis-1/3 sm:border-r flex flex-col">
           <div className="grow border-b ">
             <H1>My First React Project</H1>
-          <div className="flex justify-center grow p-3">
-            <a href="https://prismatic-zuccutto-df4443.netlify.app/" target='_blank'>
+            <div className="flex justify-center grow p-3">
+              <a
+                href="https://prismatic-zuccutto-df4443.netlify.app/"
+                target="_blank"
+              >
                 <button className="bg-black text-white">View on Netlify</button>
-            </a>
-          </div>
+              </a>
+            </div>
           </div>
           <div className=" p-5 border-b sm:border-b-0">
             <p className="py-1">
@@ -32,7 +35,7 @@ export default function MyFirstProjectPage() {
           </div>
         </div>
         {/* <div className="grid grid-cols-basic basis-2/3 "> */}
-          <ProjectRight project={projectsData[12]} />
+        <ProjectRight project={projectsData[12]} />
         {/* </div> */}
       </div>
     </>

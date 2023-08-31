@@ -1,4 +1,4 @@
-import Project from "../components/Project";
+import Project from "../components/Projects/Original/Project";
 import projectsData from "../projectsData";
 import TitleBar from "../components/TitleBar/TitleBar";
 import SectionBreak from "../components/SectionBreak/SectionBreak";

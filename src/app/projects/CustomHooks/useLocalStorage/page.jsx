@@ -1,4 +1,4 @@
-import Project from "@/app/components/ProjectAlternate";
+import Project from "@/app/components/Projects/Alternate/ProjectAlternate";
 import projectsData from "@/app/projectsData";
 import React from "react";
 
