@@ -31,20 +31,21 @@ function Menu({ isOpen, toggleMenu }) {
         isOpen ? "translate-x-0 border-l-2" : "translate-x-full border-l-0"
       } transition-transform`}
     >
-      <div className="flex h-14 justify-end">
+      <div className="flex h-14 justify-end border-l">
         <button
           onClick={toggleMenu}
-          className=" hover:bg-black hover:text-white w-[64px] px-0 rounded-none border-black"
+          className=" hover:bg-black hover:text-white w-[64px] px-0 rounded-none border-black "
         >
           <div>Close</div>
         </button>
       </div>
-      <div className="h-[calc(100vh-80px)] border-t">
+      <div className="h-[calc(100vh-3.5rem)] border-t first:border-l">
         <MenuItem
           text="Projects"
           href="/projects"
           src="/Code.png"
           toggleMenu={toggleMenu}
+          className="border-l"
         />
         <MenuItem
           text="Experience"
@@ -64,6 +65,9 @@ function Menu({ isOpen, toggleMenu }) {
           src="/Code.png"
           toggleMenu={toggleMenu}
         />
+      <div className="flex justify-center pt-10">
+        <button>Contact Me</button>
+        </div>
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-export default function MenuItem({ text, href, toggleMenu, src }) {
+export default function MenuItem({ text, href, toggleMenu, src, className }) {
   const handleClick = () => {
     toggleMenu();
   };
@@ -9,7 +9,7 @@ export default function MenuItem({ text, href, toggleMenu, src }) {
   return (
     <Link href={href}>
       <div
-        className="flex h-14 w-full items-center justify-between border-b "
+        className={`flex h-14 w-full items-center justify-between border-b ${className}`}
         onClick={handleClick}
       >
         <div

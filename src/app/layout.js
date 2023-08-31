@@ -1,6 +1,9 @@
+
 import NavBar from "./components/NavBar/NavBar";
 import "./globals.css";
 import { Roboto_Mono } from "next/font/google";
+import { ThemeProvider } from 'styled-components';
+import {theme} from "./styles/theme"
 
 const roboto = Roboto_Mono({ subsets: ["latin"] });
 
