@@ -5,7 +5,7 @@ import SectionBreak from "../components/SectionBreak/SectionBreak";
 import kjlogoonly from "../assets/LOGO ONLY.svg";
 import Image from "next/image";
 import Link from "next/link";
-import RefForm from "./components/BasicForm/RefForm";
+import RefForm from "../components/projectcomponents/BasicForm/RefForm";
 
 export default function ProjectsPage() {
   return (
@@ -38,8 +38,8 @@ export default function ProjectsPage() {
             <div>
               <p>
                 Creating this has been a challenge all along the way, but I
-                wouldn&apos;t trade the experience of teaching myself Next.js and
-                React fundamentals.
+                wouldn&apos;t trade the experience of teaching myself Next.js
+                and React fundamentals.
               </p>
             </div>
             <div className="flex gap-5 flex-wrap">

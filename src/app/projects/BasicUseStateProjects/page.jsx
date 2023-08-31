@@ -1,14 +1,16 @@
 import React from "react";
-import Counter from "../components/UseState/counter";
-import ChangeAge from "../components/UseState/ChangeAge";
-import UpdateName from "../components/UseState/updateName";
-import ArrayState from "../components/ArrayState/arrayState";
+import Counter from "../../components/projectcomponents/UseState/counter";
+import ChangeAge from "../../components/projectcomponents/UseState/ChangeAge";
+import UpdateName from "../../components/projectcomponents/UseState/updateName";
+import ArrayState from "../../components/projectcomponents/ArrayState/arrayState";
 import "./styles.css";
 import GithubLink from "@/app/components/GithubLink/GithubLink";
+import { H1 } from "@/app/styles/components";
 
-const repoUrl = 'https://github.com/kalb2/kaleb-portfolio/blob/c7510a6a05bdf4467585a6ac4c9e61e8917d9ec7/src/app/projects/BasicUseStateProjects/page.jsx'
+const repoUrl =
+  "https://github.com/kalb2/kaleb-portfolio/blob/c7510a6a05bdf4467585a6ac4c9e61e8917d9ec7/src/app/projects/BasicUseStateProjects/page.jsx";
 
-export default function BasicUseStateProjectsPage({href}) {
+export default function BasicUseStateProjectsPage({ href }) {
   return (
     <>
       <div className="flex text-2xl sm:text-3xl h-14 divide-x uppercase border-b">
@@ -16,19 +18,19 @@ export default function BasicUseStateProjectsPage({href}) {
         <div className="flex items-center px-3">001</div>
       </div>
       <div className="flex flex-col md:flex-row sm:h-[calc(100vh-7rem)]">
-      <div className="basis-1/3 sm:border-r flex flex-col">
+        <div className="basis-1/3 sm:border-r flex flex-col">
           <div className="flex flex-col grow border-b ">
-            <p
-              className="text-black text-5xl uppercase sm:border-b"
-              style={{
-                backgroundImage:
-                  "repeating-linear-gradient(180deg, transparent, transparent 47px, #000 47.5px, #000 48.5px)",
-              }}
+            <H1
+            // className="text-black text-5xl uppercase sm:border-b"
+            // style={{
+            //   backgroundImage:
+            //     "repeating-linear-gradient(180deg, transparent, transparent 47px, #000 47.5px, #000 48.5px)",
+            // }}
             >
               Creating Basic Examples of the useState hook.
-            </p>
-            <div className="flex justify-center grow p-3" >
-            <GithubLink href={repoUrl} />
+            </H1>
+            <div className="flex justify-center grow p-3">
+              <GithubLink href={repoUrl} />
             </div>
           </div>
           <div className="h-1/4 p-5 border-b sm:border-b-0">
@@ -77,7 +79,6 @@ export default function BasicUseStateProjectsPage({href}) {
             </div>
           </div>
         </div>
-
       </div>
     </>
   );

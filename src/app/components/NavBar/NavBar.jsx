@@ -8,9 +8,14 @@ import { usePathname } from "next/navigation";
 import MenuIcon from "../Menu/MenuIcon";
 import Menu from "../Menu/Menu";
 import { useState } from "react";
+import Modal from "../Modal/Modal";
 
 export default function NavBar() {
   const currentRoute = usePathname();
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => setModalOpen(true);
+  const closeModal = () => setModalOpen(false);
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -25,14 +30,37 @@ export default function NavBar() {
           <Image src={kjlogo} height={50} width={"auto"} alt="My Logo" />
         </div>
       </Link>
-      <div className="flex h-full flex-1 items-center justify-end border-r border-black p-0">
+
+      <div className="flex flex-1 flex-nowrap items-center justify-end py-2 px-3">
+        <button
+          onClick={openModal}
+          className="px-4 py-2 bg-black text-white rounded hover:bg-blue-600"
+        >
+          Contact Me
+        </button>
+        <Modal isOpen={modalOpen} onClose={closeModal}>
+          <div>
+            <p>
+              Email:{" "}
+              <a
+                href="mailto:your.email@example.com"
+                className="hover:underline hover:text-blue-600"
+              >
+                kalebcj@gmail.com
+              </a>
+            </p>
+          </div>
+        </Modal>
+      </div>
+
+      <div className="hidden lg:flex h-full items-center justify-end border-r border-black px-3">
         <a href="https://www.linkedin.com/in/kalebjensen/" target="_blank">
           <Image
             src={linkedinlogo}
             width={45}
             height={"auto"}
             alt="my LinkedIn"
-            className="invisible mr-5 md:visible"
+            className=" mr-5"
           />
         </a>
         <a href="https://github.com/kalb2" target="_blank">
@@ -41,7 +69,7 @@ export default function NavBar() {
             width={45}
             height={"auto"}
             alt="my Github"
-            className="invisible mr-5 md:visible"
+            className="mr-5 "
           />
         </a>
       </div>
@@ -66,12 +94,12 @@ export default function NavBar() {
         </div>
       </Link>
       <div
-      className="group flex h-full items-center justify-center border-black w-[64px] hover:bg-black cursor-pointer"
-      onClick={toggleMenu}
-    >
-      <MenuIcon isOpen={isMenuOpen} toggleMenu={toggleMenu} />
-      {isMenuOpen && <Menu isOpen={isMenuOpen} toggleMenu={toggleMenu} />}
-    </div>
+        className="group flex h-full items-center justify-center border-black w-[64px] hover:bg-black cursor-pointer"
+        onClick={toggleMenu}
+      >
+        <MenuIcon isOpen={isMenuOpen} toggleMenu={toggleMenu} />
+        {isMenuOpen && <Menu isOpen={isMenuOpen} toggleMenu={toggleMenu} />}
+      </div>
     </div>
   );
 }
