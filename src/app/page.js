@@ -7,6 +7,7 @@ import WhiteTitleBar from "./components/TitleBar/WhiteTitleBar";
 import code from "../../public/Code.png"
 import oladipo from "../../public/OladipoProject.png"
 import RouterBlog from "../../public/RouterBlog.png"
+import Forms from "../../public/Forms.png"
 
 
 export default function Home({bgimage}) {
@@ -18,7 +19,7 @@ export default function Home({bgimage}) {
       <CardRow>
         <Card text="001" title="This Website" href="/projects/ThisWebsite" bgimage={code.src} />
         <Card text="002" title="ReactRouter Blog" href="/projects/ReactRouterBlog" bgimage={RouterBlog.src} />
-        <Card text="003" title="Forms" href="/projects/Forms" />
+        <Card text="003" title="Forms" href="/projects/Forms" bgimage={Forms.src} />
         <Card text="004" title="Custom Hooks" href="/projects/CustomHooks" />
         <Card text="005" title="API Fetch" href="/projects/FetchAPI" />
         <Card text="006" title="Basic Fetch" href="/projects/BasicFetchRequest" />

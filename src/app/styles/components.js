@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 import {theme} from "../styles/theme"
 import { sizes } from '../styles/theme'
 
+
 const SET_SIZE = 2;
 
 export const large = ({ lines, large: largeText, lowercase }) => css`

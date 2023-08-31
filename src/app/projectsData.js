@@ -28,7 +28,7 @@ const projectsData = [
   {
     id: 2,
     title: "useRef Form",
-    description: "Description of Project 1.",
+    description: "A form created w/ useRef and validation.",
     // imageUrl: "/Code.png",
     tabs: {
       tab1: "Tab 1 Content for Project 1",
@@ -40,7 +40,7 @@ const projectsData = [
   {
     id: 3,
     title: "useState Form",
-    description: "Description of Project 2.",
+    description: "A form created w/ useState and validation",
     // imageUrl: "/next.svg",
     tabs: {
       tab1: "Tab 1 Content for Project 2",

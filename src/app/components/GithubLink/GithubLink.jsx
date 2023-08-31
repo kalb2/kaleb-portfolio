@@ -7,7 +7,7 @@ export default function GithubLink({href}) {
     <div className='flex items-center'>
     <a href={href} target='_blank'>
     <button  className='flex gap-5' >
-        <Image priority src={ghlogowhite} alt="Github Logo" height={45} width={45} />
+        <Image priority src={ghlogowhite} alt="Github Logo" height={30} width={30} />
         <p className='self-center'>View on Github</p>
     </button>
     </a>

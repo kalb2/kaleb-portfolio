@@ -1,7 +1,11 @@
+import GithubLink from "@/app/components/GithubLink/GithubLink";
 import ProjectRight from "@/app/components/Projects/ProjectRightAlternate";
 import projectsData from "@/app/projectsData";
 import { H1 } from "@/app/styles/components";
 import React from "react";
+
+
+const repoUrl = "https://github.com/kalb2/Basic-Blog-Project/tree/9f7e86b65a09412e738bf2c10f80bedb4fc79b85/after/client"
 
 export default function ReactRouterBlogPage() {
   return (
@@ -14,20 +18,19 @@ export default function ReactRouterBlogPage() {
         <div className="basis-1/3 sm:border-r flex flex-col">
           <div className="grow border-b ">
             <H1>Basic Blog w/ React Router</H1>
-          <div className="flex justify-center grow p-3">
+          <div className="flex flex-col justify-center items-center grow p-3 gap-2">
             <a href="https://cosmic-entremet-92551b.netlify.app" target='_blank'>
                 <button className="bg-black text-white">View on Netlify</button>
             </a>
+            <GithubLink href={repoUrl} />
           </div>
           </div>
           <div className=" p-5 border-b sm:border-b-0">
             <p className="py-1">
-              With no experience with JavaScript, React, or MaterialUI I created
-              this player bio dashboard.
+              Using a JSON Server, I created a basic blog that allows users to create new posts, update current ones, and search posts. 
             </p>
             <p className="py-5">
-              Using MaterialUI I learned about mapping data from a JSON file to
-              React components.
+             Note - In production, this uses a small JSON Server database, so data changed will not persist. 
             </p>
           </div>
         </div>

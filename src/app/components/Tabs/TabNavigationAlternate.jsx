@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import TabContent from "./TabContent";
 import ProjectName from "../Projects/ProjectName";
 import ProjectDescription from "../Projects/ProjectDescription";
+import { H1, H3 } from "@/app/styles/components";
 
 function TabNavigation({ tabs, project }) {
   const [activeTab, setActiveTab] = useState(0);
@@ -23,16 +24,15 @@ function TabNavigation({ tabs, project }) {
           {project.title}
         </div>
         <div className="row-span-3 border-r"></div>
-        <div className="col-span-2 row-span-3 text-2xl sm:text-3xl ">
+        <div className="col-span-2 row-span-3 text-2xl sm:text-4xl ">
           <p
-            className="leading-8 text-black"
-            style={{
-              backgroundImage:
-                "repeating-linear-gradient(180deg, transparent, transparent 31.5px, #000 32.5px)",
-            }}
+            // className="leading-8 text-black uppercase"
+            // style={{
+            //   backgroundImage:
+            //     "repeating-linear-gradient(180deg, transparent, transparent 31.5px, #000 32.5px)",
+            // }}
           >
-            CREATING PRODUCTS THAT LAST LONGER AND ARE DESIGNED WITH THE END IN
-            MIND.
+           {project.description}
           </p>
         </div>
       </div>
