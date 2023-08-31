@@ -6,14 +6,14 @@ import { sizes } from '../styles/theme'
 const SET_SIZE = 2;
 
 export const large = ({ lines, large: largeText, lowercase }) => css`
-  font-size: ${theme.fontSizes[largeText ? 6 : SET_SIZE]};
+  font-size: ${theme.fontSizes[largeText ? 5 : SET_SIZE]};
 
   @media (min-width: ${theme.sizes.md}px) {
-    font-size: ${theme.fontSizes[largeText ? 7 : SET_SIZE]};
+    font-size: ${theme.fontSizes[largeText ? 6 : SET_SIZE]};
   }
 
   @media (min-width: ${theme.sizes.xl}px) {
-    font-size: ${theme.fontSizes[largeText ? 8 : SET_SIZE]};
+    font-size: ${theme.fontSizes[largeText ? 7 : SET_SIZE]};
   }
 
   font-weight: ${theme.fontWeights.normal};

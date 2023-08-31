@@ -9,11 +9,11 @@ export default function MenuItem({ text, href, toggleMenu, src, className }) {
   return (
     <Link href={href}>
       <div
-        className={`flex h-14 w-full items-center justify-between border-b ${className}`}
+        className={`flex h-[3.25rem] w-full items-center justify-between border-b ${className}`}
         onClick={handleClick}
       >
         <div
-          className="peer h-14 w-[64px] border-y bg-cover bg-center order-last bg-no-repeat"
+          className="peer h-[3.25rem] w-[64px] border-y bg-cover bg-center order-last bg-no-repeat"
           style={{ backgroundImage: `url(${src})` }}
         ></div>
         <div
