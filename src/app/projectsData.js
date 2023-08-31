@@ -231,6 +231,13 @@ const projectsData = [
     title: "Basic useState Projects",
     href: "BasicUseStateProjects",
     bgimage: "/Code.png",
+    imageUrl: "/OladipoProject.png",
+    tabs: {
+      tab1: "Tab 1 Content for Project 3",
+      tab2: "Tab 2 Content for Project 3",
+      tab3: "Tab 3 Content for Project 3",
+    },
+    component: Counter,
   },
   {
     id: 16,
