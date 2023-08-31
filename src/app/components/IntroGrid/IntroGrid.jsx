@@ -1,8 +1,7 @@
 import React from "react";
-import styles from "./styles.module.css";
 import Image from "next/image";
 import kjlogoonly from "../../assets/LOGO ONLY.svg";
-import TitleBar from "../TitleBar/TitleBar";
+import TitleBar from "../TitleBar/TitleBar2";
 import { H1, H2, H3, H4, P } from '../../styles/components'
 import WhiteTitleBar from "../TitleBar/WhiteTitleBar";
 
@@ -10,7 +9,7 @@ import WhiteTitleBar from "../TitleBar/WhiteTitleBar";
 export default function IntroGrid() {
   return (
     <>
-      <WhiteTitleBar text="Welcome" />
+      <TitleBar text="Welcome" />
       <div className="grid h-[calc(100vh-7.5rem)] grid-cols-[1fr_3fr_2fr] grid-rows-[1fr_auto] ">
         <div className="sm:row-span-2 border-b border-r row-span-1"></div>
         <div className="border-b border-r"></div>

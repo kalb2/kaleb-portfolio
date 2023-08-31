@@ -47,7 +47,7 @@ const lineHeights = [1, 1.125, 1.25, 1.4, 1.75, 2];
 
 const fontWeights = {
   bold: 700,
-  normal: 300,
+  normal: 400,
   semiBold: 500,
 };
 
