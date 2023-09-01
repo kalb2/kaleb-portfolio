@@ -8,13 +8,13 @@ import WhiteTitleBar from "../TitleBar/WhiteTitleBar";
 export default function IntroGrid() {
   return (
     <>
-      <TitleBar text="Built with Next.js" />
+      <TitleBar text="Welcome" />
       <div className="grid h-[calc(100vh-7.8rem)] grid-cols-[1fr_3fr_2fr] grid-rows-[1fr_auto] ">
         <div className="sm:row-span-2 border-b border-r row-span-1"></div>
         <div className="border-b border-r"></div>
         <div className="border-b"></div>
         <div className="border-b border-r col-span-2 sm:col-span-1">
-          <H1>A Front-end Dev <br/> That enjoys building new things.</H1>
+          <H1>Self-Taught <br/> Front-End Dev Building Experiences</H1>
           {/* <p
             className="text-8xl uppercase px-3 leading-tight
             // bg-gradient-to-b from-transparent via-white via-20% to-black

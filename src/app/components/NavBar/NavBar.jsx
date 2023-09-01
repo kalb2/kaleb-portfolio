@@ -44,7 +44,7 @@ export default function NavBar() {
               Email:{" "}
               <a
                 href="mailto:your.email@example.com"
-                className="hover:underline hover:text-blue-600"
+                className="hover:underline text-blue-600"
               >
                 kalebcj@gmail.com
               </a>
@@ -53,24 +53,17 @@ export default function NavBar() {
         </Modal>
       </div>
 
-      <div className="hidden lg:flex h-full items-center justify-end border-r border-black px-3">
+      <div className="hidden lg:flex h-full items-center justify-end border-r border-black px-3 gap-3">
         <a href="https://www.linkedin.com/in/kalebjensen/" target="_blank">
           <Image
             src={linkedinlogo}
             width={45}
             height={"auto"}
             alt="my LinkedIn"
-            className=" mr-5"
           />
         </a>
         <a href="https://github.com/kalb2" target="_blank">
-          <Image
-            src={githublogo}
-            width={45}
-            height={"auto"}
-            alt="my Github"
-            className="mr-5 "
-          />
+          <Image src={githublogo} width={45} height={"auto"} alt="my Github" />
         </a>
       </div>
       <Link
