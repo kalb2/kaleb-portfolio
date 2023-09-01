@@ -34,7 +34,7 @@ export default function ThisWebsitePage() {
           </div>
         </div>
         <div className="grid grid-cols-basic basis-2/3">
-          <ProjectRight project={projectsData[1]} />
+          <ProjectRight project={projectsData[0]} />
         </div>
       </div>
     </>

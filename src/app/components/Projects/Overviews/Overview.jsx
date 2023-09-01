@@ -1,0 +1,52 @@
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+import kjlogoonly from "../../../assets/LOGO ONLY.svg";
+import Concepts from "../../Content/Concepts";
+
+export default function Overview({ project }) {
+  const Component = project.component;
+
+  return (
+    <div className="sm:grid-flow-row grid divide-x grid-cols-[1fr_2fr_repeat(3,_1fr)] w-screen grid-rows-[6fr_1fr_3fr] h-[calc(100vh-7.5rem)] border-b">
+      <div className="order-1 row-span-1 hidden sm:block col-span-1 border-b "></div>
+      <div className="row-span-1 order-2 col-span-5 sm:col-span-2 border-b ">
+        {project.displayComponent ? (
+          <Component />
+        ) : (
+          <div
+            className="w-full h-full"
+            style={{
+              backgroundImage: `url(${project.bgimage})`,
+              backgroundSize: "cover",
+            }}
+          ></div>
+        )}
+      </div>
+      <div className="row-span-2 order-7 sm:order-3 col-span-1 flex items-end ">
+        <Image
+          src={kjlogoonly}
+          alt="My Logo"
+          className="w-20 border-r border-t p-1 "
+        />
+      </div>
+      <div className="row-span-3 order-4 col-span-1 hidden sm:block "></div>
+      <div className="row-span-2 order-5 col-span-1 hidden sm:block "></div>
+      <div className="row-span-1 order-6 sm:col-span-2 col-span-4 flex items-center">
+        <Link href={`/projects/${project.href}`}>
+          <p className="text-4xl font-light pl-4 after:content-['_↗'] after:text-6xl ">
+            {project.title}
+          </p>
+        </Link>
+      </div>
+      <div className="row-span-1 order-7 sm:col-span-3 col-span-4 border-t">
+        <div className="p-10 flex flex-col h-full gap-3">
+          <div>
+            <p>{project.description}</p>
+          </div>
+          <Concepts project={project} />
+        </div>
+      </div>
+    </div>
+  );
+}

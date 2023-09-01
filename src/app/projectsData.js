@@ -26,6 +26,7 @@ const projectsData = [
       tab3: "Tab 3 Content for Project 1",
     },
     component: RefForm,
+    displayComponent: false,
   },
   {
     id: 2,
@@ -41,6 +42,7 @@ const projectsData = [
       tab3: "Tab 3 Content for Project 3",
     },
     component: Counter,
+    displayComponent: false,
   },
   {
     id: 3,
@@ -55,6 +57,7 @@ const projectsData = [
       tab3: "Tab 3 Content for Project 1",
     },
     component: RefForm,
+    displayComponent: true,
   },
   {
     id: 4,
