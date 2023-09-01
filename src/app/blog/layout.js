@@ -1,5 +1,5 @@
 import React from "react";
-import TitleBar from "../components/TitleBar/TitleBar";
+import TitleBar from "../components/TitleBar/TitleBar2";
 
 const BlogLayout = ({ children }) => {
   return (

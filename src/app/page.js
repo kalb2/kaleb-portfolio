@@ -11,7 +11,7 @@ import Forms from "../../public/Forms.png";
 import projectsData from "./projectsData";
 
 export default function Home({ bgimage }) {
-  let counter = 1; // Initialize the counter
+  let counter = 1; 
 
   return (
     <>
