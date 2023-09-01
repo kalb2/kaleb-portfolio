@@ -8,7 +8,7 @@ export default function Effect() {
   const childComponent = show ? <Child /> : null
 
   return (
-    <div>
+    <div className="flex flex-col items-center">
       <button onClick={() => setShow(currentShow => !currentShow)}>
         Show/Hide
       </button>

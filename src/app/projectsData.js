@@ -18,7 +18,7 @@ const projectsData = [
     id: 1,
     title: "This Portfolio Website",
     description:
-      "In some ways, more complex than a portfolio needs to be, but this became a playground for me to experiment with new ideas and skills. Take a deeper look into what went into the making of ",
+      "In some ways, more complex than a portfolio needs to be, but this became a playground for me to experiment with new ideas and skills. Take a deeper look into what went into the making of This Portfolio Website",
     conceptsUsed: [
       "Next.js App Router",
       "React Client Components",
@@ -30,7 +30,7 @@ const projectsData = [
     ],
     repoUrl: "https://github.com/kalb2/kaleb-portfolio",
     href: "ThisWebsite",
-    bgimage: "/Code.png",
+    bgimage: "/ThisWebsite.png",
     // imageUrl: "/Code.png",
     tabs: {
       tab1: "Tab 1 Content for Project 1",
@@ -44,16 +44,18 @@ const projectsData = [
     id: 2,
     title: "React Router Blog",
     description:
-      "A blog made using a fake JSON Server, Axios, and React Router. Check out my ",
-      conceptsUsed: [
-        "React Router",
-        "API Fetch Requests",
-        "Async Functions",
-        "Database Actions/Mutations",
-        "JSON Server",
-        "Axios",
-        "Loaders",
-      ],
+      "A blog made using a fake JSON Server, Axios, and React Router. An implementation of a variety of concepts. Check out my ",
+    conceptsUsed: [
+      "React Router",
+      "API Fetch Requests",
+      "Async Functions",
+      "Database Actions/Mutations",
+      "JSON Server",
+      "Axios",
+      "Loaders",
+    ],
+    repoUrl:
+      "https://github.com/kalb2/Basic-Blog-Project/tree/9f7e86b65a09412e738bf2c10f80bedb4fc79b85/after/client",
     href: "ReactRouterBlog",
     bgimage: "/RouterBlog.png",
     imageUrl: "/RouterBlog.png",
@@ -68,7 +70,16 @@ const projectsData = [
   {
     id: 3,
     title: "useRef Form",
-    description: "A form created w/ useRef and validation.",
+    description: "A basic login form created w/ useRef and basic form validation.",
+    conceptsUsed: [
+      "useRef Hook",
+      "useState Hook",
+      "Basic Form Validation",
+      "Multiple useStates",
+      "Event Listeners",
+    ],
+    repoUrl:
+      "https://github.com/kalb2/kaleb-portfolio/blob/31be306598ae4f69c8bd5ea28b725c679fc6e3ee/src/app/components/projectcomponents/BasicForm/RefForm.jsx",
     href: "Forms/useRef",
     bgimage: "/Forms.png",
     // imageUrl: "/Code.png",
@@ -83,7 +94,16 @@ const projectsData = [
   {
     id: 4,
     title: "useState Form",
-    description: "A form created w/ useState and validation",
+    description: "An alternate login form created w/ useState and basic form validation",
+    conceptsUsed: [
+      "useState Hook",
+      "useMemo Hook",
+      "Basic Form Validation",
+      "Multiple useStates",
+      "Event Listeners",
+    ],
+    repoUrl:
+      "https://github.com/kalb2/kaleb-portfolio/blob/31be306598ae4f69c8bd5ea28b725c679fc6e3ee/src/app/components/projectcomponents/BasicForm/StateForm.jsx",
     href: "Forms/useState",
     bgimage: "/Forms.png",
 
@@ -111,7 +131,14 @@ const projectsData = [
   {
     id: 5,
     title: "Custom Hook - useArray",
-    description: "Description of Project 3.",
+    description: "Creating my own React Hook to manipulate an array.",
+    conceptsUsed: [
+      "Custom React Hook",
+      "Array Manipulation",
+      "useCallback Hook",
+    ],
+    repoUrl:
+      "https://github.com/kalb2/kaleb-portfolio/tree/31be306598ae4f69c8bd5ea28b725c679fc6e3ee/src/app/components/projectcomponents/UseArray",
     href: "CustomHooks/useArray",
     bgimage: "/Code.png",
 
@@ -126,10 +153,19 @@ const projectsData = [
   },
   {
     id: 6,
-    title: "Fetch from API",
-    description: "Description of Project 3.",
+    title: "Custom Hook - Fetch",
+    description: "Using React, I created a custom hook specifically for handling fetch requests from the JSON Placeholder API.",
+    conceptsUsed: [
+      "Custom React Hook",
+      "Fetch API",
+      "useEffect Hook",
+      "useCallback Hook",
+      "Loading States",
+      "Error States",
+    ],
+    repoUrl:
+      "https://github.com/kalb2/kaleb-portfolio/tree/31be306598ae4f69c8bd5ea28b725c679fc6e3ee/src/app/components/projectcomponents/UseArray",
     href: "FetchAPI",
-
     bgimage: "/Code.png",
 
     // imageUrl: "/next.svg",
@@ -144,9 +180,17 @@ const projectsData = [
   {
     id: 7,
     title: "Basic Fetch",
-    description: "Description of Project 3.",
+    description: "Using useEffect and the Fetch API, I created a Basic Fetch Request from the JSON Placeholder API.",
+    conceptsUsed: [
+      "Fetch API",
+      "useEffect Hook",
+      "JSON Placeholder",
+      "Loading States",
+      "Error States",
+    ],
+    repoUrl:
+      "https://github.com/kalb2/kaleb-portfolio/blob/31be306598ae4f69c8bd5ea28b725c679fc6e3ee/src/app/components/projectcomponents/BasicFetch/BasicFetch.jsx",
     href: "BasicFetchRequest",
-
     bgimage: "/Code.png",
 
     // imageUrl: "/next.svg",
@@ -170,25 +214,43 @@ const projectsData = [
   //   },
   //   component: SimpleTodo,
   // },
-  {
-    id: 9,
-    title: "UserList",
-    description: "Description of Project 2.",
-    bgimage: "/Code.png",
+  // {
+  //   id: 9,
+  //   title: "UserList",
+  //   description: "Description of Project 2.",
+  //   conceptsUsed: [
+  //     "Fetch API",
+  //     "useEffect Hook",
+  //     "JSON Placeholder",
+  //     "Loading States",
+  //     "Error States",
+  //   ],
+  //   repoUrl:
+  //     "https://github.com/kalb2/kaleb-portfolio/blob/31be306598ae4f69c8bd5ea28b725c679fc6e3ee/src/app/components/projectcomponents/BasicFetch/BasicFetch.jsx",
+  //   bgimage: "/Code.png",
 
-    // imageUrl: "/next.svg",
-    tabs: {
-      tab1: "Tab 1 Content for Project 2",
-      tab2: "Tab 2 Content for Project 2",
-      tab3: "Tab 3 Content for Project 2",
-    },
-    component: UserList,
-    displayComponent: true,
-  },
+  //   // imageUrl: "/next.svg",
+  //   tabs: {
+  //     tab1: "Tab 1 Content for Project 2",
+  //     tab2: "Tab 2 Content for Project 2",
+  //     tab3: "Tab 3 Content for Project 2",
+  //   },
+  //   component: UserList,
+  //   displayComponent: true,
+  // },
   {
     id: 10,
     title: "UseEffect",
-    description: "Description of Project 3.",
+    description: "In this project, multiple useEffect Hooks are used to change the text as well as the document title (Look up).  ",
+    conceptsUsed: [
+      "useEffect on Children",
+      "useEffect Hook",
+      "Document Interaction",
+      "useState",
+      "Conditional Rendering",
+    ],
+    repoUrl:
+      "https://github.com/kalb2/kaleb-portfolio/tree/31be306598ae4f69c8bd5ea28b725c679fc6e3ee/src/app/components/projectcomponents/useEffect",
     bgimage: "/Code.png",
 
     // imageUrl: "/next.svg",
@@ -203,7 +265,16 @@ const projectsData = [
   {
     id: 11,
     title: "Update Name",
-    description: "Description of Project 3.",
+    description: "Useing useState to update a value",
+    conceptsUsed: [
+      "useEffect on Children",
+      "useEffect Hook",
+      "Document Interaction",
+      "useState",
+      "Conditional Rendering",
+    ],
+    repoUrl:
+      "https://github.com/kalb2/kaleb-portfolio/tree/31be306598ae4f69c8bd5ea28b725c679fc6e3ee/src/app/components/projectcomponents/useEffect",
     bgimage: "/Code.png",
 
     // imageUrl: "/next.svg",
@@ -214,11 +285,12 @@ const projectsData = [
     },
     component: UpdateName,
     displayComponent: true,
+    shouldExclude: true,
   },
   {
     id: 12,
     title: "Manipulate Array",
-    description: "Description of Project 3.",
+    description: "Manipulating an Array with useState.",
     bgimage: "/Code.png",
 
     // imageUrl: "/next.svg",
@@ -229,11 +301,13 @@ const projectsData = [
     },
     component: ArrayState,
     displayComponent: true,
+    shouldExclude: true,
+
   },
   {
     id: 13,
     title: "Basic Age Change",
-    description: "Description of Project 3.",
+    description: "Using useState and useEffect to change an array",
     bgimage: "/Code.png",
 
     // imageUrl: "/next.svg",
@@ -244,11 +318,13 @@ const projectsData = [
     },
     component: ChangeAge,
     displayComponent: true,
+    shouldExclude: true,
+
   },
   {
     id: 14,
     title: "Simple Counter",
-    description: "Description of Project 3.",
+    description: "Using useState to increment a number.",
     bgimage: "/Code.png",
 
     // imageUrl: "/next.svg",
@@ -259,6 +335,8 @@ const projectsData = [
     },
     component: Counter,
     displayComponent: true,
+    shouldExclude: true,
+
   },
   {
     id: 15,
@@ -273,11 +351,19 @@ const projectsData = [
     },
     component: BUSProjects,
     displayComponent: true,
+    
   },
   {
     id: 16,
     title: "My First React Project",
-    description: "A bio page for NBA Players.",
+    description: "Using React and MaterialUI, I created a basic player bio page for NBA players based on JSON Data.",
+    conceptsUsed: [
+      "MaterialUI Components",
+      "Reusable React Components",
+      "Conditional Rendering",
+      "Filtering JSON Data"
+    ],
+    // repoUrl: "",
     href: "MyFirstProject",
     bgimage: "/OladipoProject.png",
 

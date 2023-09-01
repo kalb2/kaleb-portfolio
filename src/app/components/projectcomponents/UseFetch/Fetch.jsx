@@ -33,7 +33,7 @@ export function Fetch() {
 
   return (
     <>
-      <div >
+    <div className="max-h-[50vh]" >
         <label>
           <input
             type="radio"
@@ -64,7 +64,7 @@ export function Fetch() {
       ) : isError ? (
         <h1>Error</h1>
       ) : (
-        <div className=" max-h-[60vh] overflow-auto">
+        <div className="max-h-[50vh] overflow-scroll">
           <pre className=" whitespace-pre-wrap">
             {JSON.stringify(data, null, 2)}
           </pre>

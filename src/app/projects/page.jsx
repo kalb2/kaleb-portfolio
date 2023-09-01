@@ -13,21 +13,22 @@ export default function ProjectsPage() {
   return (
     <>
       <TitleBar text="Projects" />
-      {projectsData.map((project) => {
-        const layout = project.id % 2 === 0 ? 'normal' : 'flipped';
+      {projectsData
+        .filter((project) => !project.shouldExclude)
+        .map((project) => {
+          const layout = project.id % 2 === 0 ? "normal" : "flipped";
 
-        return (
-          <div key={project.id}>
-            {layout === 'normal' ? (
-              <OverviewFlipped project={project} />
-            ) : (
-              <Overview project={project} />
-            )}
-            <SectionBreak />
-          </div>
-        );
-      })}
+          return (
+            <div key={project.id}>
+              {layout === "normal" ? (
+                <OverviewFlipped project={project} />
+              ) : (
+                <Overview project={project} />
+              )}
+              <SectionBreak />
+            </div>
+          );
+        })}
     </>
   );
 }
-

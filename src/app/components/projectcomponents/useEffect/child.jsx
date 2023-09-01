@@ -33,14 +33,14 @@ export function Child() {
   }, [name])
 
   return (
-    <div>
-      <input type="text" value={name} onChange={e => setName(e.target.value)} />
+    <div className="flex flex-col items-center">
+      <input type="text" value={name} onChange={e => setName(e.target.value)} className="bg-[#efefef] border" />
       <br />
-      <br />
+      <div>
       <button onClick={() => setAge(a => a - 1)}>-</button>
       {age}
       <button onClick={() => setAge(a => a + 1)}>+</button>
-      <br />
+      </div>
       <br />
       My name is {name} and I am {age} years old.
     </div>
