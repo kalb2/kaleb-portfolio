@@ -1,16 +1,6 @@
-button {
-    background-color: #000;
-    color: #FFF;
-}
-
-h1 {
-    font-size: x-large;
-    text-align: center;
-}
-
 input {
     background-color: #efefef;
     padding: 5px;
     border: 1px solid;
-
-}
+    border-radius: 5px;
+} 

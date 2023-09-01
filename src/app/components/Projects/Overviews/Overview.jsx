@@ -12,8 +12,9 @@ export default function Overview({ project }) {
       <div className="order-1 row-span-1 hidden sm:block col-span-1 border-b "></div>
       <div className="row-span-1 order-2 col-span-5 sm:col-span-2 border-b ">
         {project.displayComponent ? (
+          <div className="flex flex-col max-h-[60vh] justify-center items-center p-5 font-sans">
           <Component />
-        ) : (
+        </div>        ) : (
           <div
             className="w-full h-full"
             style={{

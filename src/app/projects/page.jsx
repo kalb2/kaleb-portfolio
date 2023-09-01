@@ -13,12 +13,21 @@ export default function ProjectsPage() {
   return (
     <>
       <TitleBar text="Projects" />
-      <Overview project={projectsData[0]} />
-      <SectionBreak />
-      <OverviewFlipped project={projectsData[1]} />
-      <SectionBreak />
-      <Overview project={projectsData[2]} />
-      <SectionBreak />
+      {projectsData.map((project) => {
+        const layout = project.id % 2 === 0 ? 'normal' : 'flipped';
+
+        return (
+          <div key={project.id}>
+            {layout === 'normal' ? (
+              <OverviewFlipped project={project} />
+            ) : (
+              <Overview project={project} />
+            )}
+            <SectionBreak />
+          </div>
+        );
+      })}
     </>
   );
 }
+

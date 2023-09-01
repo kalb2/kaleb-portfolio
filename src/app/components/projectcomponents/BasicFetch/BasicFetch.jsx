@@ -40,14 +40,14 @@ export default function BasicFetch() {
   }, []);
 
   return (
-    <div>
+    <div className="max-h-[60vh]" >
       <h1>User Data</h1>
       {isLoading ? (
         <p>Loading user data...</p>
       ) : error ? (
         <p>Error: {error.message}</p>
       ) : (
-        <div className="max-h-[375px] overflow-scroll">
+        <div className="max-h-[50vh] overflow-scroll">
           <pre className=" whitespace-pre-wrap">
             {JSON.stringify(users, null, 2)}
           </pre>

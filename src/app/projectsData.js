@@ -11,6 +11,7 @@ import Counter from "./components/projectcomponents/UseState/counter";
 import UpdateName from "./components/projectcomponents/UseState/updateName";
 import Effect from "./components/projectcomponents/useEffect/Effect";
 import LocalStorage from "./components/projectcomponents/UseLocalStorage/LocalStorage";
+import BUSProjects from "./projects/BasicUseStateProjects/BUSProjects";
 
 const projectsData = [
   {
@@ -73,6 +74,8 @@ const projectsData = [
       tab3: "Tab 3 Content for Project 2",
     },
     component: StateForm,
+    displayComponent: true,
+
   },
   // {
   //   id: 4,
@@ -100,6 +103,8 @@ const projectsData = [
       tab3: "Tab 3 Content for Project 3",
     },
     component: Array,
+    displayComponent: true,
+
   },
   {
     id: 6,
@@ -116,6 +121,8 @@ const projectsData = [
       tab3: "Tab 3 Content for Project 3",
     },
     component: Fetch,
+    displayComponent: true,
+
   },
   {
     id: 7,
@@ -132,6 +139,8 @@ const projectsData = [
       tab3: "Tab 3 Content for Project 3",
     },
     component: BasicFetch,
+    displayComponent: true,
+
   },
   // {
   //   id: 8,
@@ -158,6 +167,8 @@ const projectsData = [
       tab3: "Tab 3 Content for Project 2",
     },
     component: UserList,
+    displayComponent: true,
+
   },
   {
     id: 10,
@@ -172,6 +183,8 @@ const projectsData = [
       tab3: "Tab 3 Content for Project 3",
     },
     component: Effect,
+    displayComponent: true,
+
   },
   {
     id: 11,
@@ -186,6 +199,8 @@ const projectsData = [
       tab3: "Tab 3 Content for Project 3",
     },
     component: UpdateName,
+    displayComponent: true,
+
   },
   {
     id: 12,
@@ -200,6 +215,8 @@ const projectsData = [
       tab3: "Tab 3 Content for Project 3",
     },
     component: ArrayState,
+    displayComponent: true,
+
   },
   {
     id: 13,
@@ -214,6 +231,8 @@ const projectsData = [
       tab3: "Tab 3 Content for Project 3",
     },
     component: ChangeAge,
+    displayComponent: true,
+
   },
   {
     id: 14,
@@ -228,6 +247,8 @@ const projectsData = [
       tab3: "Tab 3 Content for Project 3",
     },
     component: Counter,
+    displayComponent: true,
+
   },
   {
     id: 15,
@@ -240,7 +261,9 @@ const projectsData = [
       tab2: "Tab 2 Content for Project 3",
       tab3: "Tab 3 Content for Project 3",
     },
-    component: Counter,
+    component: BUSProjects,
+    displayComponent: true,
+
   },
   {
     id: 16,
@@ -256,6 +279,8 @@ const projectsData = [
       tab3: "Tab 3 Content for Project 3",
     },
     component: Counter,
+    displayComponent: false,
+
   },
 
 ];
