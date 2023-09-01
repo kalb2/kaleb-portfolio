@@ -1,5 +1,3 @@
-import Link from "next/link";
-import Resume from "../components/Resume/resume";
 import TitleBar from "../components/TitleBar/TitleBar2";
 
 export default function ExperiencePage() {
