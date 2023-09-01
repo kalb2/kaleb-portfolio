@@ -17,7 +17,18 @@ const projectsData = [
   {
     id: 1,
     title: "This Portfolio Website",
-    description: "Description of Project 1.",
+    description:
+      "In some ways, more complex than a portfolio needs to be, but this became a playground for me to experiment with new ideas and skills. Take a deeper look into what went into the making of ",
+    conceptsUsed: [
+      "Next.js App Router",
+      "React Client Components",
+      "TailwindCSS",
+      "SSR",
+      "Reponsive UI",
+      "FlexBox",
+      "Grid",
+    ],
+    repoUrl: "https://github.com/kalb2/kaleb-portfolio",
     href: "ThisWebsite",
     bgimage: "/Code.png",
     // imageUrl: "/Code.png",
@@ -33,7 +44,16 @@ const projectsData = [
     id: 2,
     title: "React Router Blog",
     description:
-      "A blog made using a fake JSON Server, Axios, and React Router.",
+      "A blog made using a fake JSON Server, Axios, and React Router. Check out my ",
+      conceptsUsed: [
+        "React Router",
+        "API Fetch Requests",
+        "Async Functions",
+        "Database Actions/Mutations",
+        "JSON Server",
+        "Axios",
+        "Loaders",
+      ],
     href: "ReactRouterBlog",
     bgimage: "/RouterBlog.png",
     imageUrl: "/RouterBlog.png",
@@ -75,7 +95,6 @@ const projectsData = [
     },
     component: StateForm,
     displayComponent: true,
-
   },
   // {
   //   id: 4,
@@ -104,7 +123,6 @@ const projectsData = [
     },
     component: Array,
     displayComponent: true,
-
   },
   {
     id: 6,
@@ -122,7 +140,6 @@ const projectsData = [
     },
     component: Fetch,
     displayComponent: true,
-
   },
   {
     id: 7,
@@ -140,7 +157,6 @@ const projectsData = [
     },
     component: BasicFetch,
     displayComponent: true,
-
   },
   // {
   //   id: 8,
@@ -168,7 +184,6 @@ const projectsData = [
     },
     component: UserList,
     displayComponent: true,
-
   },
   {
     id: 10,
@@ -184,7 +199,6 @@ const projectsData = [
     },
     component: Effect,
     displayComponent: true,
-
   },
   {
     id: 11,
@@ -200,7 +214,6 @@ const projectsData = [
     },
     component: UpdateName,
     displayComponent: true,
-
   },
   {
     id: 12,
@@ -216,7 +229,6 @@ const projectsData = [
     },
     component: ArrayState,
     displayComponent: true,
-
   },
   {
     id: 13,
@@ -232,7 +244,6 @@ const projectsData = [
     },
     component: ChangeAge,
     displayComponent: true,
-
   },
   {
     id: 14,
@@ -248,7 +259,6 @@ const projectsData = [
     },
     component: Counter,
     displayComponent: true,
-
   },
   {
     id: 15,
@@ -263,7 +273,6 @@ const projectsData = [
     },
     component: BUSProjects,
     displayComponent: true,
-
   },
   {
     id: 16,
@@ -280,9 +289,7 @@ const projectsData = [
     },
     component: Counter,
     displayComponent: false,
-
   },
-
 ];
 
 export default projectsData;

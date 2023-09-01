@@ -44,7 +44,7 @@ export default function OverviewFlipped({ project }) {
       <div className="row-span-1 order-7 sm:col-span-3 col-span-4 border-t">
         <div className="p-10 flex flex-col h-full gap-3">
           <div>
-            <p>{project.description}</p>
+          <p>{project.description}<Link href={`/projects/${project.href}`} className="underline">{project.title}.</Link></p>
           </div>
           <Concepts project={project} />
         </div>
