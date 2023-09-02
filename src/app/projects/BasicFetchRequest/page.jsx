@@ -3,7 +3,7 @@ import projectsData from "@/app/projectsData";
 import React from "react";
 
 export default function BasicFetchRequestPage() {
-  const selectedProjectId = 9;
+  const selectedProjectId = 7;
   const selectedProject = projectsData.find(
     (project) => project.id === selectedProjectId
   );
