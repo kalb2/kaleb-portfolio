@@ -1,7 +1,3 @@
-import React from "react";
-import Carousel from "../../Carousel/Carousel";
-import ProjectName from "../Original/ProjectName";
-import ProjectDescription from "../Original/ProjectDescription";
 
 export default function ProjectRight({ project }) {
   const Component = project.component;

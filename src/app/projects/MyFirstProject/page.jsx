@@ -35,7 +35,9 @@ export default function MyFirstProjectPage() {
           </div>
         </div>
         {/* <div className="grid grid-cols-basic basis-2/3 "> */}
-        <ProjectRight project={projectsData[14]} />
+        <ProjectRight
+          project={projectsData.find((project) => project.id === 16)}
+        />
         {/* </div> */}
       </div>
     </>
