@@ -12,15 +12,10 @@ export default function ThisWebsitePage() {
       <div className="flex flex-col sm:flex-row sm:h-[calc(100vh-7rem)]">
         <div className="basis-1/3 sm:border-r flex flex-col">
           <div className="grow border-b ">
-            <p
-              className="text-black text-4xl uppercase sm:border-b"
-              style={{
-                backgroundImage:
-                  "repeating-linear-gradient(180deg, transparent, transparent 47px, #000 47.5px, #000 48.5px)",
-              }}
+            <h1 className="custom-bg border-b"
             >
               My First Next.js Project
-            </p>
+            </h1>
           </div>
           <div className="h-1/4 p-5 border-b sm:border-b-0">
             <p className="py-1">

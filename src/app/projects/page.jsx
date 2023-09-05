@@ -8,6 +8,7 @@ import Link from "next/link";
 import RefForm from "../components/projectcomponents/BasicForm/RefForm";
 import Overview from "../components/Projects/Overviews/Overview";
 import OverviewFlipped from "../components/Projects/Overviews/OverviewFlipped";
+import ProjectNavigation from "../components/ProjectsNav/ProjectNavigation";
 
 export default function ProjectsPage() {
   let counter = 1; 
@@ -15,6 +16,8 @@ export default function ProjectsPage() {
   return (
     <>
       <TitleBar text="Projects" />
+      {/* <ProjectNavigation projects={projectsData} /> */}
+
       {projectsData
         .filter((project) => !project.shouldExclude)
         .map((project) => {
@@ -22,7 +25,7 @@ export default function ProjectsPage() {
           const text = counter.toString().padStart(3, '0');
             counter++; 
           return (
-            <div key={project.id}>
+            <div key={project.id} id={project.id} >
               {layout === "normal" ? (
                 <OverviewFlipped project={project} text={text}  />
               ) : (

@@ -17,7 +17,7 @@ export default function ReactRouterBlogPage() {
       <div className="flex flex-col sm:flex-row h-[calc(100vh-7rem)]">
         <div className="basis-1/3 sm:border-r flex flex-col">
           <div className="grow border-b ">
-            <H1>Basic Blog w/ React Router</H1>
+            <h1 className="custom-bg border-b">Basic Blog w/ React Router</h1>
             <div className="flex flex-col justify-center items-center grow p-3 gap-2">
               <a
                 href="https://cosmic-entremet-92551b.netlify.app"
