@@ -69,7 +69,7 @@ export default function ThisWebsitePage() {
               It was my first introduction, but I quickly became a fan.
             </li>
             <li>
-              There's still a learning curve with Next.js, but utilizing things
+              There is still a learning curve with Next.js, but utilizing things
               like the App Router and Server-Side Rendering will hopefully help
               me create a powerful website for my personal use.
             </li>
@@ -83,11 +83,6 @@ export default function ThisWebsitePage() {
             <li>
               Tailwind became my choice for styling the majority of this site.
               It was my first introduction, but I quickly became a fan.
-            </li>
-            <li>
-              There's still a learning curve with Next.js, but utilizing things
-              like the App Router and Server-Side Rendering will hopefully help
-              me create a powerful website for my personal use.
             </li>
             <li>
               I use Vercel to deploy my site on my custom domain. It allows me to monitor speed, and errors as I continue to learn Next.js and React.
