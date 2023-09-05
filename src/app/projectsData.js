@@ -30,7 +30,7 @@ const projectsData = [
     ],
     repoUrl: "https://github.com/kalb2/kaleb-portfolio",
     href: "ThisWebsite",
-    bgimage: "/ThisWebsite.png",
+    bgimage: "/BuiltWith.png",
     imageUrl: "/ThisWebsite.png",
     tabs: {
       tab1: "Tab 1 Content for Project 1",

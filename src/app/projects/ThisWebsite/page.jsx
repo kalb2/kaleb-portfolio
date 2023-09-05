@@ -13,14 +13,10 @@ export default function ThisWebsitePage() {
       <div className="flex flex-col sm:flex-row sm:h-[calc(100vh-7rem)]">
         <div className="basis-1/3 sm:border-r flex flex-col">
           <div className="flex flex-col grow border-b ">
-            <h1 className="custom-bg border-b"
-            >
-              My First Next.js Project
-            </h1>
+            <h1 className="custom-bg border-b">My First Next.js Project</h1>
             <div className="flex flex-col items-center justify-end grow p-3 gap-2">
-            <GithubLink href={projectsData[0].repoUrl} />
+              <GithubLink href={projectsData[0].repoUrl} />
             </div>
-
           </div>
           <div className="h-1/4 p-5 border-b sm:border-b-0">
             <p className="py-1">
