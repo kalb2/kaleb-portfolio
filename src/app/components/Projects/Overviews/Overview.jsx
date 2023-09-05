@@ -4,7 +4,7 @@ import React from "react";
 import kjlogoonly from "../../../assets/LOGO ONLY.svg";
 import Concepts from "../../Content/Concepts";
 
-export default function Overview({ project }) {
+export default function Overview({ project, text }) {
   const Component = project.component;
 
   return (
@@ -13,8 +13,9 @@ export default function Overview({ project }) {
       <div className="row-span-1 order-2 col-span-5 sm:col-span-2 border-b ">
         {project.displayComponent ? (
           <div className="flex flex-col max-h-[60vh] justify-center items-center p-5 font-sans">
-          <Component />
-        </div>        ) : (
+            <Component />
+          </div>
+        ) : (
           <div
             className="w-full h-full"
             style={{
@@ -25,11 +26,14 @@ export default function Overview({ project }) {
         )}
       </div>
       <div className="row-span-2 order-7 sm:order-3 col-span-1 flex items-end ">
-        <Image
+        {/* <Image
           src={kjlogoonly}
           alt="My Logo"
           className="w-20 border-r border-t p-1 "
-        />
+        /> */}
+        <div className="border-r border-t">
+          <h1>{text}</h1>
+        </div>
       </div>
       <div className="row-span-3 order-4 col-span-1 hidden sm:block "></div>
       <div className="row-span-2 order-5 col-span-1 hidden sm:block "></div>
@@ -41,8 +45,8 @@ export default function Overview({ project }) {
         </Link>
       </div>
       <div className="row-span-1 order-7 sm:col-span-3 col-span-4 border-t">
-        <div className="p-5 flex flex-col h-full justify-around ">
-          <div>
+        <div className="p-5 flex flex-row h-full gap-5 ">
+          <div className="w-1/2">
             <p>{project.description}</p>
           </div>
           <Concepts project={project} />

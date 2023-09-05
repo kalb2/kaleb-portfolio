@@ -10,6 +10,8 @@ import Overview from "../components/Projects/Overviews/Overview";
 import OverviewFlipped from "../components/Projects/Overviews/OverviewFlipped";
 
 export default function ProjectsPage() {
+  let counter = 1; 
+
   return (
     <>
       <TitleBar text="Projects" />
@@ -17,13 +19,14 @@ export default function ProjectsPage() {
         .filter((project) => !project.shouldExclude)
         .map((project) => {
           const layout = project.id % 2 === 0 ? "normal" : "flipped";
-
+          const text = counter.toString().padStart(3, '0');
+            counter++; 
           return (
             <div key={project.id}>
               {layout === "normal" ? (
-                <OverviewFlipped project={project} />
+                <OverviewFlipped project={project} text={text}  />
               ) : (
-                <Overview project={project} />
+                <Overview project={project} text={text} />
               )}
               <SectionBreak />
             </div>
