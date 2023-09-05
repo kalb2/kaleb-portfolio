@@ -39,9 +39,9 @@ export default function Overview({ project, text }) {
       <div className="row-span-2 order-5 col-span-1 hidden sm:block "></div>
       <div className="row-span-1 order-6 sm:col-span-2 col-span-4 flex items-center">
         <Link href={`/projects/${project.href}`}>
-          <p className="text-4xl font-light pl-4 after:content-['_↗'] after:text-6xl ">
+        <h4 className=" pl-4 after:content-['_↗'] after:text-4xl sm:after:text-6xl ">
             {project.title}
-          </p>
+          </h4>
         </Link>
       </div>
       <div className="row-span-1 order-7 sm:col-span-3 col-span-4 border-t">

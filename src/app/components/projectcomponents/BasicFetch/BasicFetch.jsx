@@ -47,7 +47,7 @@ export default function BasicFetch() {
       ) : error ? (
         <p>Error: {error.message}</p>
       ) : (
-        <div className="max-h-[50vh] overflow-scroll">
+        <div className="sm:max-h-[50vh] max-h-[40vh] overflow-scroll">
           <pre className=" whitespace-pre-wrap">
             {JSON.stringify(users, null, 2)}
           </pre>
