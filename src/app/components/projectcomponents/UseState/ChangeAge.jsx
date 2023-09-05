@@ -25,17 +25,17 @@ const ChangeAge = () => {
         <button onClick={() => setAge((currentCount) => currentCount - 1)}>
           -
         </button>
-        <h1>
+        <p>
           {age}
-          </h1>
+          </p>
         <button onClick={() => setAge((currentCount) => currentCount + 1)}>
           +
         </button>
       </div>
       
-        <h1 className="px-1">
+        <p className="px-1">
           My name is <span className="underline">{name}</span> and I am {age} years old
-        </h1>
+        </p>
       
     </div>
   );

@@ -8,7 +8,7 @@
   position: absolute;
   width: 7px;
   height: 7px;
-  background: #FFF;
+  background: #fff;
   transform: translate3d(-50%, -50%, 0);
   border-radius: 50%;
   z-index: 10;
@@ -18,63 +18,105 @@ button {
   all: unset;
   border: 0.05em solid #888;
   background-color: #000;
-  color: #FFF;
+  color: #fff;
   border-radius: 0.25em;
   padding: 0.5em 1em;
   text-align: center;
   cursor: pointer;
 }
 
-html,
-body {
-  height: 100%;
-  font-size: 16.5px;
+/* breakpoints
+640px
+768px
+1024px
+1280px
+1536px */
+
+/* Define a CSS class for the background image */
+.custom-bg {
+  background-image: repeating-linear-gradient(
+    180deg,
+    transparent,
+    transparent calc((1.25 * 1em) - 1px),
+    #000 calc((1.25 * 1em) - 0.5px),
+    #000 calc((1.25 * 1em) + 0.5px)
+  );
 }
 
-@media (min-width: 576px) {
-  html,
-  body {
-    font-size: 17px;
-  }
+
+h1 {
+  font-size: 2.25rem;
+  line-height: 1.25;
+  text-transform: uppercase;
 }
 
 @media (min-width: 768px) {
-  html,
-  body {
-    font-size: 18px;
+  h1 {
+    font-size: 2.3125rem;
   }
 }
 
 @media (min-width: 1024px) {
-  html,
-  body {
-    font-size: 19px;
+  h1 {
+    font-size: 4rem;
+  }
+}
+@media (min-width: 1280px) {
+  h1 {
+    font-size: 5.5rem;
   }
 }
 
 
-
-/* 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+h2 {
+  font-size: 1.35rem;
+  line-height: 1.25;
+  text-transform: uppercase;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@media (min-width: 640px) {
+  h2 {
+    font-size: 1.4rem;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-} */
+@media (min-width: 768px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  h2 {
+    font-size: 1.575rem;
+  }
+}
+
+h3 {
+  font-size: 1.875rem;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+@media (min-width: 640px) {
+  h3 {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  h3 {
+    font-size: 2.3125rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  h3 {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  h3 {
+    font-size: 3.125rem;
+  }
+}

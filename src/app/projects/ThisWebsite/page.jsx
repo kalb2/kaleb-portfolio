@@ -13,7 +13,7 @@ export default function ThisWebsitePage() {
         <div className="basis-1/3 sm:border-r flex flex-col">
           <div className="grow border-b ">
             <p
-              className="text-black text-5xl uppercase sm:border-b"
+              className="text-black text-4xl uppercase sm:border-b"
               style={{
                 backgroundImage:
                   "repeating-linear-gradient(180deg, transparent, transparent 47px, #000 47.5px, #000 48.5px)",

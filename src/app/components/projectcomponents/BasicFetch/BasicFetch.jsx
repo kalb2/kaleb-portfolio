@@ -41,7 +41,7 @@ export default function BasicFetch() {
 
   return (
     <div className="max-h-[60vh]" >
-      <h1>User Data</h1>
+      <p>User Data</p>
       {isLoading ? (
         <p>Loading user data...</p>
       ) : error ? (

@@ -7,7 +7,7 @@ function Counter() {
 
   return (
     <div className="flex flex-col items-center">
-      <h1>{count}</h1>
+      <p>{count}</p>
       <button onClick={() => setCount((currentCount) => currentCount + 1)}>
         Add 1
       </button>

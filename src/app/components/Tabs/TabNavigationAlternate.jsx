@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import TabContent from "./TabContent";
 import ProjectName from "../Projects/Original/ProjectName";
 import ProjectDescription from "../Projects/Original/ProjectDescription";
-import { H1, H3 } from "@/app/styles/components";
+import { H1, H2, H3 } from "@/app/styles/components";
 
 function TabNavigation({ tabs, project }) {
   const [activeTab, setActiveTab] = useState(0);
@@ -16,27 +16,23 @@ function TabNavigation({ tabs, project }) {
 
   return (
     <div className="border-b bg-white sm:border-0">
-      <div className="grid h-1/3 grid-cols-3 grid-rows-4">
-        <div className="flex items-center border-b border-r pl-3 uppercase text-2xl font-light">
-          Project
+      <div className="flex flex-col basis-1/2 ">
+        <div className="h-14 flex flex-row border-b">
+          <div className="flex grow items-center border-r pl-3">
+            <h2>Project</h2>
+          </div>
+          <div className="flex items-center px-4">
+            <h2>{project.title}</h2>
+          </div>
         </div>
-        <div className="col-span-2 flex items-center border-b pl-3 uppercase text-xl lg:text-2xl font-light">
-          {project.title}
-        </div>
-        <div className="row-span-3 border-r"></div>
-        <div className="col-span-2 row-span-3 text-2xl sm:text-4xl ">
-          <p
-          // className="leading-8 text-black uppercase"
-          // style={{
-          //   backgroundImage:
-          //     "repeating-linear-gradient(180deg, transparent, transparent 31.5px, #000 32.5px)",
-          // }}
-          >
-            {project.description}
-          </p>
+        <div>
+          <div className="border-r"></div>
+          <div className="text-2xl sm:text-4xl ">
+            <h3 className="custom-bg">{project.description}</h3>
+          </div>
         </div>
       </div>
-      <div className="h-2/3 bg-white ">
+      <div className="basis-1/2 bg-white ">
         <div className="flex items-end divide-x border-t">
           {tabTitles.map((title, index) => (
             <div

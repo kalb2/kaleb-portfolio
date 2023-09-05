@@ -16,7 +16,7 @@ export default function UpdateName() {
     <div className="flex flex-col items-center">
       <button onClick={changeName}>Change Name</button>
       <br></br>
-      <h1>{name}</h1>
+      <p>{name}</p>
     </div>
   );
 }

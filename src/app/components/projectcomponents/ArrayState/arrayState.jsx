@@ -61,9 +61,9 @@ function ArrayState() {
   return (
     <div>
       <div className="bg-neutral-200 border p-1 h-10">
-      <h1>
+      <p>
       {array.join(", ")}
-      </h1>
+      </p>
       </div>
       <button onClick={removeFirstElement}>Remove First Element</button>
       <br />
