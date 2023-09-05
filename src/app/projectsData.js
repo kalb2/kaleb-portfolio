@@ -31,7 +31,7 @@ const projectsData = [
     repoUrl: "https://github.com/kalb2/kaleb-portfolio",
     href: "ThisWebsite",
     bgimage: "/ThisWebsite.png",
-    // imageUrl: "/Code.png",
+    imageUrl: "/ThisWebsite.png",
     tabs: {
       tab1: "Tab 1 Content for Project 1",
       tab2: "Tab 2 Content for Project 1",
@@ -140,7 +140,7 @@ const projectsData = [
     repoUrl:
       "https://github.com/kalb2/kaleb-portfolio/tree/31be306598ae4f69c8bd5ea28b725c679fc6e3ee/src/app/components/projectcomponents/UseArray",
     href: "CustomHooks/useArray",
-    bgimage: "/Code.png",
+    bgimage: "/ArrayHook.png",
 
     // imageUrl: "/next.svg",
     tabs: {
@@ -166,7 +166,7 @@ const projectsData = [
     repoUrl:
       "https://github.com/kalb2/kaleb-portfolio/tree/31be306598ae4f69c8bd5ea28b725c679fc6e3ee/src/app/components/projectcomponents/UseArray",
     href: "FetchAPI",
-    bgimage: "/Code.png",
+    bgimage: "/FetchHook.png",
 
     // imageUrl: "/next.svg",
     tabs: {
@@ -191,7 +191,7 @@ const projectsData = [
     repoUrl:
       "https://github.com/kalb2/kaleb-portfolio/blob/31be306598ae4f69c8bd5ea28b725c679fc6e3ee/src/app/components/projectcomponents/BasicFetch/BasicFetch.jsx",
     href: "BasicFetchRequest",
-    bgimage: "/Code.png",
+    bgimage: "/FetchHook.png",
 
     // imageUrl: "/next.svg",
     tabs: {
@@ -342,7 +342,7 @@ const projectsData = [
     id: 15,
     title: "Basic useState Projects",
     href: "BasicUseStateProjects",
-    bgimage: "/Code.png",
+    bgimage: "/useState.png",
     imageUrl: "/OladipoProject.png",
     tabs: {
       tab1: "Tab 1 Content for Project 3",
