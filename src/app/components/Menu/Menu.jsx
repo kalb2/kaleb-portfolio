@@ -49,24 +49,28 @@ function Menu({ isOpen, toggleMenu }) {
             href="/projects"
             src="/Code.png"
             toggleMenu={toggleMenu}
+            menuitemnumber="001"
             className="border-l"
           />
           <MenuItem
             text="Experience"
             href="/experience"
             src="/Code.png"
+            menuitemnumber="002"
             toggleMenu={toggleMenu}
           />
           <MenuItem
             text="About Me"
             href="/about"
             src="/Code.png"
+            menuitemnumber="003"
             toggleMenu={toggleMenu}
           />
           <MenuItem
             text="Blog"
             href="/blog"
             src="/Code.png"
+            menuitemnumber="004"
             toggleMenu={toggleMenu}
           />
         </div>
