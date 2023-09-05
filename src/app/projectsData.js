@@ -84,7 +84,7 @@ const projectsData = [
     bgimage: "/Forms.png",
     // imageUrl: "/Code.png",
     tabs: {
-      tab1: "Tab 1 Content for Project 1",
+      tab1: "In combination with the useState hook, the useRef hook is used here to create a basic login form. The hooks are used to create logic and validation for the two inputs.  ",
       tab2: "Tab 2 Content for Project 1",
       tab3: "Tab 3 Content for Project 1",
     },

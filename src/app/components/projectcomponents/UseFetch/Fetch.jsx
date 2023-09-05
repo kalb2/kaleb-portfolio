@@ -64,7 +64,7 @@ export function Fetch() {
       ) : isError ? (
         <h1>Error</h1>
       ) : (
-        <div className="sm:max-h-[50vh] max-h-[40vh] overflow-scroll">
+        <div className="sm:max-h-[50vh] max-h-[40vh] overflow-y-scroll">
           <pre className=" whitespace-pre-wrap">
             {JSON.stringify(data, null, 2)}
           </pre>

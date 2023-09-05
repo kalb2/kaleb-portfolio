@@ -13,7 +13,7 @@ export default function ProjectRight({ project }) {
           </div>
         ) : (
           Component && (
-            <div className="flex flex-col justify-items-center p-5 font-sans">
+            <div className="flex flex-col justify-items-center  p-5 font-sans">
               <Component />
             </div>
           )

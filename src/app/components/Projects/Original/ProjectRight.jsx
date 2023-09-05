@@ -8,9 +8,9 @@ export default function ProjectRight({ project }) {
 
   return (
     <div className="divide-y">
-      <div className="h-3/4 flex bg-zinc-300 place-content-center">
+      <div className="h-3/4 flex bg-neutral-300 place-content-center">
         {project.imageUrl ? (
-          <img src={project.imageUrl} />
+          <img src={project.imageUrl} className=" object-contain" />
         ) : (
           Component && (
             <div className="flex flex-col justify-center overflow-hidden">

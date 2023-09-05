@@ -10,7 +10,7 @@ export default function OverviewFlipped({ project, text }) {
   return (
     <div className="grid grid-flow-row divide-x grid-cols-[repeat(3,_1fr)_2fr_1fr] w-screen grid-rows-[6fr_1fr_3fr] h-[calc(100vh-7.5rem)] border-b">
       <div className="order-4 row-span-1 col-span-1 hidden sm:block border-b border-l "></div>
-      <div className="row-span-1 order-3 col-span-5 sm:col-span-2 border-b border-l">
+      <div className="row-span-1 order-3 col-span-5 sm:col-span-2 border-b border-l bg-neutral-50">
         {project.displayComponent ? (
           <div className="flex flex-col max-h-[60vh] justify-center items-center p-5 font-sans">
             <Component />

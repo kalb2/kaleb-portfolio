@@ -4,6 +4,7 @@ import TabContent from "./TabContent";
 import ProjectName from "../Projects/Original/ProjectName";
 import ProjectDescription from "../Projects/Original/ProjectDescription";
 import { H1, H2, H3 } from "@/app/styles/components";
+import GithubLink from "../GithubLink/GithubLink";
 
 function TabNavigation({ tabs, project }) {
   const [activeTab, setActiveTab] = useState(0);
@@ -12,10 +13,10 @@ function TabNavigation({ tabs, project }) {
     setActiveTab(tabIndex);
   };
 
-  const tabTitles = ["What I", "Concepts Used", "See the code"];
+  const tabTitles = ["Explanation", "Concepts", "See the code"];
 
   return (
-    <div className="border-b bg-white sm:border-0">
+    <div className="flex flex-col border-b bg-white sm:border-0">
       <div className="flex flex-col basis-1/2 ">
         <div className="h-14 flex flex-row border-b">
           <div className="flex grow items-center border-r pl-3">
@@ -26,10 +27,10 @@ function TabNavigation({ tabs, project }) {
           </div>
         </div>
         <div>
-          <div className="border-r"></div>
-          <div className="text-2xl sm:text-4xl ">
-            <h3 className="custom-bg">{project.description}</h3>
-          </div>
+          <h3 className="custom-bg border-b pl-3">{project.description}</h3>
+        </div>
+        <div className="flex flex-col items-center justify-center grow p-3 gap-2">
+          <GithubLink href={project.repoUrl} />
         </div>
       </div>
       <div className="basis-1/2 bg-white ">
@@ -37,7 +38,7 @@ function TabNavigation({ tabs, project }) {
           {tabTitles.map((title, index) => (
             <div
               key={index}
-              className={`flex flex-1 cursor-pointer px-4 py-2  ${
+              className={`flex flex-1 cursor-pointer px-1 md:px-2 lg:px-4 py-2  ${
                 activeTab === index
                   ? "bg-white font-bold uppercase text-black"
                   : "bg-black uppercase text-white "

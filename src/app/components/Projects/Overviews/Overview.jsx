@@ -10,7 +10,7 @@ export default function Overview({ project, text }) {
   return (
     <div className="sm:grid-flow-row grid divide-x grid-cols-[1fr_2fr_repeat(3,_1fr)] w-screen grid-rows-[6fr_1fr_3fr] h-[calc(100vh-7.5rem)] border-b">
       <div className="order-1 row-span-1 hidden sm:block col-span-1 border-b "></div>
-      <div className="row-span-1 order-2 col-span-5 sm:col-span-2 border-b ">
+      <div className="row-span-1 order-2 col-span-5 sm:col-span-2 border-b bg-neutral-50">
         {project.displayComponent ? (
           <div className="flex flex-col max-h-[60vh] justify-center items-center p-5 font-sans">
             <Component />
