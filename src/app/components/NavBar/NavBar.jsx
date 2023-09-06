@@ -44,7 +44,7 @@ export default function NavBar() {
     <div className="sticky top-0 z-20 flex h-[3.25rem] w-full border-b border-black bg-white">
       <Link href="/">
         <div className="flex h-full items-center border-r border-black px-5 ">
-          <Image src={kjlogo} height={50} width={"auto"} alt="My Logo" />
+          <Image src={kjlogo} height={50} width={"auto"} alt="My Logo" priority />
         </div>
       </Link>
 
