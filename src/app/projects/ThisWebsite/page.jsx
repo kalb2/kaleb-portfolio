@@ -42,7 +42,7 @@ export default function ThisWebsitePage() {
       <div className="flex flex-col md:flex-row h-[calc(100vh-3.25rem)] w-screen">
         <div className="flex flex-col h-full basis-1/4 items-center">
           <div className=" border-b border-r border-l">
-            <img src={project.bgimage} />
+            <img src={project.bgimage} className="w-full h-full" />
           </div>
           <div className="h-full border-r"></div>
         </div>
