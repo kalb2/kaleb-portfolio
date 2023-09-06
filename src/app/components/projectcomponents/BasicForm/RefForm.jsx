@@ -1,11 +1,12 @@
 "use client"
-import { useRef, useState } from "react";
+import { useId, useRef, useState } from "react";
 import "./styles.css";
 import { checkEmail, checkPassword } from "./validators";
 
 const RefForm = () => {
   const emailRef = useRef();
   const passwordRef = useRef();
+  const id = useId()
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -32,7 +33,7 @@ const RefForm = () => {
   return (
     <form onSubmit={onSubmit} className="form">
       <div className={`form-group ${emailErrors.length > 0 ? "error" : ""}`}>
-        <label className="label" htmlFor="email">
+        <label className="label" htmlFor={`${id}-email`}>
           Email
         </label>
         <input
@@ -43,7 +44,7 @@ const RefForm = () => {
           }
           className="input"
           type="email"
-          id="email"
+          id={`${id}-email`}
           ref={emailRef}
         />
         {emailErrors.length > 0 && (
@@ -51,13 +52,13 @@ const RefForm = () => {
         )}
       </div>
       <div className={`form-group ${passwordErrors.length > 0 ? "error" : ""}`}>
-        <label className="label" htmlFor="password">
+        <label className="label" htmlFor={`${id}-password`}>
           Password
         </label>
         <input
           className="input"
           type="password"
-          id="password"
+          id={`${id}-password`}
           ref={passwordRef}
           onChange={
             isAfterFirstSubmit

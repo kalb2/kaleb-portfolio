@@ -1,5 +1,5 @@
 "use client"
-import  { useState, useMemo } from "react";
+import  { useState, useMemo, useId } from "react";
 import "./styles.css";
 import { checkEmail, checkPassword } from "./validators";
 
@@ -7,6 +7,7 @@ const StateForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isAfterFirstSubmit, setIsAfterFirstSubmit] = useState(false);
+  const id = useId()
 
   const emailErrors = useMemo(() => {
     return isAfterFirstSubmit ? checkEmail(email) : []
@@ -33,13 +34,13 @@ const StateForm = () => {
   return (
     <form onSubmit={onSubmit} className="form">
       <div className={`form-group ${emailErrors.length > 0 ? "error" : ""}`}>
-        <label className="label" htmlFor="email">
+        <label className="label" htmlFor={`${id}-email`}>
           Email
         </label>
         <input
           className="input"
           type="email"
-          id="email"
+          id={`${id}-email`}
           value={email}
           onChange={e => setEmail(e.target.value)}
         />
@@ -48,13 +49,13 @@ const StateForm = () => {
          )}
       </div>
       <div className={`form-group ${passwordErrors.length > 0 ? "error" : ""}`}>
-        <label className="label" htmlFor="password">
+        <label className="label" htmlFor={`${id}-password`}>
           Password
         </label>
         <input
           className="input"
           type="password"
-          id="password"
+          id={`${id}-password`}
           value={password}
           onChange={e => setPassword(e.target.value)}
         />
