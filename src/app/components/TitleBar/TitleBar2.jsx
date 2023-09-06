@@ -1,5 +1,4 @@
 import React from 'react'
-import { H1 } from '@/app/styles/components'
 
 export default function TitleBar({text}) {
   return (
