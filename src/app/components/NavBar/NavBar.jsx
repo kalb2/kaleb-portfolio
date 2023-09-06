@@ -7,7 +7,7 @@ import linkedinlogo from "../../assets/LI-In-Bug.png";
 import { usePathname } from "next/navigation";
 import MenuIcon from "../Menu/MenuIcon";
 import Menu from "../Menu/Menu";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Modal from "../Modal/Modal";
 
 export default function NavBar() {
@@ -22,6 +22,23 @@ export default function NavBar() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        closeModal();
+      }
+    };
+
+    if (modalOpen) {
+      window.addEventListener("keydown", handleKeyDown);
+    }
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [modalOpen]);
+
 
   return (
     <div className="sticky top-0 z-20 flex h-[3.25rem] w-full border-b border-black bg-white">
