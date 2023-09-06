@@ -3,6 +3,7 @@ import projectsData from "@/app/projectsData";
 import ProjectRight from "@/app/components/Projects/Original/ProjectRight";
 import GithubLink from "@/app/components/GithubLink/GithubLink";
 import SectionBreak from "@/app/components/SectionBreak/SectionBreak";
+import Image from "next/image";
 
 export default function ThisWebsitePage() {
   const project = projectsData[0];
@@ -33,8 +34,8 @@ export default function ThisWebsitePage() {
           </div>
         </div>
         <div className="grid grid-cols-basic basis-2/3">
-          <div className="h-full flex bg-neutral-200 place-content-center">
-            <img src={project.imageUrl} className=" object-contain" />
+          <div className="h-full flex bg-neutral-200 place-content-center relative">
+            <Image src={project.imageUrl} alt="This Website" width={1000} height={500} className=" object-contain" />
           </div>
         </div>
       </div>

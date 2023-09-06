@@ -12,6 +12,7 @@ import UpdateName from "./components/projectcomponents/UseState/updateName";
 import Effect from "./components/projectcomponents/useEffect/Effect";
 import LocalStorage from "./components/projectcomponents/UseLocalStorage/LocalStorage";
 import BUSProjects from "./projects/BasicUseStateProjects/BUSProjects";
+import { DatePicker } from "./components/projectcomponents/DatePicker/DatePicker";
 
 const projectsData = [
   {
@@ -374,6 +375,29 @@ const projectsData = [
       tab3: "Tab 3 Content for Project 3",
     },
     component: Counter,
+    displayComponent: false,
+  },
+  {
+    id: 17,
+    title: "Date Picker",
+    description: "Using the date-fns library, I created a date picker app.",
+    conceptsUsed: [
+      "MaterialUI Components",
+      "Reusable React Components",
+      "Conditional Rendering",
+      "Filtering JSON Data"
+    ],
+    repoUrl: "https://github.com/kalb2/kaleb-portfolio/tree/5ccf051ed17072cd2306df93ca631473c29927ac/src/app/components/projectcomponents/DatePicker",
+    href: "DatePicker",
+    bgimage: "/DatePicker.png",
+
+    imageUrl: "/DatePicker.png",
+    tabs: {
+      tab1: "Tab 1 Content for Project 3",
+      tab2: "Tab 2 Content for Project 3",
+      tab3: "Tab 3 Content for Project 3",
+    },
+    component: DatePicker,
     displayComponent: false,
   },
 ];
