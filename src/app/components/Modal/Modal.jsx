@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const Modal = ({ isOpen, onClose, children }) => {
   if (!isOpen) return null;
@@ -6,6 +6,22 @@ const Modal = ({ isOpen, onClose, children }) => {
   const handleModalContentClick = (event) => {
     event.stopPropagation();
   };
+
+    const handleKeyDown = (event) => {
+    if (event.key === "Escape") {
+      onClose();
+    }
+  };
+
+  useEffect(() => {
+    if (isOpen) {
+      window.addEventListener("keydown", handleKeyDown);
+    }
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isOpen]);
 
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50">
@@ -17,7 +33,7 @@ const Modal = ({ isOpen, onClose, children }) => {
         {children}
         <button
           onClick={onClose}
-          className="mt-4 px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600"
+          className="mt-4 px-4 py-2 bg-black text-white rounded hover:bg-blue-600"
         >
           Close
         </button>
