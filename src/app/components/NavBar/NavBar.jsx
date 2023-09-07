@@ -51,7 +51,7 @@ export default function NavBar() {
       <div className="flex flex-1 flex-nowrap items-center justify-end py-1 px-1">
         <button
           onClick={openModal}
-          className="px-2 py-2 bg-black text-white rounded hover:bg-blue-600"
+          className="px-2 py-2 whitespace-nowrap bg-black text-white rounded hover:bg-blue-600"
         >
           Contact Me
         </button>
