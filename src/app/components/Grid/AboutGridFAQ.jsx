@@ -1,17 +1,14 @@
 import React from "react";
 import TitleBar from "../TitleBar/TitleBar";
+import downloadicon from "../../../../public/file-arrow-down-solid.svg"
+import Image from "next/image";
 
-export default function AboutGrid({
+export default function AboutGridFAQ({
   leftTitle,
   rightTitle,
   bgimage,
   subtitle,
-  paragraph1,
-  paragraph2,
-  paragraph3,
-  paragraph4,
-  paragraph5,
-  paragraph6,
+FAQ,
   href1,
   href1title,
   href2,
@@ -35,16 +32,18 @@ export default function AboutGrid({
       ></div>
       <div className="col-span-1 row-span-1 hidden md:block border-r border-b"></div>
       <div className="col-span-1 row-span-1 border-b md:border-r">
-        <h3 className="custom-bg px-3" dangerouslySetInnerHTML={{ __html: subtitle }}></h3>
+        <h3 className="custom-bg px-3 " >{subtitle}</h3>
       </div>
       <div className="col-span-1 row-span-2 hidden md:block border-r"></div>
-      <div className="col-span-1 row-span-1 columns-1 md:columns-2 md:gap-8 p-5 md:p-8 md:border-r">
-        <p className=" break-after-auto mb-5">{paragraph1}</p>
-        <p className=" break-after-auto mb-5">{paragraph2}</p>
-        <p className=" break-after-auto mb-5">{paragraph3}</p>
-        <p className=" break-after-auto mb-5">{paragraph4}</p>
-        <p className=" break-after-auto mb-5">{paragraph5}</p>
-        <p className=" break-after-auto mb-5">{paragraph6}</p>
+      <div className="col-span-1 row-span-1 columns-1 md:columns-2 p-4 md:p-8 md:border-r">
+      {FAQ.map((pair, index) => (
+          <div key={index} className="mb-5">
+            <p className="text-xl font-extrabold uppercase break-after-avoid break-inside-avoid">
+              {pair.header}
+            </p>
+            <p className="break-after-avoid">{pair.paragraph}</p>
+          </div>
+        ))}
       </div>
       <div className="col-span-1 row-span-1 flex flex-row items-center justify-around divide-x border-t md:border-r">
         <div className="grow flex items-center justify-center min-h-[40px]">
@@ -52,6 +51,7 @@ export default function AboutGrid({
             <h2 className=" pl-4 after:content-['_↗'] after:text-2xl sm:after:text-4xl ">
               {href1title}
             </h2>
+            {/* <Image src={downloadicon} alt="Download Resume" height={25} width={25}></Image>  */}
           </a>
         </div>
         <div className="grow h-full flex items-center justify-center min-h-[40px] ">
