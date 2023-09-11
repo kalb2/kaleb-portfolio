@@ -35,7 +35,7 @@ export default function AboutGrid({
       ></div>
       <div className="col-span-1 row-span-1 hidden md:block border-r border-b"></div>
       <div className="col-span-1 row-span-1 border-b md:border-r">
-        <h3 className="custom-bg px-3" dangerouslySetInnerHTML={{ __html: subtitle }}></h3>
+        <h3 className="custom-bg px-3" >{subtitle}</h3>
       </div>
       <div className="col-span-1 row-span-2 hidden md:block border-r"></div>
       <div className="col-span-1 row-span-1 columns-1 md:columns-2 md:gap-8 p-5 md:p-8 md:border-r">

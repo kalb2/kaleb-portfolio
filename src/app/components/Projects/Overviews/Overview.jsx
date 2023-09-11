@@ -19,7 +19,7 @@ export default function Overview({ project, text }) {
           <div
             className="w-full h-full"
             style={{
-              backgroundImage: `url(${project.bgimage})`,
+              backgroundImage: `url(${project.imageUrl})`,
               backgroundSize: "cover",
             }}
           ></div>

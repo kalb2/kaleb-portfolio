@@ -8,9 +8,6 @@ const RefForm = () => {
   const passwordRef = useRef();
   const id = useId()
 
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
   const [emailErrors, setEmailErrors] = useState([]);
   const [passwordErrors, setPasswordErrors] = useState([]);
   const [isAfterFirstSubmit, setIsAfterFirstSubmit] = useState(false);

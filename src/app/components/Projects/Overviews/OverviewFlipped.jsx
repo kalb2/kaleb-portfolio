@@ -19,7 +19,7 @@ export default function OverviewFlipped({ project, text }) {
           <div
             className="w-full h-full"
             style={{
-              backgroundImage: `url(${project.bgimage})`,
+              backgroundImage: `url(${project.imageUrl})`,
               backgroundSize: "cover",
             }}
           ></div>

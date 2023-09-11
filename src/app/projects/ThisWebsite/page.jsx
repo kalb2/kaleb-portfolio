@@ -17,7 +17,10 @@ export default function ThisWebsitePage() {
       <div className="flex flex-col sm:flex-row sm:h-[calc(100vh-7rem)] border-b">
         <div className="basis-1/3 sm:border-r flex flex-col">
           <div className="flex flex-col grow border-b ">
-            <h1 className="custom-bg border-b">My First Next.js Project</h1>
+            <h3 className="custom-bg border-b">
+              My First Next.js Project - creating a website from scratch with
+              React and TailwindCSS.
+            </h3>
             <div className="flex flex-col items-center justify-end grow p-3 gap-2">
               <GithubLink href={project.repoUrl} />
             </div>
@@ -34,8 +37,14 @@ export default function ThisWebsitePage() {
           </div>
         </div>
         <div className="grid grid-cols-basic basis-2/3">
-          <div className="h-full flex bg-neutral-200 place-content-center relative">
-            <Image src={project.imageUrl} alt="This Website" width={1000} height={500} className=" object-contain" />
+          <div className="h-full flex bg-black place-content-center relative">
+            <Image
+              src={project.imageUrl}
+              alt="This Website"
+              width={1000}
+              height={500}
+              className=" object-contain"
+            />
           </div>
         </div>
       </div>
@@ -75,7 +84,9 @@ export default function ThisWebsitePage() {
               me create a powerful website for my personal use.
             </li>
             <li className="break-inside-avoid-column">
-              I use Vercel to deploy my site on my custom domain. It allows me to monitor speed, and errors as I continue to learn Next.js and React.
+              I use Vercel to deploy my site on my custom domain. It allows me
+              to monitor speed, and errors as I continue to learn Next.js and
+              React.
             </li>
             <li>
               With my experience in React, using Next.js to create this
@@ -86,7 +97,9 @@ export default function ThisWebsitePage() {
               It was my first introduction, but I quickly became a fan.
             </li>
             <li>
-              I use Vercel to deploy my site on my custom domain. It allows me to monitor speed, and errors as I continue to learn Next.js and React.
+              I use Vercel to deploy my site on my custom domain. It allows me
+              to monitor speed, and errors as I continue to learn Next.js and
+              React.
             </li>
           </div>
         </div>
