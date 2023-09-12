@@ -83,7 +83,7 @@ const projectsData = [
     title: "useRef Form",
     tagline: "A simple form using useRef Hook and Validation",
     description: [
-      "This basic login form checks for specific validation (see below). The form also shows error messages next to the inputs every time the form is submitted, if there are any.",
+      "This basic login form checks for specific validation. The form also shows error messages next to the inputs every time the form is submitted, if there are any.",
       "If the form submission is succesful, you will see an alert for success. This particular version of the form implements the useRef hook.",
     ],
     conceptsUsed: [
@@ -114,7 +114,7 @@ const projectsData = [
     tagline:
       "An alternate login form created w/ useState and basic form validation",
     description: [
-      "This basic login form checks for specific validation (see below). The form also shows error messages next to the inputs every time the form is submitted, if there are any. If the form submission is succesful, you will see an alert for success. This particular version of the form implements the useState hook.",
+      "This basic login form checks for specific validation. The form also shows error messages next to the inputs every time the form is submitted, if there are any. If the form submission is succesful, you will see an alert for success. This particular version of the form implements the useState hook.",
     ],
     conceptsUsed: [
       "useState Hook",
