@@ -19,8 +19,9 @@ const projectsData = [
     id: 1,
     title: "This Portfolio Website",
     tagline: "My first Next.js project",
-    description:
-      "In some ways, more complex than a portfolio needs to be, but this became a playground for me to experiment with new ideas and skills. Take a deeper look into what went into the making of This Portfolio Website",
+    description: [
+      "In some ways, more complex than a portfolio needs to be, but this became a playground for me to experiment with new ideas and skills. Take a deeper look into what went into the making of This Portfolio Website.",
+    ],
     conceptsUsed: [
       "Next.js App Router",
       "React Client Components",
@@ -74,15 +75,17 @@ const projectsData = [
       "The API allows for POST, PUT, and GET endpoints that I utilize to create new posts, update posts, and filter posts.",
       "Users can also edit posts and push ",
       "When creating a new post, it also creates a new route for the post.",
-      "This project also implements a loading spinner and error page."
+      "This project also implements a loading spinner and error page.",
     ],
   },
   {
     id: 3,
     title: "useRef Form",
     tagline: "A simple form using useRef Hook and Validation",
-    description:
-      "This basic login form checks for specific validation (see below). The form also shows error messages next to the inputs every time the form is submitted, if there are any. If the form submission is succesful, you will see an alert for success. This particular version of the form implements the useRef hook.",
+    description: [
+      "This basic login form checks for specific validation (see below). The form also shows error messages next to the inputs every time the form is submitted, if there are any.",
+      "If the form submission is succesful, you will see an alert for success. This particular version of the form implements the useRef hook.",
+    ],
     conceptsUsed: [
       "useRef Hook",
       "useState Hook",
@@ -110,8 +113,9 @@ const projectsData = [
     title: "useState Form",
     tagline:
       "An alternate login form created w/ useState and basic form validation",
-    description:
+    description: [
       "This basic login form checks for specific validation (see below). The form also shows error messages next to the inputs every time the form is submitted, if there are any. If the form submission is succesful, you will see an alert for success. This particular version of the form implements the useState hook.",
+    ],
     conceptsUsed: [
       "useState Hook",
       "useMemo Hook",
@@ -150,7 +154,7 @@ const projectsData = [
     id: 5,
     title: "Custom Hook - useArray",
     tagline: "Creating my own React Hook to manipulate an array.",
-    description: "Creating my own React Hook to manipulate an array.",
+    description: ["Creating my own React Hook to manipulate an array."],
     conceptsUsed: [
       "Custom React Hook",
       "Array Manipulation",
@@ -176,8 +180,9 @@ const projectsData = [
   {
     id: 6,
     title: "Custom Hook - Fetch",
-    description:
+    description: [
       "Using React, I created a custom hook specifically for handling fetch requests from the JSON Placeholder API.",
+    ],
     conceptsUsed: [
       "Custom React Hook",
       "Fetch API",
@@ -205,8 +210,9 @@ const projectsData = [
     title: "Basic Fetch",
     tagline:
       "Using useEffect and the Fetch API, I created a Basic Fetch Request from the JSON Placeholder API.",
-    description:
+    description: [
       "Using useEffect and the Fetch API, I created a Basic Fetch Request from the JSON Placeholder API.",
+    ],
     conceptsUsed: [
       "Fetch API",
       "useEffect Hook",
@@ -269,8 +275,9 @@ const projectsData = [
     title: "UseEffect",
     tagline:
       "In this project, multiple useEffect Hooks are used to change the text as well as the document title (Look up).  ",
-    description:
+    description: [
       "In this project, multiple useEffect Hooks are used to change the text as well as the document title (Look up).  ",
+    ],
     conceptsUsed: [
       "useEffect on Children",
       "useEffect Hook",
@@ -384,8 +391,9 @@ const projectsData = [
     title: "My First React Project",
     tagline:
       "Using React and MaterialUI, I created a basic player bio page for NBA players based on JSON Data.",
-    description:
+    description: [
       "Using React and MaterialUI, I created a basic player bio page for NBA players based on JSON Data.",
+    ],
     conceptsUsed: [
       "MaterialUI Components",
       "Reusable React Components",
@@ -409,7 +417,7 @@ const projectsData = [
     id: 17,
     title: "Date Picker",
     tagline: "Using the date-fns library, I created a date picker app.",
-    description: "Using the date-fns library, I created a date picker app.",
+    description: ["Using the date-fns library, I created a date picker app."],
     conceptsUsed: [
       "MaterialUI Components",
       "Reusable React Components",

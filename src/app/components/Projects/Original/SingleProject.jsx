@@ -20,7 +20,11 @@ function SingleProject({ project }) {
             </div>
           </div>
           <div className="h-1/3 p-5 border-b sm:border-b-0">
-            <p className="py-1">{project.description}</p>
+          {project.description.map((paragraph, index) => (
+              <p className="py-1 mb-5" key={index}>
+                {paragraph}
+              </p>
+            ))}
           </div>
         </div>
         <div className="grid grid-cols-basic basis-2/3">

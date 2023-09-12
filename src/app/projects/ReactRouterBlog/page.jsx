@@ -39,7 +39,6 @@ export default function ReactRouterBlogPage() {
         </div>
         <div className="grid grid-cols-basic basis-2/3">
           <div className=" flex bg-black place-content-center items-center relative">
-            {project.imageUrl ? (
               <Image
                 src={project.imageUrl}
                 alt={project.title}
@@ -47,13 +46,7 @@ export default function ReactRouterBlogPage() {
                 height={500}
                 className=" object-contain"
               />
-            ) : (
-              Component && (
-                <div className="h-fit  p-5 font-sans bg-white">
-                  <Component />
-                </div>
-              )
-            )}
+
           </div>
         </div>
       </div>

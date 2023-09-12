@@ -8,7 +8,7 @@ export default function OverviewFlipped({ project, text }) {
   const Component = project.component;
 
   return (
-    <div className="grid grid-flow-row divide-x grid-cols-[repeat(3,_1fr)_2fr_1fr] w-screen grid-rows-[6fr_1fr_3fr] h-[calc(100vh-7.5rem)] border-b">
+    <div className="grid grid-flow-row divide-x grid-cols-[repeat(3,_1fr)_2fr_1fr] w-full grid-rows-[6fr_1fr_3fr] h-[calc(100vh-7.5rem)] border-b">
       <div className="order-4 row-span-1 col-span-1 hidden sm:block border-b border-l "></div>
       <div className="row-span-1 order-3 col-span-5 sm:col-span-2 border-b border-l bg-neutral-50">
         {project.displayComponent ? (
@@ -31,8 +31,8 @@ export default function OverviewFlipped({ project, text }) {
           alt="My Logo"
           className="w-20 border-l border-t p-1 "
         /> */}
-        <div className="border-l border-t">
-          <h1>{text}</h1>
+        <div className="md:border-l border-t w-full md:w-auto "> 
+          <h1 className="text-end">{text}</h1>
         </div>
       </div>
       <div className="row-span-3 order-1 col-span-1 hidden sm:block "></div>
@@ -45,8 +45,8 @@ export default function OverviewFlipped({ project, text }) {
         </Link>
       </div>
       <div className="row-span-1 order-7 sm:col-span-3 col-span-4 border-t">
-        <div className="p-5 flex flex-row h-full gap-5 ">
-          <div className="w-1/2">
+        <div className="p-5 flex flex-col md:flex-row h-full gap-5 ">
+          <div className="md:w-2/3">
             <p>{project.description}</p>
           </div>
           <Concepts project={project} />

@@ -8,7 +8,7 @@ export default function Overview({ project, text }) {
   const Component = project.component;
 
   return (
-    <div className="sm:grid-flow-row grid divide-x grid-cols-[1fr_2fr_repeat(3,_1fr)] w-screen grid-rows-[6fr_1fr_3fr] h-[calc(100vh-7.5rem)] border-b">
+    <div className="sm:grid-flow-row grid divide-x grid-cols-[1fr_2fr_repeat(3,_1fr)] w-full grid-rows-[6fr_1fr_3fr] h-[calc(100vh-7.5rem)] border-b">
       <div className="order-1 row-span-1 hidden sm:block col-span-1 border-b "></div>
       <div className="row-span-1 order-2 col-span-5 sm:col-span-2 border-b bg-neutral-50">
         {project.displayComponent ? (
@@ -31,7 +31,7 @@ export default function Overview({ project, text }) {
           alt="My Logo"
           className="w-20 border-r border-t p-1 "
         /> */}
-        <div className="border-r border-t">
+        <div className="md:border-r border-t w-full md:w-auto">
           <h1>{text}</h1>
         </div>
       </div>
@@ -39,14 +39,14 @@ export default function Overview({ project, text }) {
       <div className="row-span-2 order-5 col-span-1 hidden sm:block "></div>
       <div className="row-span-1 order-6 sm:col-span-2 col-span-4 flex items-center">
         <Link href={`/projects/${project.href}`}>
-        <h4 className=" pl-4 after:content-['_↗'] after:text-4xl sm:after:text-6xl ">
+          <h4 className=" pl-4 after:content-['_↗'] after:text-4xl sm:after:text-6xl ">
             {project.title}
           </h4>
         </Link>
       </div>
       <div className="row-span-1 order-7 sm:col-span-3 col-span-4 border-t">
-        <div className="p-5 flex flex-row h-full gap-5 ">
-          <div className="w-1/2">
+        <div className="p-5 flex flex-col md:flex-row h-full gap-5">
+          <div className="md:w-2/3">
             <p>{project.description}</p>
           </div>
           <Concepts project={project} />
