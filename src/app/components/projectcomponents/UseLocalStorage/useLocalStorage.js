@@ -26,7 +26,7 @@ export function useLocalStorage(key, initialValue) {
         localStorage.setItem(key, JSON.stringify(value));
       }
     }
-  }, [value, key]);
+  }, [value, key, isClient]);
 
   return [value, setValue];
 }
