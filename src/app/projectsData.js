@@ -183,6 +183,7 @@ const projectsData = [
   {
     id: 6,
     title: "Custom Hook - Fetch",
+    tagline: "Creating my own React Hook to Fetch data from an API.",
     description: [
       "Using React, I created a custom hook specifically for handling fetch requests from the JSON Placeholder API.",
     ],
@@ -200,13 +201,12 @@ const projectsData = [
     bgimage: "/FetchHook.png",
 
     // imageUrl: "/next.svg",
-    tabs: {
-      tab1: "Tab 1 Content for Project 3",
-      tab2: "Tab 2 Content for Project 3",
-      tab3: "Tab 3 Content for Project 3",
-    },
     component: Fetch,
     displayComponent: true,
+    about: [
+      "This hook implements a basic Fetch request to pull data from the JSONPlaceholder API.",
+      "The project also includes a loading state in case the fetch is slow.",
+    ],
   },
   {
     id: 7,
@@ -236,6 +236,10 @@ const projectsData = [
     },
     component: BasicFetch,
     displayComponent: true,
+    about: [
+      "This hook implements a basic Fetch request to pull data from the JSONPlaceholder API.",
+      "The project also includes a loading state in case the fetch is slow.",
+    ],
   },
   // {
   //   id: 8,
@@ -276,8 +280,7 @@ const projectsData = [
   {
     id: 10,
     title: "UseEffect",
-    tagline:
-      "In this project, multiple useEffect Hooks are used to change the text as well as the document title (Look up).  ",
+    tagline: "Multiple useEffect Hook use cases.  ",
     description: [
       "In this project, multiple useEffect Hooks are used to change the text as well as the document title (Look up).  ",
     ],
@@ -290,6 +293,8 @@ const projectsData = [
     ],
     repoUrl:
       "https://github.com/kalb2/kaleb-portfolio/tree/31be306598ae4f69c8bd5ea28b725c679fc6e3ee/src/app/components/projectcomponents/useEffect",
+    href: "UseEffect",
+
     bgimage: "/Code.png",
 
     // imageUrl: "/next.svg",
@@ -300,6 +305,10 @@ const projectsData = [
     },
     component: Effect,
     displayComponent: true,
+    about: [
+      "This project allows you to update the document title when you update the input.",
+      "With useEffect, you can show and hide the component.",
+    ],
   },
   {
     id: 11,
