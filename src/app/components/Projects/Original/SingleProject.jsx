@@ -51,10 +51,12 @@ function SingleProject({ project }) {
       <div className="flex flex-col md:flex-row min-h-[calc(100vh-7rem)] ">
         <div className="flex flex-col basis-1/4 items-center ">
           <div className=" border-b border-r border-l">
-            <img
+            <Image
               src={project.bgimage}
               className="w-full h-full"
               alt={project.title}
+              width={500}
+              height={500}
             />
           </div>
           <div className="h-full border-r"></div>
@@ -73,7 +75,7 @@ function SingleProject({ project }) {
                 {item}
               </li>
             ))}
-            <h2>Concepts used</h2>
+            <h2 className=" break-after-avoid">Concepts used</h2>
             {project.conceptsUsed.map((item, index) => (
               <li key={index} className="break-inside-avoid-column md:text-xl">
                 {item}
