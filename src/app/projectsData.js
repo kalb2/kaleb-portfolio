@@ -154,7 +154,10 @@ const projectsData = [
     id: 5,
     title: "Custom Hook - useArray",
     tagline: "Creating my own React Hook to manipulate an array.",
-    description: ["Creating my own React Hook to manipulate an array."],
+    description: [
+      "My useArray hook is built using a number of useCallback hooks to manipulate the state of the array.",
+      "This is a ",
+    ],
     conceptsUsed: [
       "Custom React Hook",
       "Array Manipulation",

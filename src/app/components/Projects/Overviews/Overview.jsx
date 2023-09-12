@@ -49,7 +49,7 @@ export default function Overview({ project, text }) {
       <div className="row-span-1 order-7 sm:col-span-3 col-span-4 border-t">
         <div className="flex flex-col md:flex-row h-full p-3 md:p-5 gap-3 md:gap-5">
           <div className="md:w-2/3">
-            <p>{project.description}</p>
+          <p className="md:text-xl">{project.description}</p>
           </div>
           <Concepts project={project} />
         </div>
