@@ -8,10 +8,9 @@ function LocalStorage() {
       return "Default"
     })
   
-    const [hobbies, setHobbies] = useLocalStorage("HOBBIES", [
-      "Programming",
-      "Weight Lifting",
-    ])
+    const [hobbies, setHobbies] = useLocalStorage("HOBBIES", () => {
+      return ["Programming", "Weight Lifting"];
+    });
   
     return (
       <>
