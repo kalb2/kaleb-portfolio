@@ -21,9 +21,7 @@ export function useLocalStorage(key, initialValue) {
 
   useEffect(() => {
     if (isClient) {
-      if (value === undefined) {
-        localStorage.removeItem(key);
-      } else {
+      if (value !== undefined) { // Add a check here
         localStorage.setItem(key, JSON.stringify(value));
       }
     }
@@ -31,6 +29,7 @@ export function useLocalStorage(key, initialValue) {
 
   return [value, setValue];
 }
+
 
 
 
