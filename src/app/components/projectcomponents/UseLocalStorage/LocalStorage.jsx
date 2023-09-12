@@ -37,7 +37,6 @@ function LocalStorage() {
           />
         </div>
   
-        {/* Bonus: */}
         <div
           style={{
             display: "flex",
@@ -60,7 +59,6 @@ function LocalStorage() {
           />
         </div>
   
-        {/* Bonus: */}
         <div>{hobbies.join(", ")}</div>
         <button
           onClick={() =>

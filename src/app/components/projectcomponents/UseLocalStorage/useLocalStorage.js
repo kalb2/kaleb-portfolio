@@ -17,7 +17,6 @@ export function useLocalStorage(key, initialValue) {
         return JSON.parse(localValue);
       }
     }
-    // Provide a default value if not running on the client
     return initialValue;
   });
 
@@ -31,27 +30,3 @@ export function useLocalStorage(key, initialValue) {
 
   return [value, setValue];
 }
-
-
-
-// This is the code for using local storage before the bonus 
-// export function useLocalStorage (key, initialValue) {
-//     const [value, setValue] = useState(() => {
-//         const localValue = localStorage.getItem(key)
-//         if(localValue == null) {
-//             if (typeof initialValue === "function") {
-//                 return initialValue()
-//             } else {            
-//                 return initialValue
-//             }
-//             } else {
-//         return localValue
-//     }
-//     })
-
-//     useEffect(() => {
-//         localStorage.setItem(key, value)
-//     }, [value])
-
-//     return [value, setValue]
-// }

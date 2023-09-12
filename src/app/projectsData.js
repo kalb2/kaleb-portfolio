@@ -154,7 +154,7 @@ const projectsData = [
     repoUrl:
       "https://github.com/kalb2/kaleb-portfolio/tree/31be306598ae4f69c8bd5ea28b725c679fc6e3ee/src/app/components/projectcomponents/UseLocalStorage",
     href: "CustomHooks/useLocalStorage",
-    bgimage: "/ArrayHook.png",
+    bgimage: "/localstorage.png",
     // imageUrl: "/next.svg",
     component: LocalStorage,
     displayComponent: true, 
@@ -307,7 +307,7 @@ const projectsData = [
       "https://github.com/kalb2/kaleb-portfolio/tree/31be306598ae4f69c8bd5ea28b725c679fc6e3ee/src/app/components/projectcomponents/useEffect",
     href: "UseEffect",
 
-    bgimage: "/Code.png",
+    bgimage: "/useeffect.png",
 
     // imageUrl: "/next.svg",
     tabs: {
