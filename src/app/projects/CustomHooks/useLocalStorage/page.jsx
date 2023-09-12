@@ -4,7 +4,7 @@ import projectsData from "@/app/projectsData";
 import React from "react";
 
 export default function UseLocalStoragePage() {
-  const selectedProjectId = 4;
+  const selectedProjectId = 8;
   const selectedProject = projectsData.find(
     (project) => project.id === selectedProjectId
   );

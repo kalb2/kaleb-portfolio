@@ -129,7 +129,7 @@ const projectsData = [
     bgimage: "/Forms.png",
     // imageUrl: "/next.svg",
     component: StateForm,
-    displayComponent: true,
+    displayComponent: true, 
     about: [
       "Using ternary operators, if there are more than 1 errors, they will display under the email and password inputs.",
       "The form requires an email that ends in 'gmail.com'",
@@ -138,25 +138,37 @@ const projectsData = [
       "This form implements the useMemo hook to ensure that the errors only render when the inputs change. or the 'isAfterFirstSubmit' state changes.",
     ],
   },
-  // {
-  //   id: 4,
-  //   title: "Local Storage Custom Hook",
-  //   description: "Description of Project 3.",
-  //   // imageUrl: "/next.svg",
-  //   tabs: {
-  //     tab1: "Tab 1 Content for Project 3",
-  //     tab2: "Tab 2 Content for Project 3",
-  //     tab3: "Tab 3 Content for Project 3"
-  //   },
-  //   component: LocalStorage,
-  // },
+  {
+    id: 8,
+    title: "Custom Hook - useLocalStorage",
+    tagline: "Creating my own React Hook to access local storage.",
+    description: [
+      "My useLocalStorage hook is built using useState, useEffect, and a custom hook to save items in local storage.",
+    ],
+    conceptsUsed: [
+      "Custom React Hook",
+      "Local Storage",
+      "useState Hook",
+      "useEffect Hook",
+    ],
+    repoUrl:
+      "https://github.com/kalb2/kaleb-portfolio/tree/31be306598ae4f69c8bd5ea28b725c679fc6e3ee/src/app/components/projectcomponents/UseLocalStorage",
+    href: "CustomHooks/useLocalStorage",
+    bgimage: "/ArrayHook.png",
+    // imageUrl: "/next.svg",
+    component: LocalStorage,
+    displayComponent: true, 
+    about: [
+      "The useRef Hook allows me to reference the inputs on these forms to populate the error messages.  ",
+      "Using ternary operators, if there are more than 1 errors, they will display under the email and password inputs.",
+    ],
+  },
   {
     id: 5,
     title: "Custom Hook - useArray",
     tagline: "Creating my own React Hook to manipulate an array.",
     description: [
       "My useArray hook is built using a number of useCallback hooks to manipulate the state of the array.",
-      "This is a ",
     ],
     conceptsUsed: [
       "Custom React Hook",

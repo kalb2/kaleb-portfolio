@@ -34,7 +34,12 @@ export function Child() {
 
   return (
     <div className="flex flex-col items-center">
-      <input type="text" value={name} onChange={e => setName(e.target.value)} className="bg-[#efefef] border" />
+      <input type="text" value={name} onChange={e => setName(e.target.value)} style={{
+              border: "0.05em solid black",
+              borderRadius: "0.25em",
+              padding: "0.25em 0.5em",
+              backgroundColor: "#fff",
+            }} />
       <br />
       <div>
       <button onClick={() => setAge(a => a - 1)}>-</button>

@@ -28,6 +28,12 @@ function LocalStorage() {
             type="text"
             value={firstName}
             onChange={e => setFirstName(e.target.value)}
+            style={{
+              border: "0.05em solid black",
+              borderRadius: "0.25em",
+              padding: "0.25em 0.5em",
+              backgroundColor: "#fff",
+            }}
           />
         </div>
   
@@ -45,6 +51,12 @@ function LocalStorage() {
             type="text"
             value={lastName}
             onChange={e => setLastName(e.target.value)}
+            style={{
+              border: "0.05em solid black",
+              borderRadius: "0.25em",
+              padding: "0.25em 0.5em",
+              backgroundColor: "#fff",
+            }}
           />
         </div>
   

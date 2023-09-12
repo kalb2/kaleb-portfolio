@@ -60,7 +60,7 @@ function ArrayState() {
 
   return (
     <div>
-      <div className="bg-neutral-200 border p-1 h-10">
+      <div className="bg-white border pl-1 pt-2 h-10">
       <p>
       {array.join(", ")}
       </p>
@@ -81,7 +81,12 @@ function ArrayState() {
       <br />
       <button onClick={() => addLetterAtIndex("C", 2)}>Add C At 2</button>
       <br />
-      <input placeholder="Add Value Here" value={value} onChange={e => setValue(e.target.value)} />
+      <input placeholder="Add Value Here" value={value} onChange={e => setValue(e.target.value)} style={{
+              border: "0.05em solid black",
+              borderRadius: "0.25em",
+              padding: "0.25em 0.5em",
+              backgroundColor: "#fff",
+            }}/>
       <br />
       <button onClick={() => addLetterToStart(value)}>
         Add Value To Array

@@ -39,7 +39,7 @@ function SingleProject({ project }) {
               />
             ) : (
               Component && (
-                <div className="h-fit  p-5 font-sans bg-white">
+                <div className="h-fit  p-5 font-sans bg-neutral-50">
                   <Component />
                 </div>
               )
