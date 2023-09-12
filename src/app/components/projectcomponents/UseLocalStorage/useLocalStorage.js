@@ -17,11 +17,13 @@ export function useLocalStorage(key, initialValue) {
         return JSON.parse(localValue);
       }
     }
+    // Provide a default value if not running on the client
+    return initialValue;
   });
 
   useEffect(() => {
     if (isClient) {
-      if (value !== undefined) { // Add a check here
+      if (value !== undefined) {
         localStorage.setItem(key, JSON.stringify(value));
       }
     }
@@ -29,7 +31,6 @@ export function useLocalStorage(key, initialValue) {
 
   return [value, setValue];
 }
-
 
 
 
