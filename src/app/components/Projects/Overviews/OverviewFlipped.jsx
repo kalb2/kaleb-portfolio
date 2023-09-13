@@ -33,7 +33,7 @@ export default function OverviewFlipped({ project, text }) {
           alt="My Logo"
           className="w-20 border-l border-t p-1 "
         /> */}
-        <div className="md:border-l border-t w-full md:w-auto ">
+        <div className="sm:border-l border-t w-full sm:w-auto ">
           <h1 className="text-end">{text}</h1>
         </div>
       </div>

@@ -294,7 +294,8 @@ const projectsData = [
     title: "UseEffect",
     tagline: "Multiple useEffect Hook use cases.  ",
     description: [
-      "In this project, multiple useEffect Hooks are used to change the text as well as the document title (Look up).  ",
+      "In this project, multiple useEffect Hooks are used to change the text as well as the document title.",
+      "Give it a try by typing in a name and you'll see it at the top.",
     ],
     conceptsUsed: [
       "useEffect on Children",
@@ -306,20 +307,14 @@ const projectsData = [
     repoUrl:
       "https://github.com/kalb2/kaleb-portfolio/tree/31be306598ae4f69c8bd5ea28b725c679fc6e3ee/src/app/components/projectcomponents/useEffect",
     href: "UseEffect",
-
     bgimage: "/useeffect.png",
-
     // imageUrl: "/next.svg",
-    tabs: {
-      tab1: "Tab 1 Content for Project 3",
-      tab2: "Tab 2 Content for Project 3",
-      tab3: "Tab 3 Content for Project 3",
-    },
     component: Effect,
     displayComponent: true,
     about: [
       "This project allows you to update the document title when you update the input.",
       "With useEffect, you can show and hide the component.",
+      "To show and hide the component, I used a useState to show/hide the child component.",
     ],
   },
   {
@@ -337,13 +332,7 @@ const projectsData = [
     repoUrl:
       "https://github.com/kalb2/kaleb-portfolio/tree/31be306598ae4f69c8bd5ea28b725c679fc6e3ee/src/app/components/projectcomponents/useEffect",
     bgimage: "/Code.png",
-
     // imageUrl: "/next.svg",
-    tabs: {
-      tab1: "Tab 1 Content for Project 3",
-      tab2: "Tab 2 Content for Project 3",
-      tab3: "Tab 3 Content for Project 3",
-    },
     component: UpdateName,
     displayComponent: true,
     shouldExclude: true,
@@ -353,13 +342,7 @@ const projectsData = [
     title: "Manipulate Array",
     description: "Manipulating an Array with useState.",
     bgimage: "/Code.png",
-
     // imageUrl: "/next.svg",
-    tabs: {
-      tab1: "Tab 1 Content for Project 3",
-      tab2: "Tab 2 Content for Project 3",
-      tab3: "Tab 3 Content for Project 3",
-    },
     component: ArrayState,
     displayComponent: true,
     shouldExclude: true,
@@ -369,13 +352,7 @@ const projectsData = [
     title: "Basic Age Change",
     description: "Using useState and useEffect to change an array",
     bgimage: "/Code.png",
-
     // imageUrl: "/next.svg",
-    tabs: {
-      tab1: "Tab 1 Content for Project 3",
-      tab2: "Tab 2 Content for Project 3",
-      tab3: "Tab 3 Content for Project 3",
-    },
     component: ChangeAge,
     displayComponent: true,
     shouldExclude: true,
@@ -385,13 +362,7 @@ const projectsData = [
     title: "Simple Counter",
     description: "Using useState to increment a number.",
     bgimage: "/Code.png",
-
     // imageUrl: "/next.svg",
-    tabs: {
-      tab1: "Tab 1 Content for Project 3",
-      tab2: "Tab 2 Content for Project 3",
-      tab3: "Tab 3 Content for Project 3",
-    },
     component: Counter,
     displayComponent: true,
     shouldExclude: true,
@@ -402,11 +373,6 @@ const projectsData = [
     href: "BasicUseStateProjects",
     bgimage: "/useState.png",
     imageUrl: "/OladipoProject.png",
-    tabs: {
-      tab1: "Tab 1 Content for Project 3",
-      tab2: "Tab 2 Content for Project 3",
-      tab3: "Tab 3 Content for Project 3",
-    },
     component: BUSProjects,
     displayComponent: true,
   },
@@ -414,9 +380,10 @@ const projectsData = [
     id: 16,
     title: "My First React Project",
     tagline:
-      "Using React and MaterialUI, I created a basic player bio page for NBA players based on JSON Data.",
+      "A basic player bio page made with React and MaterialUI",
     description: [
       "Using React and MaterialUI, I created a basic player bio page for NBA players based on JSON Data.",
+      "Hooking up tables to populate with player data was a great intro to using a component library with React.",
     ],
     conceptsUsed: [
       "MaterialUI Components",
@@ -427,40 +394,40 @@ const projectsData = [
     // repoUrl: "",
     href: "MyFirstProject",
     bgimage: "/OladipoProject.png",
-
     imageUrl: "/OladipoProject.png",
-    tabs: {
-      tab1: "Tab 1 Content for Project 3",
-      tab2: "Tab 2 Content for Project 3",
-      tab3: "Tab 3 Content for Project 3",
-    },
     component: Counter,
     displayComponent: false,
+    about: [
+      "This was my first attempt at creating a React App from scratch.",
+      "Without knowing, I taught myself MaterialUI along the way and created a basic player bio.",
+      "Even though the design is somewhat rough, it was a great way to jump in and get familiar with React and MaterialUI.",
+    ],
   },
   {
     id: 17,
     title: "Date Picker",
-    tagline: "Using the date-fns library, I created a date picker app.",
-    description: ["Using the date-fns library, I created a date picker app."],
+    tagline: "A simple Date Picker App.",
+    description: ["Using the Date-FNS library, I created a date picker that allows you to change months, and displays current date."],
     conceptsUsed: [
-      "MaterialUI Components",
-      "Reusable React Components",
+      "Date-FNS Library",
+      "Date Formatting",
+      "Modals",
       "Conditional Rendering",
-      "Filtering JSON Data",
     ],
     repoUrl:
       "https://github.com/kalb2/kaleb-portfolio/tree/5ccf051ed17072cd2306df93ca631473c29927ac/src/app/components/projectcomponents/DatePicker",
     href: "DatePicker",
     bgimage: "/DatePicker.png",
-
-    imageUrl: "/DatePicker.png",
-    tabs: {
-      tab1: "Tab 1 Content for Project 3",
-      tab2: "Tab 2 Content for Project 3",
-      tab3: "Tab 3 Content for Project 3",
-    },
+    // imageUrl: "/DatePicker.png",
     component: DatePicker,
-    displayComponent: false,
+    displayComponent: true,
+    about: [
+      "A basic Date Picker with a dropdown modal",
+      "The design changes according to the length of the month.",
+      "The current day is always displayed.",
+      "The selected day is displayed in an alternate color.",
+      "The days in the previous and next month are grayed out.",
+    ],
   },
 ];
 

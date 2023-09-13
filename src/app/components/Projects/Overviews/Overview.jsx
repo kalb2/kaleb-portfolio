@@ -33,7 +33,7 @@ export default function Overview({ project, text }) {
           alt="My Logo"
           className="w-20 border-r border-t p-1 "
         /> */}
-        <div className="md:border-r border-t w-full md:w-auto">
+        <div className="sm:border-r border-t w-full sm:w-auto">
           <h1>{text}</h1>
         </div>
       </div>

@@ -21,31 +21,38 @@ export default function BasicUseStateProjectsPage({ href }) {
       <div className="flex flex-col md:flex-row sm:h-[calc(100vh-7rem)]">
         <div className="basis-1/3 sm:border-r flex flex-col">
           <div className="flex flex-col  border-b ">
-            <H1
-            // className="text-black text-5xl uppercase sm:border-b"
-            // style={{
-            //   backgroundImage:
-            //     "repeating-linear-gradient(180deg, transparent, transparent 47px, #000 47.5px, #000 48.5px)",
-            // }}
-            >
+            <h3 className="custom-bg border-b">
               Creating Basic Examples of the useState hook.
-            </H1>
+            </h3>
             <div className="flex justify-center grow p-3">
               <GithubLink href={repoUrl} />
             </div>
           </div>
           <div className="h-1/4 p-5 border-b sm:border-b-0">
-            <p className="py-1">
+            <p className="py-1 mb-5">
               When I began learning React, I created these examples to solidify
-              my understanding of the useState hook.
+              my understanding of the useState hook. Combining those with
+              concepts like event listeners and array manipulation gave me a
+              wide variety of applications to pull from in future projects.
             </p>
-            <p className="py-1">
-              Whether it was an indivual state or multiple, I have found this to
-              be invaluable over my career.
+            <p className="py-1 mb-5">
+              From a simple counter with a button to add 1 each time...
+            </p>
+            <p className="py-1 mb-5">
+              To changing the value of something on a page based on an input...
+            </p>
+            <p className="py-1 mb-5">
+              Removing an item from an array with a button...
+            </p>
+            <p className="py-1 mb-5">
+              And changing an array based on multiple useStates...
+            </p>
+            <p className="py-1 mb-5">
+              All these concepts have laid the foundation of my React journey.{" "}
             </p>
           </div>
         </div>
-       <BUSProjects />
+        <BUSProjects />
       </div>
     </>
   );
