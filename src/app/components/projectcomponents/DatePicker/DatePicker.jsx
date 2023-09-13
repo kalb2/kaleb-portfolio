@@ -14,8 +14,15 @@ import {
   startOfWeek,
 } from "date-fns"
 
-export function DatePicker({ value, onChange }) {
+export function DatePicker() {
+  const [value, setValue] = useState()
+
   const [isOpen, setIsOpen] = useState(false)
+  
+  const onChange = (date) => {
+    setValue(date); // Update the selected date
+  };
+
   return (
     <div className="date-picker-container">
       <button className="date-picker-button" onClick={() => setIsOpen(o => !o)}>
