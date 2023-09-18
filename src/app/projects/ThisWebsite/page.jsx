@@ -31,8 +31,9 @@ export default function ThisWebsitePage() {
               again.
             </p>
             <p className="py-1">
-              While I know it is far from perfect, I have enjoyed the entire
-              process.
+              This site is inspired by the <a href="https://www.nikecirculardesign.com/" className="underline after:content-['_↗'] after:text-3xl">
+                Nike Circular Design Website
+                </a>
             </p>
           </div>
         </div>
