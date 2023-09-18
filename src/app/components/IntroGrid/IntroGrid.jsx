@@ -14,7 +14,7 @@ export default function IntroGrid() {
         <div className="border-b border-r"></div>
         <div className="border-b"></div>
         <div className="border-b border-r col-span-2 sm:col-span-1">
-          <h1 className="custom-bg">Self-Taught <br/> Front-End Dev <br/> Hire me</h1>
+          <h1 className="custom-bg">Self-Taught <br/> Front-End <br/> Dev </h1>
         </div>
         <div className="flex border-b p-5 justify-center ">
           <Image
