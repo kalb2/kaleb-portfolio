@@ -19,6 +19,7 @@ const projectsData = [
     id: 1,
     title: "This Portfolio Website",
     tagline: "My first Next.js project",
+    type: "React",
     description: [
       "In some ways, more complex than a portfolio needs to be, but this became a playground for me to experiment with new ideas and skills. Take a deeper look into what went into the making of This Portfolio Website.",
     ],
