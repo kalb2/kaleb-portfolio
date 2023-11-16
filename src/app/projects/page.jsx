@@ -8,7 +8,6 @@ import Link from "next/link";
 import RefForm from "../components/projectcomponents/BasicForm/RefForm";
 import Overview from "../components/Projects/Overviews/Overview";
 import OverviewFlipped from "../components/Projects/Overviews/OverviewFlipped";
-import ProjectNavigation from "../components/ProjectsNav/ProjectNavigation";
 
 export default function ProjectsPage() {
   let counter = 1; 
