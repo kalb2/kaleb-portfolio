@@ -101,17 +101,19 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 {tool}
               </span>
             ))}
-            {project.links.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                target="_blank"
-                rel="noreferrer"
-                className="ml-auto font-mono text-xs uppercase tracking-widest after:ml-1 after:content-['↗'] hover:underline"
-              >
-                {link.label}
-              </a>
-            ))}
+            <div className="ml-auto flex flex-wrap gap-4">
+              {project.links.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-mono text-xs uppercase tracking-widest after:ml-1 after:content-['↗'] hover:underline"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </section>

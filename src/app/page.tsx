@@ -12,7 +12,7 @@ export default function HomePage() {
         <div className="row-span-1 border-b border-r border-black sm:row-span-2" />
         <div className="border-b border-r border-black" />
         <div className="border-b border-black" />
-        <div className="col-span-2 border-b border-r border-black sm:col-span-1">
+        <div className="col-span-2 flex flex-col justify-end border-b border-r border-black sm:col-span-1">
           <h1 className="lined px-1 text-[2.25rem] uppercase leading-[1.25] tracking-tight md:text-[2.3125rem] lg:text-6xl xl:text-7xl">
             Enterprise
             <br />
@@ -20,8 +20,11 @@ export default function HomePage() {
             <br />
             Builds
           </h1>
+          <p className="border-t border-black px-3 py-3 font-mono text-xs uppercase tracking-[0.18em] sm:text-sm">
+            {site.company} · {site.location} · Side projects that ship
+          </p>
         </div>
-        <div className="flex flex-col items-center justify-center gap-6 border-b border-black p-5">
+        <div className="flex items-center justify-center border-b border-black p-5">
           <Image
             src="/kj-mark.svg"
             alt=""
@@ -29,11 +32,6 @@ export default function HomePage() {
             height={120}
             className="w-3/4 max-w-[180px]"
           />
-          <p className="text-center font-mono text-xs uppercase tracking-[0.2em]">
-            {site.company} · {site.location}
-            <br />
-            Side projects that ship
-          </p>
         </div>
       </section>
       <SectionBreak />

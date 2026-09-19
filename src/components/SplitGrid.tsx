@@ -26,7 +26,7 @@ export function SplitGrid({
   links,
 }: SplitGridProps) {
   return (
-    <section className="flex flex-col border-b border-black md:grid md:grid-cols-[1fr_3fr_2fr] md:grid-rows-[auto_auto_1fr_auto] md:border-r">
+    <section className="flex flex-col border-b border-black md:grid md:min-h-[calc(100vh-8rem)] md:grid-cols-[1fr_3fr_2fr] md:grid-rows-[auto_auto_1fr_auto] md:border-r">
       <div className="hidden items-center border-b border-r border-black pl-3 md:flex">
         <h2 className="text-[1.35rem] uppercase leading-[1.25] md:text-2xl">
           {leftTitle}
@@ -38,7 +38,7 @@ export function SplitGrid({
         </h2>
       </div>
       <div
-        className="order-first min-h-[45vh] bg-cover bg-center md:order-none md:row-span-4"
+        className="order-first min-h-[50vh] bg-cover bg-center md:order-none md:row-span-4 md:min-h-full"
         style={{ backgroundImage: `url(${imageSrc})` }}
         role="img"
         aria-label={imageAlt}
