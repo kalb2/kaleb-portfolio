@@ -2,6 +2,9 @@
   "name": "kalebjensen",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": "22.x"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,19 +12,19 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "^15.5.3",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1"
-  },
-  "devDependencies": {
     "@types/node": "^22.18.1",
     "@types/react": "^19.1.12",
     "@types/react-dom": "^19.1.9",
     "autoprefixer": "^10.4.21",
-    "eslint": "^9.35.0",
-    "eslint-config-next": "^15.5.3",
+    "next": "^15.5.3",
     "postcss": "^8.5.6",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.9.2"
+  },
+  "devDependencies": {
+    "eslint": "^9.35.0",
+    "eslint-config-next": "^15.5.3"
   }
 }
