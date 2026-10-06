@@ -8,7 +8,7 @@ import { projects } from "@/data/projects";
 export const metadata: Metadata = {
   title: "Projects",
   description:
-    "Internal tools, HubSpot systems, and side projects from Kaleb Jensen.",
+    "Feature request matching, internal tools, HubSpot systems, and side projects from Kaleb Jensen.",
 };
 
 export default function ProjectsPage() {
@@ -40,8 +40,9 @@ export default function ProjectsPage() {
         </div>
         <div className="hidden p-6 md:block">
           <p className="max-w-sm text-sm leading-relaxed">
-            Six projects. No React-hook demos. Each case study is problem, what
-            was built, and outcome.
+            {projects.length} projects. No React-hook demos. Feature Request
+            Matcher is a STAR case study. The shorter entries stay problem,
+            what was built, and outcome.
           </p>
         </div>
       </div>

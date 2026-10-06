@@ -75,6 +75,14 @@ export function ProjectPattern({ pattern, number }: ProjectPatternProps) {
           ))}
         </div>
       )}
+      {pattern === "loop" && (
+        <div className="absolute inset-x-[14%] top-[8%] h-[58%] border border-black">
+          <div className="absolute left-0 top-0 h-3 w-[58%] bg-black" />
+          <div className="absolute right-0 top-0 h-[58%] w-3 bg-black" />
+          <div className="absolute bottom-0 right-0 h-3 w-[58%] bg-black" />
+          <div className="absolute bottom-0 left-0 h-[58%] w-3 bg-black" />
+        </div>
+      )}
       <div className="absolute inset-0 flex items-end p-5">
         <span
           className={`font-mono text-6xl leading-none tracking-tighter ${

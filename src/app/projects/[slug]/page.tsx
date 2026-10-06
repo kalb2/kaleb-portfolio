@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CardHandles } from "@/components/CardHandles";
+import { CaseStudy } from "@/components/CaseStudy";
 import { ProjectPattern } from "@/components/ProjectPattern";
 import { SectionBreak } from "@/components/SectionBreak";
 import { TitleBar } from "@/components/TitleBar";
@@ -23,7 +24,7 @@ export async function generateMetadata({
   if (!project) return { title: "Project" };
   return {
     title: project.title,
-    description: project.tagline,
+    description: project.caseStudy?.pitch ?? project.tagline,
   };
 }
 
@@ -54,6 +55,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           </p>
         </div>
       </section>
+      {project.caseStudy ? (
+        <CaseStudy project={project} />
+      ) : (
       <section className="grid border-b border-black lg:grid-cols-[2fr_3fr]">
         <div className="border-b border-black p-6 lg:border-b-0 lg:border-r">
           <div className="relative mx-auto max-w-md outline outline-1 outline-black">
@@ -117,6 +121,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           </div>
         </div>
       </section>
+      )}
       <SectionBreak />
       <nav className="grid grid-cols-2 border-b border-black">
         {previous ? (
