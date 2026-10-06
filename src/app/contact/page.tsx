@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { SectionBreak } from "@/components/SectionBreak";
 import { TitleBar } from "@/components/TitleBar";
 import { site } from "@/data/site";
@@ -49,9 +50,9 @@ export default function ContactPage() {
           <p className="border-b border-black p-5 leading-relaxed md:p-8">
             Hiring conversations are welcome. Email is the fastest path. Resume
             and LinkedIn are the primary backups. The{" "}
-            <a href="/projects/feature-request-matcher" className="underline">
+            <Link href="/projects/feature-request-matcher" className="underline">
               Feature Request Matcher case study
-            </a>{" "}
+            </Link>{" "}
             is a quick look at how I build. GitHub is there if you want to see
             how the internal tools and side projects are built.
           </p>
