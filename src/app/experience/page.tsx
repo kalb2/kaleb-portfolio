@@ -14,27 +14,27 @@ const faq = [
   {
     header: "What I do now",
     paragraph:
-      "Enterprise Customer Success Manager at Connecteam. I onboard, retain, and grow customers. I partner with product and support, and I turn friction into process and tools.",
+      "Enterprise Customer Success Manager at Connecteam. I own a book of about 80 enterprise accounts (~$1.76M). Day to day: onboard, retain, expand, and turn recurring friction into process and tools.",
   },
   {
     header: "Path",
     paragraph:
-      "Marketing and sales foundation, then customer-facing roles, then CSM. HubSpot depth from MDF. Hands-on building at Connecteam.",
+      "Marketing and sales foundation, then customer-facing roles, then CSM. HubSpot systems work at MDF. Hands-on building at Connecteam, including a Feature Request Matcher that ties client asks to daily release notes.",
   },
   {
     header: "Why building matters",
     paragraph:
-      "I ship dashboards, PDF and certificate flows, and API helpers so CS and customers move faster. Code is how the work gets unblocked — not the job title.",
+      "I ship dashboards, PDF and certificate flows, API helpers, and automations so CS and customers move faster. Feature Request Matcher is the clearest example: calls and release notes become a morning list of who to tell, with a draft email ready. Code unblocks the work. It is not the job title.",
   },
   {
     header: "Why hire me",
     paragraph:
-      "Commercial instincts plus systems thinking. I can sit with a customer, see the pattern, and build the thing that removes it.",
+      "Commercial instincts plus systems thinking. I can sit with a customer, see the pattern, and build the thing that removes it, then prove it in interviews with a live case study.",
   },
   {
     header: "Let's talk",
     paragraph:
-      "Resume and LinkedIn are the primary next step. GitHub is there if you want to see how the tools are built.",
+      "Resume and LinkedIn are the primary next step. The Feature Request Matcher case study on this site is the fastest proof of how I build. GitHub is there if you want the repos.",
   },
 ];
 
@@ -52,7 +52,7 @@ const mdfWork = [
   {
     header: "Health scoring",
     paragraph:
-      "Made risk visible early enough to act — before a renewal became a surprise.",
+      "Made risk visible early enough to act, before a renewal became a surprise.",
   },
   {
     header: "Client onboarding websites",

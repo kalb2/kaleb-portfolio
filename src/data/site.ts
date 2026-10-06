@@ -2,7 +2,7 @@ export const site = {
   name: "Kaleb Jensen",
   title: "Kaleb Jensen — Enterprise CSM",
   description:
-    "Enterprise Customer Success Manager at Connecteam. Builder of internal tools, automations, and side projects.",
+    "Enterprise Customer Success Manager at Connecteam. Builds automations and internal tools that close the loop for a large book of accounts.",
   email: "kalebcj@gmail.com",
   location: "Utah",
   role: "Enterprise CSM",

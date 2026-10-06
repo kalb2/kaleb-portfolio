@@ -26,10 +26,10 @@ export default function AboutPage() {
         ]}
       >
         <p className="mb-5 leading-relaxed">
-          Coding is how I ship tools and side projects. It is not the career
-          identity. The job is Enterprise Customer Success — onboard, retain,
-          grow — and the builder habit is what removes friction for the team
-          and the customer.
+          Coding is how I ship client-call automations, internal tools, and
+          side projects. It is not the career identity. The job is Enterprise
+          Customer Success: onboard, retain, grow. The builder habit is what
+          removes friction for the team and the customer.
         </p>
         <p className="mb-5 leading-relaxed">
           Off the clock: family, the shop, and the next trip. I would not call
@@ -37,7 +37,7 @@ export default function AboutPage() {
           my favorite lines:
         </p>
         <p className="mb-5 text-xl uppercase">
-          “All I know is that I know nothing.” — Socrates
+          “All I know is that I know nothing.” (Socrates)
         </p>
         <p className="mb-5 leading-relaxed">
           No matter how much I learn, there is just as much I still do not. I
