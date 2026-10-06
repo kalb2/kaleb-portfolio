@@ -18,7 +18,7 @@ export type CaseStudy = {
   results: string[];
   stack: CaseStudyStackItem[];
   next: string;
-  screenshots: { label: string }[];
+  screenshots: { src: string; alt: string; label: string }[];
   download: { label: string; href: string };
 };
 
@@ -121,12 +121,20 @@ export const projects: Project[] = [
       next: "Harden the request matching and reduce the manual steps before sending.",
       screenshots: [
         {
+          src: "/case-studies/feature-request-matcher/google-sheet-columns.webp",
+          alt: "Mockup of a Google Sheet with columns for client, who asked, feature, request type, and status. Names are redacted.",
           label:
-            "Screenshot slot: Google Sheet columns (client / who asked / feature)",
+            "Mock: Google Sheet columns (client / who asked / feature)",
         },
-        { label: "Screenshot slot: Morning ChatGPT recommendation" },
         {
-          label: "Screenshot slot: Sample draft email (blur client names)",
+          src: "/case-studies/feature-request-matcher/morning-recommendation.webp",
+          alt: "Mockup of a ChatGPT morning briefing that recommends which clients to contact after a release.",
+          label: "Mock: Morning ChatGPT recommendation",
+        },
+        {
+          src: "/case-studies/feature-request-matcher/draft-email.webp",
+          alt: "Mockup of a draft email saying the requested feature is live. The client name and address are blurred.",
+          label: "Mock: Sample draft email (blurred client names)",
         },
       ],
       download: {

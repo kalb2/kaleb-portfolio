@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { CardHandles } from "@/components/CardHandles";
 import { ProjectPattern } from "@/components/ProjectPattern";
 import { CaseStudyStackItem, Project } from "@/data/projects";
@@ -207,37 +208,34 @@ export function CaseStudy({ project }: CaseStudyProps) {
         <div className="grid border-b border-black md:grid-cols-[1fr_3fr_2fr]">
           <div className="hidden border-r border-black p-4 md:block">
             <p className="font-mono text-xs uppercase tracking-widest">
-              Slots
+              Mocks
             </p>
           </div>
           <div className="border-b border-black p-4 md:border-b-0 md:border-r">
-            <h2 className="text-2xl uppercase">Screenshot slots</h2>
+            <h2 className="text-2xl uppercase">Illustrative mockups</h2>
           </div>
           <div className="p-4">
             <p className="font-mono text-xs uppercase tracking-widest">
-              Add real shots later
+              Not live product shots
             </p>
           </div>
         </div>
         <div className="grid md:grid-cols-3">
-          {study.screenshots.map((slot, index) => (
+          {study.screenshots.map((slot) => (
             <figure
-              key={slot.label}
-              className="border-b border-black bg-sand p-4 last:border-b-0 md:border-b-0 md:border-r md:last:border-r-0"
+              key={slot.src}
+              className="border-b border-black bg-white p-4 last:border-b-0 md:border-b-0 md:border-r md:last:border-r-0"
             >
               <div className="relative outline outline-1 outline-black">
                 <CardHandles />
-                <div className="relative h-0 pt-[78%]">
-                  <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-sand p-6 text-center">
-                    <span className="border border-dashed border-black bg-white px-2 py-1 font-mono text-[10px] uppercase tracking-widest">
-                      Placeholder {String(index + 1).padStart(2, "0")}
-                    </span>
-                    <div
-                      className="h-16 w-full max-w-[12rem] border border-dashed border-black"
-                      aria-hidden="true"
-                    />
-                  </div>
-                </div>
+                <Image
+                  src={slot.src}
+                  alt={slot.alt}
+                  width={1280}
+                  height={720}
+                  className="h-auto w-full"
+                  sizes="(min-width: 768px) 33vw, 100vw"
+                />
               </div>
               <figcaption className="mt-3 font-mono text-xs uppercase leading-relaxed tracking-wide">
                 {slot.label}
