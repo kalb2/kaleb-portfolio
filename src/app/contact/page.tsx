@@ -48,8 +48,12 @@ export default function ContactPage() {
           </h3>
           <p className="border-b border-black p-5 leading-relaxed md:p-8">
             Hiring conversations are welcome. Email is the fastest path. Resume
-            and LinkedIn are the primary backups. GitHub is there if you want
-            to see how the internal tools and side projects are built.
+            and LinkedIn are the primary backups. The{" "}
+            <a href="/projects/feature-request-matcher" className="underline">
+              Feature Request Matcher case study
+            </a>{" "}
+            is a quick look at how I build. GitHub is there if you want to see
+            how the internal tools and side projects are built.
           </p>
           {actions.map((action) => (
             <a

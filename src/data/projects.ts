@@ -157,7 +157,7 @@ export const projects: Project[] = [
     built:
       "A set of internal tools under the connecteam-* repos: a dashboard builder, a PDF generator that turns form submissions into shareable files, a certificate generator with chat delivery, and an API helper so CS can move data without waiting on a ticket.",
     outcome:
-      "The team spends less time assembling artifacts and more time with customers. The tools are built by someone who feels the friction first.",
+      "CS spends less time assembling dashboards, PDFs, and certificates and more time with customers. The shortcuts exist because the person who felt the friction built them.",
     tools: ["Next.js", "Connecteam API", "Vercel", "PDFs"],
     pattern: "grid",
   },
@@ -169,7 +169,7 @@ export const projects: Project[] = [
     angle: "HubSpot depth from building, not just clicking.",
     links: [{ label: "LinkedIn", href: "https://www.linkedin.com/in/kalebjensen/" }],
     problem:
-      "At MDF, customer work lived in HubSpot — but pipelines, health, and onboarding were not structured enough to scale. Spreadsheets and one-off sites filled the gaps.",
+      "At MDF, customer work lived in HubSpot, but pipelines, health, and onboarding were not structured enough to scale. Spreadsheets and one-off sites filled the gaps.",
     built:
       "Custom object pipelines, automations that moved work without extra clicks, health scoring so risk showed up early, and onboarding websites clients could actually use.",
     outcome:
@@ -189,7 +189,7 @@ export const projects: Project[] = [
     problem:
       "Woodworking plans are usually 2D. That is fine until you need to see joinery, scale, and how a piece sits in a room before you cut.",
     built:
-      "A 3D woodworking app for visualizing and planning builds — the same instinct as CS tooling: make the next step obvious before you commit.",
+      "A 3D woodworking app for visualizing and planning builds. The same instinct as CS tooling: make the next step obvious before you commit.",
     outcome:
       "A shipped side project that treats the shop like a product surface. Repo: github.com/kalb2/3d-woodworking.",
     tools: ["TypeScript", "React", "3D"],
@@ -220,15 +220,15 @@ export const projects: Project[] = [
     slug: "north-shore-current",
     number: "006",
     title: "The North Shore Current",
-    tagline: "A local newsletter treated like a product.",
+    tagline: "A 5-minute local briefing, treated like a product.",
     angle: "Community information, shipped.",
     links: [],
     problem:
-      "Local news is fragmented. Neighbors still want a simple current — what happened, what is coming, what is worth knowing.",
+      "Local coverage around Saratoga Springs, Lehi, and Eagle Mountain is fragmented. Neighbors still want a simple current: what happened, what is coming, and what is worth knowing.",
     built:
-      "A local newsletter product: editorial judgment plus the same systems thinking used on CS tools — cadence, list, and a format people will actually open.",
+      "A real local briefing for that area, on a repeatable cadence. Editorial judgment plus the same systems thinking used on CS tools: a defined audience, a list, and a short format people will actually open.",
     outcome:
-      "A side project that keeps the builder habit pointed at a real audience, not a demo hook.",
+      "Neighbors in Saratoga Springs, Lehi, and Eagle Mountain get a short briefing they can count on. The work is a product with a cadence, not a one-off demo.",
     tools: ["Newsletter", "Editorial", "Audience"],
     pattern: "columns",
   },
@@ -236,13 +236,13 @@ export const projects: Project[] = [
     slug: "this-site",
     number: "007",
     title: "This Site",
-    tagline: "Circular Design–inspired system, rebuilt clean.",
+    tagline: "Circular Design inspired system, rebuilt clean.",
     angle: "The portfolio, without the playground.",
     links: [{ label: "GitHub", href: "https://github.com/kalb2" }],
     problem:
       "The old kalebjensen.com wore a Nike Circular Design skin over a React-hook playground. Styled-components, demo pages, and career copy about switching to front-end no longer matched the work.",
     built:
-      "A clean Next.js App Router + TypeScript + Tailwind rebuild. Same visual language — bordered grid, lined headlines, card handles, section breaks — with CSM-focused content and no interactive hook demos.",
+      "A clean Next.js App Router + TypeScript + Tailwind rebuild. Same visual language (bordered grid, lined headlines, card handles, section breaks) with CSM-focused content and no interactive hook demos.",
     outcome:
       "A site that represents Enterprise CSM work and the tools that ship around it.",
     tools: ["Next.js", "TypeScript", "Tailwind"],
