@@ -51,7 +51,7 @@ export const projects: Project[] = [
       },
     ],
     problem:
-      "Across about 80 enterprise accounts, clients ask for features constantly during day-to-day calls. Those asks are easy to lose, and when a feature finally ships, it is hard to remember which client asked for it. Meanwhile, multiple release note emails arrive every day.",
+      "Across my 30 enterprise clients, people ask for features constantly during day-to-day calls. Those asks are easy to lose, and when a feature finally ships, it is hard to remember which client asked for it. Meanwhile, multiple release note emails arrive every day.",
     built:
       "I spotted the gap and built the automation myself, with ChatGPT's help. It logs feature requests from client calls, tallies them in a Google Sheet, and each morning checks release notes against every request on record.",
     outcome:
@@ -62,9 +62,9 @@ export const projects: Project[] = [
       pitch:
         "I turned everyday client calls and daily release notes into an automated loop that tells me each morning which clients asked for what just shipped, with an email ready to send.",
       context:
-        "Kaleb Jensen, Enterprise Customer Success Manager at Connecteam. $1.76M portfolio across about 80 enterprise accounts.",
+        "Kaleb Jensen, Enterprise Customer Success Manager at Connecteam. $2.15M enterprise portfolio across 30 clients.",
       situation:
-        'Across about 80 enterprise accounts, clients ask for features constantly during day-to-day calls. Those asks are easy to lose, and when a feature finally ships, it is hard to remember which client asked for it. Meanwhile, multiple release note emails arrive every day. Without a system, the moment to go back and say "you asked, we delivered" slips by. My task: make sure no request gets lost and every client hears back when their feature ships.',
+        'Across my 30 enterprise clients, people ask for features constantly during day-to-day calls. Those asks are easy to lose, and when a feature finally ships, it is hard to remember which client asked for it. Meanwhile, multiple release note emails arrive every day. Without a system, the moment to go back and say "you asked, we delivered" slips by. My task: make sure no request gets lost and every client hears back when their feature ships.',
       action:
         "I spotted the gap and built the automation myself, with ChatGPT's help. It captures feature requests straight from my client calls, logs and tallies them by client in a Google Sheet, and each morning checks the latest release notes against every request on record. It tells me which clients asked for a feature that just shipped and drafts a short email so I can let them know.",
       steps: [
