@@ -14,7 +14,7 @@ const faq = [
   {
     header: "What I do now",
     paragraph:
-      "Enterprise Customer Success Manager at Connecteam. I own a book of about 80 enterprise accounts (~$1.76M). Day to day: onboard, retain, expand, and turn recurring friction into process and tools.",
+      "Enterprise Customer Success Manager at Connecteam. I own a $2.15M enterprise portfolio across 30 clients. Day to day: onboard, retain, expand, and turn recurring friction into process and tools.",
   },
   {
     header: "Path",
