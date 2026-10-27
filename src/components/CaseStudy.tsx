@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { CardHandles } from "@/components/CardHandles";
-import { ProjectPattern } from "@/components/ProjectPattern";
+import { ProjectHeroArt } from "@/components/ProjectHeroArt";
 import { CaseStudyStackItem, Project } from "@/data/projects";
 
 type CaseStudyProps = {
@@ -84,17 +84,7 @@ export function CaseStudy({ project }: CaseStudyProps) {
     <>
       <section className="grid border-b border-black lg:grid-cols-[2fr_3fr]">
         <div className="border-b border-black p-6 lg:border-b-0 lg:border-r">
-          <div className="relative mx-auto max-w-md outline outline-1 outline-black">
-            <CardHandles />
-            <div className="relative h-0 pt-[120%]">
-              <div className="absolute inset-0">
-                <ProjectPattern
-                  pattern={project.pattern}
-                  number={project.number}
-                />
-              </div>
-            </div>
-          </div>
+          <ProjectHeroArt project={project} />
         </div>
         <div className="flex flex-col">
           <h3 className="lined border-b border-black px-4 py-2 text-[1.875rem] uppercase leading-[1.25] sm:text-4xl">

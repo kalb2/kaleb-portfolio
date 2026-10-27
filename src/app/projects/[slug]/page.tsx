@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { CardHandles } from "@/components/CardHandles";
 import { CaseStudy } from "@/components/CaseStudy";
-import { ProjectPattern } from "@/components/ProjectPattern";
+import { ProjectHeroArt } from "@/components/ProjectHeroArt";
 import { SectionBreak } from "@/components/SectionBreak";
 import { TitleBar } from "@/components/TitleBar";
 import { getProject, projects } from "@/data/projects";
@@ -63,17 +62,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       ) : (
       <section className="grid border-b border-black lg:grid-cols-[2fr_3fr]">
         <div className="border-b border-black p-6 lg:border-b-0 lg:border-r">
-          <div className="relative mx-auto max-w-md outline outline-1 outline-black">
-            <CardHandles />
-            <div className="relative h-0 pt-[120%]">
-              <div className="absolute inset-0">
-                <ProjectPattern
-                  pattern={project.pattern}
-                  number={project.number}
-                />
-              </div>
-            </div>
-          </div>
+          <ProjectHeroArt project={project} />
         </div>
         <div className="grid grid-rows-[auto_1fr_auto]">
           <h3 className="lined border-b border-black px-4 py-2 text-[1.875rem] uppercase leading-[1.25] sm:text-4xl">
