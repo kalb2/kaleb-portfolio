@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Project } from "@/data/projects";
 import { CardHandles } from "./CardHandles";
@@ -17,11 +18,21 @@ export function ProjectCard({ project }: ProjectCardProps) {
         <div className="relative outline outline-1 outline-black">
           <CardHandles />
           <div className="relative h-0 pt-[120%]">
-            <div className="absolute inset-0">
-              <ProjectPattern
-                pattern={project.pattern}
-                number={project.number}
-              />
+            <div className="absolute inset-0 overflow-hidden bg-white">
+              {project.cardImage ? (
+                <Image
+                  src={project.cardImage.src}
+                  alt={project.cardImage.alt}
+                  fill
+                  sizes="(min-width: 640px) 26rem, 82vw"
+                  className="object-cover object-top"
+                />
+              ) : (
+                <ProjectPattern
+                  pattern={project.pattern}
+                  number={project.number}
+                />
+              )}
             </div>
           </div>
           <div className="border-t border-black bg-white p-3">
