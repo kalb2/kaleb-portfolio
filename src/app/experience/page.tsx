@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import { SectionBreak } from "@/components/SectionBreak";
 import { SplitGrid } from "@/components/SplitGrid";
 import { TitleBar } from "@/components/TitleBar";
 import { site } from "@/data/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Experience",
   description:
     "Enterprise CSM at Connecteam. Marketing and sales path, HubSpot depth from MDF, and tools that ship.",
-};
+  path: "/experience",
+});
 
 const faq = [
   {
@@ -69,7 +71,7 @@ export default function ExperiencePage() {
         leftTitle="FAQ"
         rightTitle="What is my background?"
         imageSrc="/profile.jpg"
-        imageAlt="Kaleb Jensen"
+        imageAlt="Black and white portrait of Kaleb Jensen"
         subtitle="Enterprise CSM. Builder of the tools around the book."
         links={[
           { href: site.resume, label: "Resume", external: true },
@@ -90,7 +92,7 @@ export default function ExperiencePage() {
         leftTitle="Systems"
         rightTitle="What I built there"
         imageSrc="/about.jpg"
-        imageAlt="Travel photograph"
+        imageAlt="Kaleb Jensen traveling, standing outdoors near palm trees and water"
         subtitle="Pipelines. Automations. Health. Onboarding sites."
         links={[
           { href: "/projects/hubspot-mdf", label: "Case study" },

@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import { SectionBreak } from "@/components/SectionBreak";
 import { SplitGrid } from "@/components/SplitGrid";
 import { TitleBar } from "@/components/TitleBar";
 import { site } from "@/data/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "About",
   description:
     "Husband. Dad. CSM. Woodworker. Traveler. Coding is how the tools ship.",
-};
+  path: "/about",
+});
 
 export default function AboutPage() {
   return (
@@ -18,7 +20,7 @@ export default function AboutPage() {
         leftTitle="Bio"
         rightTitle={site.name}
         imageSrc="/about.jpg"
-        imageAlt="Travel photograph"
+        imageAlt="Kaleb Jensen traveling, standing outdoors near palm trees and water"
         subtitle="Husband. Dad. CSM. Woodworker. Traveler."
         links={[
           { href: site.linkedin, label: "LinkedIn", external: true },

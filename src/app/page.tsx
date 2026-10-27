@@ -1,12 +1,38 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { ProjectRail } from "@/components/ProjectRail";
 import { SectionBreak } from "@/components/SectionBreak";
 import { TitleBar } from "@/components/TitleBar";
 import { site } from "@/data/site";
+import { pageMetadata } from "@/lib/metadata";
+
+export const metadata: Metadata = pageMetadata({
+  description: site.description,
+  path: "/",
+});
+
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: site.name,
+  jobTitle: "Enterprise Customer Success Manager",
+  worksFor: {
+    "@type": "Organization",
+    name: site.company,
+  },
+  url: site.url,
+  sameAs: ["https://www.linkedin.com/in/kalebjensen", site.github],
+};
 
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(personJsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
       <TitleBar text="Welcome" />
       <section className="grid min-h-[calc(100svh-6.5rem)] grid-cols-[1fr_3fr_2fr] grid-rows-[1fr_auto] md:min-h-[calc(100vh-8.25rem)]">
         <div className="row-span-1 border-b border-r border-black sm:row-span-2" />
@@ -27,7 +53,7 @@ export default function HomePage() {
         <div className="flex items-center justify-center border-b border-black p-5">
           <Image
             src="/kj-mark.svg"
-            alt=""
+            alt="KJ monogram"
             width={180}
             height={120}
             className="w-3/4 max-w-[180px]"
