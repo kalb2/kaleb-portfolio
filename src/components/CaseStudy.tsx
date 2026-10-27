@@ -114,6 +114,46 @@ export function CaseStudy({ project }: CaseStudyProps) {
         </div>
       </section>
 
+      {study.demo ? (
+        <section className="border-b border-black">
+          <div className="grid border-b border-black md:grid-cols-[1fr_3fr_2fr]">
+            <div className="hidden border-r border-black p-4 md:block">
+              <p className="font-mono text-xs uppercase tracking-widest">
+                Demo
+              </p>
+            </div>
+            <div className="border-b border-black p-4 md:border-b-0 md:border-r">
+              <h2 className="text-2xl uppercase">See it work</h2>
+            </div>
+            <div className="p-4">
+              <p className="font-mono text-xs uppercase tracking-widest">
+                80 second walkthrough
+              </p>
+            </div>
+          </div>
+          <figure className="bg-white p-4 md:p-6">
+            <div className="relative mx-auto max-w-5xl outline outline-1 outline-black">
+              <CardHandles />
+              <video
+                className="block aspect-video h-auto w-full bg-black"
+                controls
+                playsInline
+                preload="metadata"
+                poster={study.demo.poster}
+                aria-label={study.demo.label}
+                width={1920}
+                height={1080}
+              >
+                <source src={study.demo.src} type="video/mp4" />
+              </video>
+            </div>
+            <figcaption className="mx-auto mt-3 max-w-5xl font-mono text-xs uppercase leading-relaxed tracking-wide">
+              {study.demo.caption}
+            </figcaption>
+          </figure>
+        </section>
+      ) : null}
+
       <section className="grid border-b border-black md:grid-cols-2">
         <div className="border-b border-black p-6 md:border-b-0 md:border-r">
           <p className="mb-3 font-mono text-xs uppercase tracking-widest">
