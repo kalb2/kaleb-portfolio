@@ -35,6 +35,7 @@ export type Project = {
   outcome: string;
   tools: string[];
   pattern: "grid" | "bars" | "rings" | "steps" | "columns" | "slash" | "loop";
+  cardImage?: { src: string; alt: string };
   caseStudy?: CaseStudy;
 };
 
@@ -59,6 +60,10 @@ export const projects: Project[] = [
       "By the next morning after a release, I know which clients to tell. The loop closes, drafts are ready to review and send, and the tally shows which asks come up most across the book.",
     tools: ["Attention AI API", "ChatGPT", "Google Sheets", "Gmail"],
     pattern: "loop",
+    cardImage: {
+      src: "/projects/cards/feature-request-matcher.webp",
+      alt: "Mockup of a morning release match: a shipped feature matched to three fictional clients who asked for it, with draft emails ready",
+    },
     caseStudy: {
       pitch:
         "I turned everyday client calls and daily release notes into an automated loop that tells me each morning which clients asked for what just shipped, with an email ready to send.",
@@ -177,6 +182,10 @@ export const projects: Project[] = [
       "CS spends less time assembling dashboards, PDFs, and certificates and more time with customers. The shortcuts exist because the person who felt the friction built them.",
     tools: ["Next.js", "Connecteam API", "Vercel", "PDFs"],
     pattern: "grid",
+    cardImage: {
+      src: "/projects/cards/connecteam-internal-tools.webp",
+      alt: "Mockup of four internal CS tools: a dashboard builder, a PDF generator, a certificate generator, and an API helper",
+    },
   },
   {
     slug: "hubspot-mdf",
@@ -193,6 +202,10 @@ export const projects: Project[] = [
       "A cleaner view of the book, faster onboarding, and a HubSpot system that matches how CS actually works.",
     tools: ["HubSpot", "Custom objects", "Automation", "Onboarding sites"],
     pattern: "bars",
+    cardImage: {
+      src: "/projects/cards/hubspot-mdf.webp",
+      alt: "Mockup of a CRM client record with a health score, an onboarding pipeline, and an automation, using fictional data",
+    },
   },
   {
     slug: "3d-woodworking",
@@ -211,6 +224,10 @@ export const projects: Project[] = [
       "A shipped side project that treats the shop like a product surface. Repo: github.com/kalb2/3d-woodworking.",
     tools: ["TypeScript", "React", "3D"],
     pattern: "rings",
+    cardImage: {
+      src: "/projects/cards/3d-woodworking.webp",
+      alt: "Screenshot of the 3D woodworking app showing a wooden table model in the 3D editor",
+    },
   },
   {
     slug: "nfl-missed-kick-bot",
@@ -232,6 +249,10 @@ export const projects: Project[] = [
       "A live side project that ships without babysitting. Repo: github.com/kalb2/nfl-missed-kick-bot.",
     tools: ["TypeScript", "ESPN API", "GitHub Actions", "X API"],
     pattern: "slash",
+    cardImage: {
+      src: "/projects/cards/nfl-missed-kick-bot.webp",
+      alt: "Example post from the NFL Missed Kick Bot announcing a missed field goal with kicker, distance, result, and score",
+    },
   },
   {
     slug: "north-shore-current",
@@ -248,6 +269,10 @@ export const projects: Project[] = [
       "Neighbors in Saratoga Springs, Lehi, and Eagle Mountain get a short briefing they can count on. The work is a product with a cadence, not a one-off demo.",
     tools: ["Newsletter", "Editorial", "Audience"],
     pattern: "columns",
+    cardImage: {
+      src: "/projects/cards/north-shore-current.webp",
+      alt: "Screenshot of The North Shore Current newsletter signup page, a free weekly local briefing for Saratoga Springs, Lehi, and Eagle Mountain",
+    },
   },
   {
     slug: "this-site",
@@ -264,6 +289,10 @@ export const projects: Project[] = [
       "A site that represents Enterprise CSM work and the tools that ship around it.",
     tools: ["Next.js", "TypeScript", "Tailwind"],
     pattern: "steps",
+    cardImage: {
+      src: "/projects/cards/this-site.webp",
+      alt: "Screenshots of kalebjensen.com on desktop and mobile",
+    },
   },
 ];
 
