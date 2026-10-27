@@ -19,6 +19,7 @@ export type CaseStudy = {
   stack: CaseStudyStackItem[];
   next: string;
   screenshots: { src: string; alt: string; label: string }[];
+  demo?: { src: string; poster: string; caption: string; label: string };
   download: { label: string; href: string };
 };
 
@@ -137,6 +138,14 @@ export const projects: Project[] = [
           label: "Mock: Sample draft email (blurred client names)",
         },
       ],
+      demo: {
+        src: "/projects/feature-request-matcher/frm-demo.mp4",
+        poster: "/projects/feature-request-matcher/frm-demo-poster.jpg",
+        label:
+          "Walkthrough of the Feature Request Matcher: request log, morning release match, and drafted client email",
+        caption:
+          "Mock-up recreation with fictional data. The real tool ran on proprietary client data.",
+      },
       download: {
         label: "One-pager PDF",
         href: "/Feature_Request_Matcher_OnePager.pdf",
