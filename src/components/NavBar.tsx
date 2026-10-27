@@ -61,17 +61,15 @@ export function NavBar() {
           href={site.linkedin}
           target="_blank"
           rel="noreferrer"
-          aria-label="LinkedIn"
         >
-          <Image src="/linkedin.png" alt="" width={28} height={28} />
+          <Image src="/linkedin.png" alt="LinkedIn" width={28} height={28} />
         </a>
         <a
           href={site.github}
           target="_blank"
           rel="noreferrer"
-          aria-label="GitHub"
         >
-          <Image src="/github-mark.svg" alt="" width={26} height={26} />
+          <Image src="/github-mark.svg" alt="GitHub" width={26} height={26} />
         </a>
       </div>
 

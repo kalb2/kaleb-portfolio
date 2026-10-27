@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { ProjectRail } from "@/components/ProjectRail";
 import { SectionBreak } from "@/components/SectionBreak";
 import { TitleBar } from "@/components/TitleBar";
 import { projects } from "@/data/projects";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Projects",
   description:
     "Feature request matching, internal tools, HubSpot systems, and side projects from Kaleb Jensen.",
-};
+  path: "/projects",
+});
 
 export default function ProjectsPage() {
   return (

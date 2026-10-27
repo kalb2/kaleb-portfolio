@@ -7,6 +7,7 @@ import { ProjectPattern } from "@/components/ProjectPattern";
 import { SectionBreak } from "@/components/SectionBreak";
 import { TitleBar } from "@/components/TitleBar";
 import { getProject, projects } from "@/data/projects";
+import { pageMetadata } from "@/lib/metadata";
 
 type ProjectPageProps = {
   params: Promise<{ slug: string }>;
@@ -22,10 +23,12 @@ export async function generateMetadata({
   const { slug } = await params;
   const project = getProject(slug);
   if (!project) return { title: "Project" };
-  return {
+  return pageMetadata({
     title: project.title,
     description: project.caseStudy?.pitch ?? project.tagline,
-  };
+    path: `/projects/${project.slug}`,
+    defaultImages: false,
+  });
 }
 
 export default async function ProjectPage({ params }: ProjectPageProps) {

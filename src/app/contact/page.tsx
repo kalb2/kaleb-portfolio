@@ -1,13 +1,16 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { SectionBreak } from "@/components/SectionBreak";
 import { TitleBar } from "@/components/TitleBar";
 import { site } from "@/data/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Contact",
-  description: "Hiring conversations, resume, and LinkedIn.",
-};
+  description:
+    "Hiring conversations, resume, and LinkedIn.",
+  path: "/contact",
+});
 
 const actions = [
   {

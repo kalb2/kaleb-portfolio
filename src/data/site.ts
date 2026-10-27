@@ -1,6 +1,7 @@
 export const site = {
   name: "Kaleb Jensen",
-  title: "Kaleb Jensen — Enterprise CSM",
+  title: "Kaleb Jensen | Enterprise CSM",
+  url: "https://www.kalebjensen.com",
   description:
     "Enterprise Customer Success Manager at Connecteam. Builds automations and internal tools that close the loop for a large book of accounts.",
   email: "kalebcj@gmail.com",
