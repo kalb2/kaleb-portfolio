@@ -107,6 +107,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   className="font-mono text-xs uppercase tracking-widest after:ml-1 after:content-['↗'] hover:underline"
                 >
                   {link.label}
+                  <span className="sr-only"> (opens in a new tab)</span>
                 </a>
               ))}
             </div>

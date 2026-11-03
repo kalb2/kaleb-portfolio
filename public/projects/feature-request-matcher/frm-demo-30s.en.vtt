@@ -1,0 +1,21 @@
+WEBVTT
+
+1
+00:00:00.300 --> 00:00:03.000
+Clients ask me for features on calls all the time.
+
+2
+00:00:03.000 --> 00:00:08.250
+This pulls those requests from my calls, logs them by client, and keeps a running tally.
+
+3
+00:00:10.500 --> 00:00:16.650
+Every morning it checks new release notes against every request, and tells me who asked for what just shipped.
+
+4
+00:00:19.500 --> 00:00:23.220
+Then it drafts the email. I personalize it and hit send.
+
+5
+00:00:24.500 --> 00:00:28.670
+By the next morning after a release, I know exactly which clients to tell.

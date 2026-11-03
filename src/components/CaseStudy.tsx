@@ -117,7 +117,7 @@ export function CaseStudy({ project }: CaseStudyProps) {
             </div>
             <div className="p-4">
               <p className="font-mono text-xs uppercase tracking-widest">
-                80 second walkthrough
+                {study.demo.lengthLabel}
               </p>
             </div>
           </div>
@@ -135,6 +135,14 @@ export function CaseStudy({ project }: CaseStudyProps) {
                 height={1080}
               >
                 <source src={study.demo.src} type="video/mp4" />
+                {study.demo.captions ? (
+                  <track
+                    kind="captions"
+                    src={study.demo.captions}
+                    srcLang="en"
+                    label="English"
+                  />
+                ) : null}
               </video>
             </div>
             <figcaption className="mx-auto mt-3 max-w-5xl font-mono text-xs uppercase leading-relaxed tracking-wide">

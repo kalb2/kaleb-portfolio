@@ -20,6 +20,7 @@ export default function AboutPage() {
         leftTitle="Bio"
         rightTitle={site.name}
         imageSrc="/about.jpg"
+        priority
         imageAlt="Kaleb Jensen traveling, standing outdoors near palm trees and water"
         subtitle="Husband. Dad. CSM. Woodworker. Traveler."
         links={[
