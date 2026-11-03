@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ReactNode } from "react";
 
 type SplitLink = {
@@ -14,6 +15,8 @@ type SplitGridProps = {
   subtitle: string;
   children: ReactNode;
   links: SplitLink[];
+  /** Set on the first grid of a page: its photo is the mobile LCP. */
+  priority?: boolean;
 };
 
 export function SplitGrid({
@@ -24,6 +27,7 @@ export function SplitGrid({
   subtitle,
   children,
   links,
+  priority = false,
 }: SplitGridProps) {
   return (
     <section className="flex flex-col border-b border-black md:grid md:min-h-[calc(100vh-8rem)] md:grid-cols-[1fr_3fr_2fr] md:grid-rows-[auto_auto_1fr_auto] md:border-r">
@@ -37,12 +41,16 @@ export function SplitGrid({
           {rightTitle}
         </h2>
       </div>
-      <div
-        className="order-first min-h-[50vh] bg-cover bg-center md:order-none md:row-span-4 md:min-h-full"
-        style={{ backgroundImage: `url(${imageSrc})` }}
-        role="img"
-        aria-label={imageAlt}
-      />
+      <div className="relative order-first min-h-[50vh] overflow-hidden md:order-none md:row-span-4 md:min-h-full">
+        <Image
+          src={imageSrc}
+          alt={imageAlt}
+          fill
+          priority={priority}
+          sizes="(min-width: 768px) 34vw, 100vw"
+          className="object-cover object-center"
+        />
+      </div>
       <div className="hidden border-b border-r border-black md:block" />
       <div className="border-b border-black md:border-r">
         <h3 className="lined px-3 text-[1.875rem] uppercase leading-[1.25] sm:text-4xl md:text-[2.3125rem] xl:text-5xl">
@@ -65,6 +73,9 @@ export function SplitGrid({
             <span className="text-[1.35rem] leading-none md:text-2xl">
               {link.label}
             </span>
+            {link.external ? (
+              <span className="sr-only"> (opens in a new tab)</span>
+            ) : null}
           </a>
         ))}
       </div>

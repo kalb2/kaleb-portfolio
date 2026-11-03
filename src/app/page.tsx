@@ -33,7 +33,7 @@ export default function HomePage() {
           __html: JSON.stringify(personJsonLd).replace(/</g, "\\u003c"),
         }}
       />
-      <TitleBar text="Welcome" />
+      <TitleBar text="Welcome" as="p" />
       <section className="grid min-h-[calc(100svh-6.5rem)] grid-cols-[1fr_3fr_2fr] grid-rows-[1fr_auto] md:min-h-[calc(100vh-8.25rem)]">
         <div className="row-span-1 border-b border-r border-black sm:row-span-2" />
         <div className="border-b border-r border-black" />
@@ -61,7 +61,7 @@ export default function HomePage() {
         </div>
       </section>
       <SectionBreak />
-      <TitleBar text="Recent Projects" />
+      <TitleBar text="Recent Projects" as="h2" />
       <ProjectRail />
     </>
   );

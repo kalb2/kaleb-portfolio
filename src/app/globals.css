@@ -10,6 +10,63 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Keyboard focus: black ring with a white halo so it reads on white cards,
+   black buttons, and the cardboard rail alike. Mouse clicks stay ring free. */
+:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px #fff;
+}
+
+/* Full-height header cells and menu rows sit flush against borders, so draw
+   the ring inside them in the current text color (white on the active tab). */
+header > a:focus-visible,
+header > button:focus-visible,
+header nav a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: -6px;
+  box-shadow: none;
+}
+
+main:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+.skip-link {
+  position: absolute;
+  left: 0.5rem;
+  top: 0.5rem;
+  z-index: 100;
+  transform: translateY(-200%);
+  background: #000;
+  color: #fff;
+  padding: 0.5rem 0.75rem;
+  font-family: var(--font-roboto-mono), ui-monospace, monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.skip-link:focus {
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 body {
   @apply bg-paper text-ink antialiased;
 }

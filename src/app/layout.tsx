@@ -8,6 +8,7 @@ import "./globals.css";
 const robotoMono = Roboto_Mono({
   subsets: ["latin"],
   variable: "--font-roboto-mono",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -38,8 +39,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${robotoMono.variable} font-sans`}>
+        <a href="#main-content" className="skip-link">
+          Skip to content
+        </a>
         <NavBar />
-        <main>{children}</main>
+        <main id="main-content" tabIndex={-1} className="outline-none">
+          {children}
+        </main>
       </body>
     </html>
   );
