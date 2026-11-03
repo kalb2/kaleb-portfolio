@@ -1,4 +1,3 @@
-import { preload } from "react-dom";
 import { projects } from "@/data/projects";
 import { ProjectCard } from "./ProjectCard";
 
@@ -11,10 +10,6 @@ type ProjectRailProps = {
 };
 
 export function ProjectRail({ priority = false }: ProjectRailProps) {
-  if (priority) {
-    preload(CARDBOARD_TEXTURE, { as: "image", fetchPriority: "high" });
-  }
-
   return (
     <section
       aria-label="Projects"
@@ -24,6 +19,16 @@ export function ProjectRail({ priority = false }: ProjectRailProps) {
         backgroundRepeat: "repeat",
       }}
     >
+      {priority ? (
+        // Rendered as an element (not ReactDOM.preload) so the hint only
+        // applies when this page renders, not when a Link prefetches it.
+        <link
+          rel="preload"
+          as="image"
+          href={CARDBOARD_TEXTURE}
+          fetchPriority="high"
+        />
+      ) : null}
       {projects.map((project, index) => (
         <ProjectCard
           key={project.slug}
