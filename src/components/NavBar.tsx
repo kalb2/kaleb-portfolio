@@ -111,6 +111,7 @@ export function NavBar() {
             <Link
               key={link.href}
               href={link.href}
+              onClick={() => setOpen(false)}
               className="flex h-[3.25rem] items-center justify-between border-b border-black hover:bg-black hover:text-white"
             >
               <span className="flex h-full flex-1 items-end border-r border-black px-3 text-4xl uppercase leading-none tracking-tighter hover:border-white">
