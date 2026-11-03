@@ -30,7 +30,12 @@ for (const route of allRoutes) {
         .first()
         .getAttribute("content");
       expect(ogImage, "og:image").toBeTruthy();
-      expect(ogImage!.startsWith(site.url), "og:image is absolute").toBe(true);
+      // Production uses the site URL. Vercel previews point file-based share
+      // images at the preview deployment instead, which is also fine.
+      expect(
+        ogImage!.startsWith(site.url) || ogImage!.startsWith(baseURL!),
+        `og:image is absolute (${ogImage})`,
+      ).toBe(true);
       const img = await request.get(local(ogImage!, baseURL!));
       expect(img.status(), `og:image ${ogImage}`).toBe(200);
       expect(img.headers()["content-type"]).toMatch(/^image\//);
