@@ -19,7 +19,14 @@ export type CaseStudy = {
   stack: CaseStudyStackItem[];
   next: string;
   screenshots: { src: string; alt: string; label: string }[];
-  demo?: { src: string; poster: string; caption: string; label: string };
+  demo?: {
+    src: string;
+    poster: string;
+    caption: string;
+    label: string;
+    lengthLabel: string;
+    captions?: string;
+  };
   download: { label: string; href: string };
 };
 
@@ -144,12 +151,14 @@ export const projects: Project[] = [
         },
       ],
       demo: {
-        src: "/projects/feature-request-matcher/frm-demo.mp4",
-        poster: "/projects/feature-request-matcher/frm-demo-poster.jpg",
+        src: "/projects/feature-request-matcher/frm-demo-30s.mp4",
+        poster: "/projects/feature-request-matcher/frm-demo-30s-poster.jpg",
+        captions: "/projects/feature-request-matcher/frm-demo-30s.en.vtt",
+        lengthLabel: "30 second walkthrough",
         label:
           "Walkthrough of the Feature Request Matcher: request log, morning release match, and drafted client email",
         caption:
-          "Mock-up recreation with fictional data. The real tool ran on proprietary client data.",
+          "Mock-up recreation with fictional data and an AI voiceover. The real tool ran on proprietary client data.",
       },
       download: {
         label: "One-pager PDF",
