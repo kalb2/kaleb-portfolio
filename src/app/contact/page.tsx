@@ -47,9 +47,9 @@ export default function ContactPage() {
           <h2 className="text-2xl uppercase">Hire</h2>
         </div>
         <div className="flex flex-col border-black md:border-r">
-          <h3 className="lined border-b border-black px-3 text-[1.875rem] uppercase leading-[1.25] sm:text-4xl xl:text-5xl">
+          <h2 className="lined border-b border-black px-3 text-[1.875rem] uppercase leading-[1.25] sm:text-4xl xl:text-5xl">
             Let’s talk about the book, the tools, or the next role.
-          </h3>
+          </h2>
           <p className="border-b border-black p-5 leading-relaxed md:p-8">
             Hiring conversations are welcome. Email is the fastest path. Resume
             and LinkedIn are the primary backups. The{" "}
@@ -73,6 +73,9 @@ export default function ContactPage() {
               <span className="font-mono text-xs uppercase tracking-widest after:ml-2 after:content-['↗']">
                 {action.detail}
               </span>
+              {action.external ? (
+                <span className="sr-only"> (opens in a new tab)</span>
+              ) : null}
             </a>
           ))}
         </div>

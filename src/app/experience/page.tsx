@@ -71,6 +71,7 @@ export default function ExperiencePage() {
         leftTitle="FAQ"
         rightTitle="What is my background?"
         imageSrc="/profile.jpg"
+        priority
         imageAlt="Black and white portrait of Kaleb Jensen"
         subtitle="Enterprise CSM. Builder of the tools around the book."
         links={[
@@ -87,7 +88,7 @@ export default function ExperiencePage() {
         ))}
       </SplitGrid>
       <SectionBreak />
-      <TitleBar text="MDF / HubSpot" />
+      <TitleBar text="MDF / HubSpot" as="h2" />
       <SplitGrid
         leftTitle="Systems"
         rightTitle="What I built there"

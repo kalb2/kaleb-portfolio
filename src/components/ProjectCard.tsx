@@ -6,9 +6,11 @@ import { ProjectPattern } from "./ProjectPattern";
 
 type ProjectCardProps = {
   project: Project;
+  /** Load eagerly with high priority (first card in the rail). */
+  priority?: boolean;
 };
 
-export function ProjectCard({ project }: ProjectCardProps) {
+export function ProjectCard({ project, priority = false }: ProjectCardProps) {
   return (
     <article className="w-[min(82vw,22rem)] shrink-0 snap-start odd:-translate-y-4 even:translate-y-4 sm:w-[26rem]">
       <p className="pb-3 pl-2 font-mono text-[1.35rem] uppercase leading-none sm:text-2xl">
@@ -24,6 +26,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
                   src={project.cardImage.src}
                   alt={project.cardImage.alt}
                   fill
+                  priority={priority}
                   sizes="(min-width: 640px) 26rem, 82vw"
                   className="object-cover object-top"
                 />

@@ -17,7 +17,7 @@ export default function ProjectsPage() {
   return (
     <>
       <TitleBar text="Projects" />
-      <ProjectRail />
+      <ProjectRail priority />
       <SectionBreak />
       <div className="grid border-b border-black md:grid-cols-[1fr_3fr_2fr]">
         <div className="hidden border-r border-black p-4 md:block">

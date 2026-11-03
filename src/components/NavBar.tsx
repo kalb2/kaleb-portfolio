@@ -3,25 +3,30 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { navLinks, site } from "@/data/site";
 import { MenuIcon } from "./MenuIcon";
 
 export function NavBar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     setOpen(false);
   }, [pathname]);
 
   useEffect(() => {
+    if (!open) return;
     const onKey = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setOpen(false);
+      if (event.key !== "Escape") return;
+      setOpen(false);
+      // Return keyboard focus to the toggle when the menu closes.
+      menuButtonRef.current?.focus();
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, []);
+  }, [open]);
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -62,36 +67,42 @@ export function NavBar() {
           target="_blank"
           rel="noreferrer"
         >
-          <Image src="/linkedin.png" alt="LinkedIn" width={28} height={28} />
+          <Image src="/linkedin.png" alt="" width={28} height={28} />
+          <span className="sr-only">LinkedIn (opens in a new tab)</span>
         </a>
         <a
           href={site.github}
           target="_blank"
           rel="noreferrer"
         >
-          <Image src="/github-mark.svg" alt="GitHub" width={26} height={26} />
+          <Image src="/github-mark.svg" alt="" width={26} height={26} />
+          <span className="sr-only">GitHub (opens in a new tab)</span>
         </a>
       </div>
 
-      {navLinks
-        .filter((link) => link.href !== "/")
-        .map((link) => {
-          const active =
-            pathname === link.href || pathname.startsWith(`${link.href}/`);
-          return (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`hidden h-full items-center border-l border-black px-5 hover:bg-black hover:text-white md:flex ${
-                active ? "bg-black text-white" : "bg-white"
-              }`}
-            >
-              {link.label}
-            </Link>
-          );
-        })}
+      <nav aria-label="Primary" className="contents">
+        {navLinks
+          .filter((link) => link.href !== "/")
+          .map((link) => {
+            const active =
+              pathname === link.href || pathname.startsWith(`${link.href}/`);
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                aria-current={active ? "page" : undefined}
+                className={`hidden h-full items-center border-l border-black px-5 hover:bg-black hover:text-white md:flex ${
+                  active ? "bg-black text-white" : "bg-white"
+                }`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
+      </nav>
 
       <button
+        ref={menuButtonRef}
         type="button"
         className="group flex h-full w-16 items-center justify-center border-l border-black hover:bg-black"
         aria-expanded={open}
@@ -105,6 +116,7 @@ export function NavBar() {
       {open && (
         <nav
           id="site-menu"
+          aria-label="Site menu"
           className="fixed inset-0 top-[3.25rem] z-40 bg-white md:left-auto md:w-1/3 md:border-l md:border-black"
         >
           {navLinks.map((link, index) => (
@@ -129,6 +141,7 @@ export function NavBar() {
               className="flex flex-1 items-center justify-center py-4 uppercase after:ml-2 after:content-['↗']"
             >
               LinkedIn
+              <span className="sr-only"> (opens in a new tab)</span>
             </a>
             <a
               href={site.github}
@@ -137,6 +150,7 @@ export function NavBar() {
               className="flex flex-1 items-center justify-center py-4 uppercase after:ml-2 after:content-['↗']"
             >
               GitHub
+              <span className="sr-only"> (opens in a new tab)</span>
             </a>
           </div>
         </nav>
