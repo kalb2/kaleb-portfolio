@@ -7,6 +7,7 @@ import "./globals.css";
 
 const robotoMono = Roboto_Mono({
   subsets: ["latin"],
+  weight: "400",
   variable: "--font-roboto-mono",
   display: "swap",
 });
