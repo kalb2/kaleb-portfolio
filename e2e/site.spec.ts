@@ -114,11 +114,11 @@ test.describe("crawler files", () => {
     expect(body).toContain(`Sitemap: ${site.url}/sitemap.xml`);
   });
 
-  test("sitemap.xml lists exactly the 5 main pages and every project", async ({ request }) => {
+  test("sitemap.xml lists exactly the main pages and every project", async ({ request }) => {
     const res = await request.get("/sitemap.xml");
     expect(res.status()).toBe(200);
     const locs = [...(await res.text()).matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
     expect(locs.sort()).toEqual(allRoutes.map((r) => canonicalFor(r.path)).sort());
-    expect(allRoutes).toHaveLength(5 + projects.length);
+    expect(allRoutes).toHaveLength(navLinks.length + projects.length);
   });
 });

@@ -91,7 +91,7 @@ export function NavBar() {
                 key={link.href}
                 href={link.href}
                 aria-current={active ? "page" : undefined}
-                className={`hidden h-full items-center border-l border-black px-5 hover:bg-black hover:text-white md:flex ${
+                className={`hidden h-full items-center border-l border-black px-3 lg:px-5 hover:bg-black hover:text-white md:flex ${
                   active ? "bg-black text-white" : "bg-white"
                 }`}
               >

@@ -8,7 +8,7 @@ import { site } from "@/data/site";
 export const metadata: Metadata = pageMetadata({
   title: "About",
   description:
-    "Husband. Dad. CSM. Woodworker. Traveler. Coding is how the tools ship.",
+    "Meet Kaleb Jensen, Enterprise Customer Success Manager and builder of SaaS customer success tools. Family, woodworking, travel, and a habit of shipping.",
   path: "/about",
 });
 

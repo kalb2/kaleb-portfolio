@@ -6,9 +6,9 @@ import { TitleBar } from "@/components/TitleBar";
 import { site } from "@/data/site";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Experience",
+  title: "Enterprise Customer Success Experience",
   description:
-    "Enterprise CSM at Connecteam. Marketing and sales path, HubSpot depth from MDF, and tools that ship.",
+    "Enterprise and Strategic CSM experience in SaaS renewals, expansion, and NRR. Connecteam portfolio ownership and HubSpot CS operations at MDF Commerce.",
   path: "/experience",
 });
 
@@ -16,7 +16,7 @@ const faq = [
   {
     header: "What I do now",
     paragraph:
-      "Enterprise Customer Success Manager at Connecteam. I own a $2.15M enterprise portfolio across 30 clients. Day to day: onboard, retain, expand, and turn recurring friction into process and tools.",
+      "Enterprise Customer Success Manager at Connecteam. I own a $2.15M enterprise portfolio across 30 clients. Day to day: customer onboarding, renewals, expansion, and turning recurring friction into process and tools.",
   },
   {
     header: "Path",
@@ -31,7 +31,7 @@ const faq = [
   {
     header: "Why hire me",
     paragraph:
-      "Commercial instincts plus systems thinking. I can sit with a customer, see the pattern, and build the thing that removes it, then prove it in interviews with a live case study.",
+      "For Enterprise and Strategic CSM roles, I bring commercial instincts plus systems thinking. I can sit with a customer, see the pattern, and build the thing that removes it, then prove it in interviews with a live case study.",
   },
   {
     header: "Let's talk",
@@ -69,7 +69,7 @@ export default function ExperiencePage() {
       <TitleBar text="Experience" />
       <SplitGrid
         leftTitle="FAQ"
-        rightTitle="What is my background?"
+        rightTitle="Enterprise customer success"
         imageSrc="/profile.jpg"
         priority
         imageAlt="Black and white portrait of Kaleb Jensen"

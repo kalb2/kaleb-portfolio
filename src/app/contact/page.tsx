@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { InquiryForm } from "@/components/InquiryForm";
+import { SchedulingLink } from "@/components/SchedulingLink";
 import { pageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { SectionBreak } from "@/components/SectionBreak";
@@ -8,7 +10,7 @@ import { site } from "@/data/site";
 export const metadata: Metadata = pageMetadata({
   title: "Contact",
   description:
-    "Hiring conversations, resume, and LinkedIn.",
+    "Contact Kaleb Jensen about Enterprise or Strategic CSM roles, SaaS customer success, HubSpot automations, or a side project.",
   path: "/contact",
 });
 
@@ -51,7 +53,7 @@ export default function ContactPage() {
             Let’s talk about the book, the tools, or the next role.
           </h2>
           <p className="border-b border-black p-5 leading-relaxed md:p-8">
-            Hiring conversations are welcome. Email is the fastest path. Resume
+            Hiring conversations and focused side projects are welcome. Email is the fastest path. Resume
             and LinkedIn are the primary backups. The{" "}
             <Link href="/projects/feature-request-matcher" className="underline">
               Feature Request Matcher case study
@@ -88,6 +90,14 @@ export default function ContactPage() {
         </div>
       </section>
       <SectionBreak />
+      <TitleBar text="Send an inquiry" as="h2" />
+      <section aria-label="Contact inquiry" className="grid border-b border-black md:grid-cols-[1fr_3fr_2fr]">
+        <div className="hidden border-r border-black p-4 md:block"><p className="text-2xl uppercase">Your note</p></div>
+        <div className="p-5 md:col-span-2 md:p-8 lg:pr-32">
+          <SchedulingLink />
+          <InquiryForm />
+        </div>
+      </section>
     </>
   );
 }

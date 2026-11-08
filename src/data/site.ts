@@ -1,10 +1,12 @@
 export const site = {
   name: "Kaleb Jensen",
-  title: "Kaleb Jensen | Enterprise CSM",
+  title: "Kaleb Jensen | Enterprise Customer Success Manager",
   url: "https://www.kalebjensen.com",
   description:
-    "Enterprise Customer Success Manager at Connecteam. Builds automations and internal tools that close the loop for a large book of accounts.",
+    "Enterprise Customer Success Manager at Connecteam focused on SaaS renewals, expansion, and customer onboarding. Builds HubSpot systems and AI workflows.",
   email: "kalebcj@gmail.com",
+  // Set to your real HTTPS booking page to show Book a call on Contact and Hire Me.
+  schedulingUrl: "",
   location: "Utah",
   role: "Enterprise CSM",
   company: "Connecteam",
@@ -19,5 +21,6 @@ export const navLinks = [
   { href: "/projects", label: "Projects" },
   { href: "/experience", label: "Experience" },
   { href: "/about", label: "About" },
+  { href: "/hire", label: "Hire Me" },
   { href: "/contact", label: "Contact" },
 ] as const;
