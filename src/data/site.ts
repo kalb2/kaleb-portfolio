@@ -14,7 +14,7 @@ export const site = {
   linkedin: "https://www.linkedin.com/in/kalebjensen/",
   github: "https://github.com/kalb2",
   resume:
-    "https://drive.google.com/file/d/1uJMMSSKpXHWpaAnDPxn_RSsJOO8eCqiA/view?usp=sharing",
+    "https://drive.google.com/file/d/11j9Lt6vJKOyHQie5QfVmu-_rFQdyH96e/view?usp=sharing",
 };
 
 export const navLinks = [
