@@ -1,5 +1,4 @@
 import { expect, test } from "@playwright/test";
-import { site } from "./routes";
 
 test("homepage metrics use approved Connecteam figures and responsive cells", async ({ page, isMobile }) => {
   await page.goto("/");
@@ -27,6 +26,7 @@ test("homepage metrics use approved Connecteam figures and responsive cells", as
 test("Person schema describes enterprise customer success and real profile links", async ({ page }) => {
   await page.goto("/");
   const person = JSON.parse(await page.locator('script[type="application/ld+json"]').innerText());
+  expect(person).not.toHaveProperty("email");
   expect(person.jobTitle).toBe("Enterprise Customer Success Manager");
   expect(person.sameAs).toContain("https://www.linkedin.com/in/kalebjensen");
   expect(person.knowsAbout).toEqual(expect.arrayContaining(["Strategic CSM", "HubSpot", "Customer onboarding", "CS operations", "AI workflows"]));
@@ -43,46 +43,12 @@ test("Hire Me offerings link to real project evidence", async ({ page }) => {
 });
 
 for (const path of ["/contact", "/hire"]) {
-  test(`${path} hides booking when unset and builds a correct email draft`, async ({ page }) => {
-    expect(site.schedulingUrl).toBe("");
+  test(`${path} hides an unconfigured form and shows LinkedIn`, async ({ page }) => {
     await page.goto(path);
+    await expect(page.getByRole("form", { name: "Send an inquiry" })).toHaveCount(0);
+    const fallback = page.getByRole("link", { name: "connect with me on LinkedIn", exact: true });
+    await expect(fallback).toBeVisible();
+    await expect(fallback).toHaveAttribute("href", "https://www.linkedin.com/in/kalebjensen");
     await expect(page.getByRole("link", { name: "Book a call" })).toHaveCount(0);
-    const form = page.getByRole("form", { name: "Send an inquiry" });
-    await expect(form.getByLabel("Inquiry type")).toHaveValue(path === "/hire" ? "Side project" : "Job opportunity");
-    await form.getByLabel("Name (required)").fill("Alex & Co");
-    await form.getByLabel("Email (required)").fill("alex@example.com");
-    await form.getByLabel("Inquiry type").selectOption("Side project");
-    await form.getByLabel("Message (required)").fill("HubSpot & AI?\nLet's talk scope.");
-    await form.getByRole("button", { name: "Open email draft" }).click();
-    const draft = form.getByRole("link", { name: "open the prepared draft" });
-    await expect(draft).toBeVisible();
-    const url = new URL((await draft.getAttribute("href"))!);
-    expect(url.protocol).toBe("mailto:");
-    expect(url.pathname).toBe(site.email);
-    expect(url.searchParams.get("subject")).toBe("Website inquiry: Side project - Alex & Co");
-    expect(url.searchParams.get("body")).toBe("Name: Alex & Co\nEmail: alex@example.com\nType: Side project\n\nHubSpot & AI?\nLet's talk scope.");
-    await expect(form.getByRole("status")).toContainText("not sent");
-    await form.getByLabel("Message (required)").fill("Updated scope");
-    await expect(draft).toHaveCount(0);
-  });
-
-  test(`${path} validates required fields, email and whitespace`, async ({ page }) => {
-    await page.goto(path);
-    const form = page.getByRole("form", { name: "Send an inquiry" });
-    const submit = form.getByRole("button", { name: "Open email draft" });
-    await submit.click();
-    await expect(form.getByRole("link", { name: "open the prepared draft" })).toHaveCount(0);
-    await expect(form.getByLabel("Name (required)")).toBeFocused();
-    await form.getByLabel("Name (required)").fill("Alex");
-    await form.getByLabel("Email (required)").fill("not-an-email");
-    await form.getByLabel("Message (required)").fill("A project");
-    await submit.click();
-    await expect(form.getByLabel("Email (required)")).toBeFocused();
-    await form.getByLabel("Email (required)").fill("alex@example.com");
-    await form.getByLabel("Message (required)").fill("   ");
-    await submit.click();
-    await expect(form.getByRole("alert")).toContainText("not just spaces");
-    await expect(form.getByLabel("Message (required)")).toBeFocused();
-    await expect(form.getByRole("link", { name: "open the prepared draft" })).toHaveCount(0);
   });
 }

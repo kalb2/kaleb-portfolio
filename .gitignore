@@ -10,6 +10,7 @@
 
 # next.js
 /.next/
+/.next-formspree-test/
 /out/
 
 # production

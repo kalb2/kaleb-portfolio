@@ -16,11 +16,6 @@ export const metadata: Metadata = pageMetadata({
 
 const actions = [
   {
-    href: `mailto:${site.email}`,
-    label: "Email",
-    detail: site.email,
-  },
-  {
     href: site.resume,
     label: "Resume",
     detail: "Google Drive",
@@ -53,7 +48,7 @@ export default function ContactPage() {
             Let’s talk about the book, the tools, or the next role.
           </h2>
           <p className="border-b border-black p-5 leading-relaxed md:p-8">
-            Hiring conversations and focused side projects are welcome. Email is the fastest path. Resume
+            Hiring conversations and focused side projects are welcome. Send an inquiry below or connect on LinkedIn. Resume
             and LinkedIn are the primary backups. The{" "}
             <Link href="/projects/feature-request-matcher" className="underline">
               Feature Request Matcher case study

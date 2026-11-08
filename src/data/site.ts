@@ -4,7 +4,8 @@ export const site = {
   url: "https://www.kalebjensen.com",
   description:
     "Enterprise Customer Success Manager at Connecteam focused on SaaS renewals, expansion, and customer onboarding. Builds HubSpot systems and AI workflows.",
-  email: "kalebcj@gmail.com",
+  // Public form id only. The recipient inbox stays in Formspree, never here.
+  formspreeFormId: process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID ?? "",
   // Set to your real HTTPS booking page to show Book a call on Contact and Hire Me.
   schedulingUrl: "",
   location: "Utah",

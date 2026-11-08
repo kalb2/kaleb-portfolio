@@ -1,14 +1,19 @@
-import { site } from "@/data/site";
-
 export const inquiryTypes = ["Job opportunity", "Side project", "Other"] as const;
 export type InquiryType = (typeof inquiryTypes)[number];
 export type Inquiry = { name: string; email: string; type: InquiryType; message: string };
 
-/** Encode each field as data, never as extra mailto headers or recipients. */
-export function buildInquiryMailto(inquiry: Inquiry) {
-  const name = inquiry.name.trim().replace(/[\r\n]+/g, " ");
-  const email = inquiry.email.trim().replace(/[\r\n]+/g, "");
-  const subject = `Website inquiry: ${inquiry.type} - ${name}`;
-  const body = `Name: ${name}\nEmail: ${email}\nType: ${inquiry.type}\n\n${inquiry.message.trim()}`;
-  return `mailto:${site.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+export function formspreeEndpoint(formId: string) {
+  const id = formId.trim();
+  return /^[a-z0-9_-]+$/i.test(id) ? `https://formspree.io/f/${id}` : "";
+}
+
+export function buildInquiryPayload(inquiry: Inquiry, honeypot = "") {
+  return {
+    name: inquiry.name.trim(),
+    email: inquiry.email.trim(),
+    type: inquiry.type,
+    message: inquiry.message.trim(),
+    _subject: `kalebjensen.com inquiry: ${inquiry.type}`,
+    _gotcha: honeypot,
+  };
 }

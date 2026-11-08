@@ -1,80 +1,123 @@
 "use client";
 
-import { useId, useState, type FormEvent } from "react";
+import { useId, useRef, useState, type FormEvent } from "react";
 import { site } from "@/data/site";
-import { buildInquiryMailto, inquiryTypes, type InquiryType } from "@/lib/inquiry";
+import { buildInquiryPayload, formspreeEndpoint, inquiryTypes, type InquiryType } from "@/lib/inquiry";
 
+const linkedin = "https://www.linkedin.com/in/kalebjensen";
 type InquiryFormProps = { defaultType?: InquiryType };
 const inputClass = "mt-2 block w-full rounded-none border border-black bg-white p-3 text-base font-normal normal-case tracking-normal";
 const labelClass = "block font-mono text-xs uppercase tracking-widest";
 
 export function InquiryForm({ defaultType = "Job opportunity" }: InquiryFormProps) {
   const id = useId();
-  const [draftHref, setDraftHref] = useState("");
+  const pending = useRef(false);
+  const [selectedType, setSelectedType] = useState<InquiryType>(defaultType);
+  const [sending, setSending] = useState(false);
+  const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
+  const endpoint = formspreeEndpoint(site.formspreeFormId);
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  if (!endpoint) {
+    return <p className="leading-relaxed">To discuss a role or side project, <a href={linkedin} className="underline underline-offset-4">connect with me on LinkedIn</a>.</p>;
+  }
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    if (pending.current) return;
     const form = event.currentTarget;
     const data = new FormData(form);
     const name = String(data.get("name") ?? "").trim();
     const email = String(data.get("email") ?? "").trim();
     const message = String(data.get("message") ?? "").trim();
     const type = String(data.get("type")) as InquiryType;
+    setSuccess(false);
     if (!name || !message) {
       setError("Please add your name and a message, not just spaces.");
       (form.elements.namedItem(!name ? "name" : "message") as HTMLElement)?.focus();
       return;
     }
     if (!inquiryTypes.includes(type)) return;
+    const honeypot = String(data.get("_gotcha") ?? "");
+    if (honeypot) {
+      setError("We could not submit this inquiry. Please refresh and try again.");
+      return;
+    }
+    pending.current = true;
+    setSending(true);
     setError("");
-    const href = buildInquiryMailto({ name, email, type, message });
-    setDraftHref(href);
-    window.location.assign(href);
+    const controller = new AbortController();
+    const timeout = window.setTimeout(() => controller.abort(), 15_000);
+    try {
+      const response = await fetch(endpoint, {
+        method: "POST",
+        headers: { Accept: "application/json", "Content-Type": "application/json" },
+        body: JSON.stringify(buildInquiryPayload({ name, email, type, message }, honeypot)),
+        signal: controller.signal,
+      });
+      if (!response.ok) throw new Error("Submission rejected");
+      form.reset();
+      setSelectedType(defaultType);
+      setSuccess(true);
+    } catch {
+      setError("Your inquiry could not be sent. Please try again or connect on LinkedIn.");
+    } finally {
+      window.clearTimeout(timeout);
+      pending.current = false;
+      setSending(false);
+    }
   }
 
   return (
     <form
-      action={`mailto:${site.email}`}
-      method="get"
+      action={endpoint}
+      method="post"
       aria-label="Send an inquiry"
       aria-describedby={`${id}-note`}
+      aria-busy={sending}
       onSubmit={handleSubmit}
-      onChange={() => { setDraftHref(""); setError(""); }}
+      onChange={() => { setSuccess(false); setError(""); }}
       className="space-y-6"
     >
       <p id={`${id}-note`} className="text-sm leading-relaxed">
-        This opens a draft in your email app. Nothing is sent or stored by this site.
-        Review the draft and send it there. An email app must be set up on your device.
+        Your inquiry is delivered securely through Formspree. Use this form for
+        hiring conversations or a focused side project. Please avoid sharing sensitive information.
       </p>
-      <div className="grid gap-6 sm:grid-cols-2">
-        <label className={labelClass} htmlFor={`${id}-name`}>
-          Name (required)
-          <input className={inputClass} id={`${id}-name`} name="name" autoComplete="name" required maxLength={100} />
+      <fieldset disabled={sending} className="space-y-6">
+        <legend className="sr-only">Inquiry details</legend>
+        <div hidden aria-hidden="true">
+          <label htmlFor={`${id}-gotcha`}>Leave this field empty</label>
+          <input id={`${id}-gotcha`} name="_gotcha" tabIndex={-1} autoComplete="off" />
+        </div>
+        <input type="hidden" name="_subject" value={`kalebjensen.com inquiry: ${selectedType}`} />
+        <div className="grid gap-6 sm:grid-cols-2">
+          <label className={labelClass} htmlFor={`${id}-name`}>
+            Name (required)
+            <input className={inputClass} id={`${id}-name`} name="name" autoComplete="name" required maxLength={100} />
+          </label>
+          <label className={labelClass} htmlFor={`${id}-email`}>
+            Email (required)
+            <input className={inputClass} id={`${id}-email`} name="email" type="email" autoComplete="email" required maxLength={254} />
+          </label>
+        </div>
+        <label className={labelClass} htmlFor={`${id}-type`}>
+          Inquiry type
+          <select className={inputClass} id={`${id}-type`} name="type" value={selectedType} onChange={(event) => setSelectedType(event.target.value as InquiryType)}>
+            {inquiryTypes.map((type) => <option key={type}>{type}</option>)}
+          </select>
         </label>
-        <label className={labelClass} htmlFor={`${id}-email`}>
-          Email (required)
-          <input className={inputClass} id={`${id}-email`} name="email" type="email" autoComplete="email" required maxLength={254} />
+        <label className={labelClass} htmlFor={`${id}-message`}>
+          Message (required)
+          <textarea className={inputClass} id={`${id}-message`} name="message" rows={5} required maxLength={3000} />
         </label>
-      </div>
-      <label className={labelClass} htmlFor={`${id}-type`}>
-        Inquiry type
-        <select className={inputClass} id={`${id}-type`} name="type" defaultValue={defaultType}>
-          {inquiryTypes.map((type) => <option key={type}>{type}</option>)}
-        </select>
-      </label>
-      <label className={labelClass} htmlFor={`${id}-message`}>
-        Message (required)
-        <textarea className={inputClass} id={`${id}-message`} name="message" rows={5} required maxLength={3000} />
-      </label>
-      {error ? <p role="alert" className="text-sm">{error}</p> : null}
-      <button type="submit" className="border border-black bg-black px-5 py-3 font-mono text-xs uppercase tracking-widest text-white hover:bg-white hover:text-black">
-        Open email draft
-      </button>
+        <button type="submit" disabled={sending} className="border border-black bg-black px-5 py-3 font-mono text-xs uppercase tracking-widest text-white hover:bg-white hover:text-black disabled:cursor-wait disabled:opacity-60">
+          {sending ? "Sending..." : "Send inquiry"}
+        </button>
+      </fieldset>
+      {error ? <p role="alert" className="text-sm">{error} <a href={linkedin} className="underline">Connect on LinkedIn</a>.</p> : null}
       <p role="status" className="text-sm leading-relaxed">
-        {draftHref ? <>Draft prepared, not sent. If your email app did not open, <a href={draftHref} className="underline">open the prepared draft</a> or email <a href={`mailto:${site.email}`} className="underline">{site.email}</a>.</> : null}
+        {success ? "Thanks. Your inquiry has been sent. I will be in touch." : sending ? "Sending your inquiry..." : ""}
       </p>
-      <noscript><p>Email <a href={`mailto:${site.email}`} className="underline">{site.email}</a> directly. The draft builder needs JavaScript.</p></noscript>
     </form>
   );
 }
