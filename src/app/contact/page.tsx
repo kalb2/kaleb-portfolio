@@ -18,7 +18,7 @@ const actions = [
   {
     href: site.resume,
     label: "Resume",
-    detail: "Google Drive",
+    detail: "PDF",
     external: true,
   },
   {
