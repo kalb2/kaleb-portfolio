@@ -72,13 +72,18 @@ body {
 }
 
 .lined {
-  background-image: repeating-linear-gradient(
-    180deg,
-    transparent,
-    transparent calc((1.25 * 1em) - 1px),
-    #000 calc((1.25 * 1em) - 0.5px),
-    #000 calc((1.25 * 1em) + 0.5px)
+  /* Tailwind text-* sizes set their own line-height, so lock it here to keep
+     the ruled lines exactly one line apart, under each line of text. */
+  line-height: 1.25 !important;
+  background-image: linear-gradient(
+    to bottom,
+    transparent calc(100% - 1px),
+    #000 calc(100% - 1px)
   );
+  background-size: 100% 1.25em;
+  background-repeat: repeat-y;
+  background-origin: content-box;
+  background-clip: content-box;
 }
 
 .handles {
