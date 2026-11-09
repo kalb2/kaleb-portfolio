@@ -113,7 +113,7 @@ export function CaseStudy({ project }: CaseStudyProps) {
               </p>
             </div>
             <div className="border-b border-black p-4 md:border-b-0 md:border-r">
-              <h2 className="text-2xl uppercase">See it work</h2>
+              <h3 className="text-2xl uppercase">See it work</h3>
             </div>
             <div className="p-4">
               <p className="font-mono text-xs uppercase tracking-widest">
@@ -154,15 +154,15 @@ export function CaseStudy({ project }: CaseStudyProps) {
 
       <section className="grid border-b border-black md:grid-cols-2">
         <div className="border-b border-black p-6 md:border-b-0 md:border-r">
-          <p className="mb-3 font-mono text-xs uppercase tracking-widest">
+          <h3 className="mb-3 font-mono text-xs uppercase tracking-widest">
             Situation and task
-          </p>
+          </h3>
           <p className="max-w-xl text-lg leading-relaxed">{study.situation}</p>
         </div>
         <div className="p-6">
-          <p className="mb-3 font-mono text-xs uppercase tracking-widest">
+          <h3 className="mb-3 font-mono text-xs uppercase tracking-widest">
             Action
-          </p>
+          </h3>
           <p className="max-w-xl text-lg leading-relaxed">{study.action}</p>
         </div>
       </section>
@@ -173,7 +173,7 @@ export function CaseStudy({ project }: CaseStudyProps) {
             <p className="font-mono text-xs uppercase tracking-widest">Flow</p>
           </div>
           <div className="border-b border-black p-4 md:border-b-0 md:border-r">
-            <h2 className="text-2xl uppercase">How it works</h2>
+            <h3 className="text-2xl uppercase">How it works</h3>
           </div>
           <div className="p-4">
             <p className="font-mono text-xs uppercase tracking-widest">
@@ -203,9 +203,9 @@ export function CaseStudy({ project }: CaseStudyProps) {
 
       <section className="grid border-b border-black lg:grid-cols-[2fr_3fr]">
         <div className="border-b border-black p-6 lg:border-b-0 lg:border-r">
-          <p className="mb-4 font-mono text-xs uppercase tracking-widest">
+          <h3 className="mb-4 font-mono text-xs uppercase tracking-widest">
             Stack
-          </p>
+          </h3>
           <ul className="flex flex-col gap-3">
             {study.stack.map((item) => (
               <li
@@ -226,9 +226,9 @@ export function CaseStudy({ project }: CaseStudyProps) {
           </ul>
         </div>
         <div className="p-6">
-          <p className="mb-4 font-mono text-xs uppercase tracking-widest">
+          <h3 className="mb-4 font-mono text-xs uppercase tracking-widest">
             Result
-          </p>
+          </h3>
           <ul>
             {study.results.map((result) => (
               <li
@@ -250,7 +250,7 @@ export function CaseStudy({ project }: CaseStudyProps) {
             </p>
           </div>
           <div className="border-b border-black p-4 md:border-b-0 md:border-r">
-            <h2 className="text-2xl uppercase">Illustrative mockups</h2>
+            <h3 className="text-2xl uppercase">Illustrative mockups</h3>
           </div>
           <div className="p-4">
             <p className="font-mono text-xs uppercase tracking-widest">
@@ -285,9 +285,9 @@ export function CaseStudy({ project }: CaseStudyProps) {
 
       <section className="grid border-b border-black md:grid-cols-[3fr_2fr]">
         <div className="border-b border-black p-6 md:border-b-0 md:border-r">
-          <p className="mb-2 font-mono text-xs uppercase tracking-widest">
+          <h3 className="mb-2 font-mono text-xs uppercase tracking-widest">
             Next
-          </p>
+          </h3>
           <p className="max-w-2xl text-lg leading-relaxed">{study.next}</p>
         </div>
         <a

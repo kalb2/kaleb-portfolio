@@ -20,6 +20,7 @@ export const site = {
 export const navLinks = [
   { href: "/", label: "Home" },
   { href: "/projects", label: "Projects" },
+  { href: "/case-studies", label: "Case Studies" },
   { href: "/experience", label: "Experience" },
   { href: "/about", label: "About" },
   { href: "/hire", label: "Hire Me" },

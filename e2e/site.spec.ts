@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-import { allRoutes, canonicalFor, navLinks, projects, site } from "./routes";
+import { allRoutes, canonicalFor, caseStudyRoutes, navLinks, projects, site } from "./routes";
 
 test("homepage project cards have a real image, alt text, and the right link", async ({
   page,
@@ -119,6 +119,6 @@ test.describe("crawler files", () => {
     expect(res.status()).toBe(200);
     const locs = [...(await res.text()).matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
     expect(locs.sort()).toEqual(allRoutes.map((r) => canonicalFor(r.path)).sort());
-    expect(allRoutes).toHaveLength(navLinks.length + projects.length);
+    expect(allRoutes).toHaveLength(navLinks.length + projects.length + caseStudyRoutes.length);
   });
 });

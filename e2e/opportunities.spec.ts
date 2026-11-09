@@ -2,7 +2,7 @@ import { expect, test } from "@playwright/test";
 
 test("homepage metrics use approved Connecteam figures and responsive cells", async ({ page, isMobile }) => {
   await page.goto("/");
-  const strip = page.getByRole("region", { name: "Connecteam portfolio results" });
+  const strip = page.getByRole("region", { name: "Connecteam / Enterprise customer success" });
   await expect(strip).toBeVisible();
   for (const value of ["$2.15M", "105%", "96%", "99%"]) {
     await expect(strip.getByRole("definition").filter({ hasText: value })).toBeVisible();
@@ -52,3 +52,19 @@ for (const path of ["/contact", "/hire"]) {
     await expect(page.getByRole("link", { name: "Book a call" })).toHaveCount(0);
   });
 }
+
+test("Case Studies index links to STAR pages and related projects", async ({ page }) => {
+  await page.goto("/case-studies");
+  const pack = page.getByRole("region", { name: "Career case studies" });
+  await expect(pack.getByRole("article")).toHaveCount(3);
+  for (const slug of [
+    "connecteam-enterprise-csm",
+    "mdf-commerce-enterprise-csm",
+    "gresham-myers-account-management",
+  ]) {
+    await expect(page.locator(`a[href="/case-studies/${slug}"]`)).toHaveCount(1);
+  }
+  for (const href of ["hubspot-mdf", "connecteam-internal-tools", "feature-request-matcher"]) {
+    expect(await page.locator(`a[href="/projects/${href}"]`).count()).toBeGreaterThan(0);
+  }
+});

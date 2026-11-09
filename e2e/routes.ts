@@ -1,3 +1,4 @@
+import { careerCaseStudies } from "../src/data/careerCaseStudies";
 import { projects } from "../src/data/projects";
 import { navLinks, site } from "../src/data/site";
 
@@ -14,7 +15,12 @@ export const projectRoutes: Route[] = projects.map((project) => ({
   title: `${project.title} | ${site.name}`,
 }));
 
-export const allRoutes: Route[] = [...mainRoutes, ...projectRoutes];
+export const caseStudyRoutes: Route[] = careerCaseStudies.map((study) => ({
+  path: `/case-studies/${study.slug}`,
+  title: `${study.company} Case Study | ${site.name}`,
+}));
+
+export const allRoutes: Route[] = [...mainRoutes, ...projectRoutes, ...caseStudyRoutes];
 
 export const canonicalFor = (path: string) =>
   path === "/" ? site.url : `${site.url}${path}`;

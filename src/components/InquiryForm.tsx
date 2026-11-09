@@ -16,7 +16,11 @@ export function InquiryForm({ defaultType = "Job opportunity" }: InquiryFormProp
   const [sending, setSending] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
+  const [invalidFields, setInvalidFields] = useState<Array<"name" | "message">>([]);
   const endpoint = formspreeEndpoint(site.formspreeFormId);
+  const errorId = `${id}-error`;
+  const statusId = `${id}-status`;
+  const noteId = `${id}-note`;
 
   if (!endpoint) {
     return <p className="leading-relaxed">To discuss a role or side project, <a href={linkedin} className="underline underline-offset-4">connect with me on LinkedIn</a>.</p>;
@@ -32,11 +36,16 @@ export function InquiryForm({ defaultType = "Job opportunity" }: InquiryFormProp
     const message = String(data.get("message") ?? "").trim();
     const type = String(data.get("type")) as InquiryType;
     setSuccess(false);
-    if (!name || !message) {
+    const missing: Array<"name" | "message"> = [];
+    if (!name) missing.push("name");
+    if (!message) missing.push("message");
+    if (missing.length) {
+      setInvalidFields(missing);
       setError("Please add your name and a message, not just spaces.");
-      (form.elements.namedItem(!name ? "name" : "message") as HTMLElement)?.focus();
+      (form.elements.namedItem(missing[0]) as HTMLElement)?.focus();
       return;
     }
+    setInvalidFields([]);
     if (!inquiryTypes.includes(type)) return;
     const honeypot = String(data.get("_gotcha") ?? "");
     if (honeypot) {
@@ -68,18 +77,22 @@ export function InquiryForm({ defaultType = "Job opportunity" }: InquiryFormProp
     }
   }
 
+  const describedBy = [noteId, error ? errorId : null, success || sending ? statusId : null]
+    .filter(Boolean)
+    .join(" ");
+
   return (
     <form
       action={endpoint}
       method="post"
       aria-label="Send an inquiry"
-      aria-describedby={`${id}-note`}
+      aria-describedby={describedBy}
       aria-busy={sending}
       onSubmit={handleSubmit}
-      onChange={() => { setSuccess(false); setError(""); }}
+      onChange={() => { setSuccess(false); setError(""); setInvalidFields([]); }}
       className="space-y-6"
     >
-      <p id={`${id}-note`} className="text-sm leading-relaxed">
+      <p id={noteId} className="text-sm leading-relaxed">
         Your inquiry is delivered securely through Formspree. Use this form for
         hiring conversations or a focused side project. Please avoid sharing sensitive information.
       </p>
@@ -93,7 +106,16 @@ export function InquiryForm({ defaultType = "Job opportunity" }: InquiryFormProp
         <div className="grid gap-6 sm:grid-cols-2">
           <label className={labelClass} htmlFor={`${id}-name`}>
             Name (required)
-            <input className={inputClass} id={`${id}-name`} name="name" autoComplete="name" required maxLength={100} />
+            <input
+              className={inputClass}
+              id={`${id}-name`}
+              name="name"
+              autoComplete="name"
+              required
+              maxLength={100}
+              aria-invalid={invalidFields.includes("name") || undefined}
+              aria-describedby={invalidFields.includes("name") ? errorId : undefined}
+            />
           </label>
           <label className={labelClass} htmlFor={`${id}-email`}>
             Email (required)
@@ -108,16 +130,33 @@ export function InquiryForm({ defaultType = "Job opportunity" }: InquiryFormProp
         </label>
         <label className={labelClass} htmlFor={`${id}-message`}>
           Message (required)
-          <textarea className={inputClass} id={`${id}-message`} name="message" rows={5} required maxLength={3000} />
+          <textarea
+            className={inputClass}
+            id={`${id}-message`}
+            name="message"
+            rows={5}
+            required
+            maxLength={3000}
+            aria-invalid={invalidFields.includes("message") || undefined}
+            aria-describedby={invalidFields.includes("message") ? errorId : undefined}
+          />
         </label>
         <button type="submit" disabled={sending} className="border border-black bg-black px-5 py-3 font-mono text-xs uppercase tracking-widest text-white hover:bg-white hover:text-black disabled:cursor-wait disabled:opacity-60">
           {sending ? "Sending..." : "Send inquiry"}
         </button>
       </fieldset>
-      {error ? <p role="alert" className="text-sm">{error} <a href={linkedin} className="underline">Connect on LinkedIn</a>.</p> : null}
-      <p role="status" className="text-sm leading-relaxed">
-        {success ? "Thanks. Your inquiry has been sent. I will be in touch." : sending ? "Sending your inquiry..." : ""}
-      </p>
+      <div aria-live="assertive" aria-atomic="true">
+        {error ? (
+          <p id={errorId} role="alert" className="text-sm">
+            {error} <a href={linkedin} className="underline">Connect on LinkedIn</a>.
+          </p>
+        ) : null}
+      </div>
+      <div aria-live="polite" aria-atomic="true">
+        <p id={statusId} role="status" className="text-sm leading-relaxed">
+          {success ? "Thanks. Your inquiry has been sent. I will be in touch." : sending ? "Sending your inquiry..." : ""}
+        </p>
+      </div>
     </form>
   );
 }

@@ -7,10 +7,13 @@ const metrics = [
 
 export function MetricsStrip() {
   return (
-    <section aria-label="Connecteam portfolio results" className="border-b border-black">
-      <p className="border-b border-black px-3 py-2 font-mono text-xs uppercase tracking-widest">
+    <section aria-labelledby="metrics-heading" className="border-b border-black">
+      <h2
+        id="metrics-heading"
+        className="border-b border-black px-3 py-2 font-mono text-xs uppercase tracking-widest"
+      >
         Connecteam / Enterprise customer success
-      </p>
+      </h2>
       <dl className="grid grid-cols-2 md:grid-cols-4">
         {metrics.map((metric, index) => (
           <div

@@ -16,12 +16,12 @@ const faq = [
   {
     header: "What I do now",
     paragraph:
-      "Enterprise Customer Success Manager at Connecteam. I own a $2.15M enterprise portfolio across 30 clients. Day to day: customer onboarding, renewals, expansion, and turning recurring friction into process and tools.",
+      "Enterprise Customer Success Manager at Connecteam. I own a $2.15M enterprise portfolio across 30 clients, with 105% NRR, 96% GRR, and 99% logo retention. Day to day: customer onboarding, renewals, expansion, and turning recurring friction into process and tools.",
   },
   {
     header: "Path",
     paragraph:
-      "Marketing and sales foundation, then customer-facing roles, then CSM. HubSpot systems work at MDF. Hands-on building at Connecteam, including a Feature Request Matcher that ties client asks to daily release notes.",
+      "Marketing and sales foundation, then customer-facing roles, then CSM. At Gresham & Myers I grew $50K+ new ARR with a 90%+ renewal rate through quarterly business reviews. At MDF Commerce I owned $2M ARR across 50 accounts (97% GRR, 110% NRR, $150K expansion ARR) and built HubSpot systems. At Connecteam I build hands-on, including a Feature Request Matcher that ties client asks to daily release notes.",
   },
   {
     header: "Why building matters",
@@ -36,7 +36,7 @@ const faq = [
   {
     header: "Let's talk",
     paragraph:
-      "Resume and LinkedIn are the primary next step. The Feature Request Matcher case study on this site is the fastest proof of how I build. GitHub is there if you want the repos.",
+      "Start with the Case Studies page for STAR writeups of Connecteam, MDF Commerce, and Gresham & Myers. Resume and LinkedIn are the primary next step. The Feature Request Matcher case study is the fastest product proof. GitHub is there if you want the repos.",
   },
 ];
 
@@ -75,6 +75,7 @@ export default function ExperiencePage() {
         imageAlt="Black and white portrait of Kaleb Jensen"
         subtitle="Enterprise CSM. Builder of the tools around the book."
         links={[
+          { href: "/case-studies", label: "Case Studies" },
           { href: site.resume, label: "Resume", external: true },
           { href: site.linkedin, label: "LinkedIn", external: true },
           { href: site.github, label: "GitHub", external: true },
@@ -96,7 +97,8 @@ export default function ExperiencePage() {
         imageAlt="Kaleb Jensen traveling, standing outdoors near palm trees and water"
         subtitle="Pipelines. Automations. Health. Onboarding sites."
         links={[
-          { href: "/projects/hubspot-mdf", label: "Case study" },
+          { href: "/case-studies/mdf-commerce-enterprise-csm", label: "MDF case study" },
+          { href: "/projects/hubspot-mdf", label: "HubSpot systems" },
           { href: "/contact", label: "Let's talk" },
         ]}
       >
