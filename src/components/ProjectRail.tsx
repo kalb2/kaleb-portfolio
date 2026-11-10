@@ -17,6 +17,7 @@ export function ProjectRail({ priority = false }: ProjectRailProps) {
       style={{
         backgroundImage: `url(${CARDBOARD_TEXTURE})`,
         backgroundRepeat: "repeat",
+        backgroundSize: "512px",
       }}
     >
       {priority ? (
