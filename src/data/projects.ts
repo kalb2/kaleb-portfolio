@@ -188,7 +188,7 @@ export const projects: Project[] = [
     built:
       "A set of internal tools under the connecteam-* repos: a dashboard builder, a PDF generator that turns form submissions into shareable files, a certificate generator with chat delivery, and an API helper so CS can move data without waiting on a ticket.",
     outcome:
-      "CS spends less time assembling dashboards, PDFs, and certificates and more time with customers. The shortcuts exist because the person who felt the friction built them.",
+      "CS spends less time assembling dashboards, PDFs, and certificates and more time with customers. Internal tooling and process frameworks cut data-migration delivery time by 15%. The shortcuts exist because the person who felt the friction built them.",
     tools: ["Next.js", "Connecteam API", "Vercel", "PDFs"],
     pattern: "grid",
     cardImage: {

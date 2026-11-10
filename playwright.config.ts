@@ -1,6 +1,7 @@
 import { defineConfig, devices } from "@playwright/test";
 
 const PORT = Number(process.env.PORT ?? 3100);
+const formBaseURL = process.env.E2E_FORM_BASE_URL ?? `http://localhost:${PORT + 1}`;
 const baseURL = process.env.E2E_BASE_URL ?? `http://localhost:${PORT}`;
 
 export default defineConfig({
@@ -35,10 +36,16 @@ export default defineConfig({
   ],
   webServer: process.env.E2E_BASE_URL
     ? undefined
-    : {
+    : [{
         command: `npm run start -- -p ${PORT}`,
         url: baseURL,
         reuseExistingServer: !process.env.CI,
         timeout: 120_000,
-      },
+      }, {
+        command: `npm run build && npm run start -- -p ${PORT + 1}`,
+        env: { NEXT_BUILD_DIR: ".next-formspree-test", NEXT_PUBLIC_FORMSPREE_FORM_ID: "e2e-test-form" },
+        url: formBaseURL,
+        reuseExistingServer: false,
+        timeout: 180_000,
+      }],
 });

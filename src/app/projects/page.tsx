@@ -9,7 +9,7 @@ import { projects } from "@/data/projects";
 export const metadata: Metadata = pageMetadata({
   title: "Projects",
   description:
-    "Feature request matching, internal tools, HubSpot systems, and side projects from Kaleb Jensen.",
+    "AI workflows, CS operations tools, HubSpot automations, and customer onboarding projects built by Enterprise Customer Success Manager Kaleb Jensen.",
   path: "/projects",
 });
 

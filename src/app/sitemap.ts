@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { careerCaseStudies } from "@/data/careerCaseStudies";
 import { projects } from "@/data/projects";
 import { navLinks, site } from "@/data/site";
 
@@ -13,5 +14,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "monthly" as const,
     priority: project.caseStudy ? 0.8 : 0.6,
   }));
-  return [...pages, ...projectPages];
+  const caseStudyPages = careerCaseStudies.map((study) => ({
+    url: `${site.url}/case-studies/${study.slug}`,
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+  return [...pages, ...projectPages, ...caseStudyPages];
 }

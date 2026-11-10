@@ -4,6 +4,7 @@ type LinedHeadingProps = {
   children: ReactNode;
   as?: "h1" | "h2" | "h3";
   className?: string;
+  id?: string;
 };
 
 const sizes = {
@@ -16,9 +17,11 @@ export function LinedHeading({
   children,
   as: Tag = "h1",
   className = "",
+  id,
 }: LinedHeadingProps) {
   return (
     <Tag
+      id={id}
       className={`lined uppercase leading-[1.25] tracking-tight ${sizes[Tag]} ${className}`}
     >
       {children}

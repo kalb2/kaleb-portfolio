@@ -1,23 +1,28 @@
 export const site = {
   name: "Kaleb Jensen",
-  title: "Kaleb Jensen | Enterprise CSM",
+  title: "Kaleb Jensen | Enterprise Customer Success Manager",
   url: "https://www.kalebjensen.com",
   description:
-    "Enterprise Customer Success Manager at Connecteam. Builds automations and internal tools that close the loop for a large book of accounts.",
-  email: "kalebcj@gmail.com",
+    "Enterprise Customer Success Manager at Connecteam focused on SaaS renewals, expansion, and customer onboarding. Builds HubSpot systems and AI workflows.",
+  // Public form id only. The recipient inbox stays in Formspree, never here.
+  formspreeFormId: process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID ?? "",
+  // Set to your real HTTPS booking page to show Book a call on Contact and Hire Me.
+  schedulingUrl: "",
   location: "Utah",
   role: "Enterprise CSM",
   company: "Connecteam",
   linkedin: "https://www.linkedin.com/in/kalebjensen/",
   github: "https://github.com/kalb2",
   resume:
-    "https://drive.google.com/file/d/1uJMMSSKpXHWpaAnDPxn_RSsJOO8eCqiA/view?usp=sharing",
+    "/resume.pdf",
 };
 
 export const navLinks = [
   { href: "/", label: "Home" },
   { href: "/projects", label: "Projects" },
+  { href: "/case-studies", label: "Case Studies" },
   { href: "/experience", label: "Experience" },
   { href: "/about", label: "About" },
+  { href: "/hire", label: "Hire Me" },
   { href: "/contact", label: "Contact" },
 ] as const;

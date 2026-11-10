@@ -17,6 +17,8 @@ for (const route of allRoutes) {
       const errors = trackErrors(page);
       const res = await page.goto(route.path, { waitUntil: "networkidle" });
       expect(res?.status()).toBe(200);
+      expect(await res!.text(), "no exposed personal contact address or direct-message URI").not.toMatch(/\u0040gmail|\u006dailto:/i);
+      expect(await page.content()).not.toMatch(/\u0040gmail|\u006dailto:/i);
 
       await expect(page).toHaveTitle(route.title);
 
